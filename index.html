@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 	
 <head>	
-
+<!--看到这个的人一定在看这个吧-->
 <!--<body background="image/yh.jpg">-->
 <meta charset="utf-8">
 <title>UNDERTALE汉化下崽站</title>
 <link rel="icon" href="image/soul.ico" >
 <style>
+	    html,
+	    body {
+	        height: 100%;
+	        width: 100%;
+	        margin: 0px;
+	        padding: 0px;
+	    }
 	@font-face {
 		font-family: undertalefont;
 		src: url(font/font.ttf);
@@ -112,5 +119,164 @@
 	</p>
 	<div style="background-color: gray; padding: 20px; line-height: 10px; text-align: center;" >本网站由Cxx版权所有（什）</div>
 	<!--由AX暗星233进行部分网站设置（草，这什么鬼注释，删了删了（不））-->
+	<canvas id="画板id"></canvas>
+	<script>
+	    var 参数 = {
+	        画板载入: function (can) {
+	                var canvas = document.getElementById(can);
+	                canvas.width = document.body.offsetWidth;
+	                canvas.height = document.body.offsetHeight;
+	                canvas.style.backgroundColor = "rgb(255, 255, 255)";
+	                return canvas;
+	            },
+	            二D配置: function (canvas) {
+	                var cvs = canvas.getContext('2d');
+	                return cvs;
+	            },
+	            星星配置: function () {
+	                var 星图 = 绘图.星星("","","");
+	                var image = new Image();
+	                image.src = 星图;
+	                return image;
+	            },
+	            背景星图: function (画板返回, 星星, size) {
+	                var x = 画板返回.width,
+	                    y = 画板返回.height,
+	                    rgba;
+	                var eko = 备用画板(x, y);
+	                var context = eko[1],
+	                    canvas = eko[0];
+	                context.clearRect(0, 0, canvas.width, canvas.height);
+	                for (var i = 0; i < size; i++) {
+	                    var moadl = Math.random() * 9;
+	                    context.drawImage(星星, Math.random() * x, Math.random() * y, moadl, moadl);
+	                }
+	                canvas.parentNode.removeChild(canvas);
+	                var image = new Image();
+	                image.src = canvas.toDataURL("image/png");
+	                return image;
+	            },
+				文字:function(){
+					var eko = 备用画板(500, 500);
+					
+				}
+	    }
+	    var 绘图 = {
+	        星星: function (x, y, rgba) {
+	            var eko = 备用画板(x, y);
+	            var context = eko[1],
+	                civ = eko[0];
+	            context.clearRect(0, 0, civ.width, civ.height);
+	            var grd = context.createRadialGradient(civ.width / 2, civ.height / 2, 1, civ.width / 2, civ.height / 2, civ.width / 2);
+	            grd.addColorStop(0, 'rgba(231,223,174,0.5)');
+	            grd.addColorStop(1, 'rgba(231,223,174,0)');
+	            context.fillStyle = grd;
+	            context.fillRect(0, 0, civ.width, civ.height);
+	            context.moveTo(cos(0)[0], cos(0)[1]);
+	            context.lineTo(sin(0.78539815)[0], sin(0.78539815)[1]);
+	            context.lineTo(cos(1.5707963)[0], cos(1.5707963)[1]);
+	            context.lineTo(sin(2.35619445)[0], sin(2.35619445)[1]);
+	            context.lineTo(cos(3.1415926)[0], cos(3.1415926)[1]);
+	            context.lineTo(sin(0.78539815 + Math.PI)[0], sin(0.78539815 + Math.PI)[1]);
+	            context.lineTo(cos(1.5707963 + Math.PI)[0], cos(1.5707963 + Math.PI)[1]);
+	            context.lineTo(sin(2.35619445 + Math.PI)[0], sin(2.35619445 + Math.PI)[1]);
+	            context.lineTo(cos(3.1415926 + Math.PI)[0], cos(3.1415926 + Math.PI)[1]);
+	            context.fillStyle = rgba || "rgb(255, 249, 100)";
+	            context.fill();
+	            context.beginPath();
+	            civ.parentNode.removeChild(civ);
+	            return civ.toDataURL("image/png");
+	            function cos(cos) {
+	                return [Math.cos(cos) * (civ.width / 2) + civ.width / 2, Math.sin(cos) * (civ.height / 2) + civ.height / 2]
+	            }
+	 
+	            function sin(sin) {
+	                return [Math.cos(sin) * (civ.width / 2 / 3) + civ.width / 2, Math.sin(sin) * (civ.height / 2 / 3) + civ.height / 2]
+	            }
+	        }
+	    }
+	    var 备用画板 = function (x, y, rgba) {
+	        var civ = document.createElement("canvas");
+	        civ.width = x || document.body.offsetWidth / 100;
+	        civ.height = y || document.body.offsetWidth / 100;
+	        civ.id = "stpc";
+	        civ.style = "display:none; z-index:-9999";
+	        document.body.appendChild(civ);
+	        var canvas = document.getElementById("stpc");
+	        var context = canvas.getContext("2d");
+	        return [canvas, context];
+	    }
+	    var 修改 = {
+	        修改背景: function (canvas, color) {
+	            canvas.style.backgroundColor = color;
+	            return true;
+	        }
+	    }
+	    var 载入 = function (载入) {
+	        return new 载入();
+	    }
+	    载入(function () {
+	        var 画板返回 = 参数.画板载入("画板id");
+	        修改.修改背景(画板返回, "rgb(9, 11, 31)");
+	        var cvs = 参数.二D配置(画板返回);
+	        var 星星 = 参数.星星配置();
+	        var 星图 = 参数.背景星图(画板返回, 星星, 500);
+	        var cexiao = 画板返回.width;
+	        var cexiaox = 0;
+	        var nico = [];
+	        var maki = "";
+	        (function donghua() {
+	            cvs.clearRect(0, 0, 画板返回.width, 画板返回.height);
+	            cvs.drawImage(星图, 0, 0);
+	            var mrs = Math.random()*10+5;
+	            if (nico.length < 10) {
+	                var naive = new Naive(Math.random() * 画板返回.width * 2, -Math.random()*画板返回.height, mrs, mrs, Math.random() * 2 + 10,2.8,0,0);
+	                nico.push(naive);
+	            }
+	            for (i = 0; i < nico.length; i++) {
+	                maki = nico[i];
+	                var tty = maki.shan();
+	                if (tty[0]<-画板返回.width&&tty[1]>画板返回.height*2) {
+	                    nico.splice(i,1);
+	                }
+	            }
+	            requestAnimationFrame(donghua);
+	        })();
+	        function Naive(x, y, w, h, s,d,pi,hw,z) {
+	            this.x = x;
+	            this.y = y;
+	            this.w = w;
+	            this.h = h;
+	            this.s = s;
+				this.pi = pi;
+				this.d = d;
+				this.z = z;
+	            this.shan = function () {
+					this.dx = this.pi*Math.cos(this.d)+this.x;
+					this.dy = this.pi*Math.sin(this.d)+this.y;
+					cvs.beginPath();
+					cvs.moveTo(this.dx,this.dy);
+					cvs.lineTo(this.x,this.y);
+					cvs.lineWidth = 1;
+					this.lGrd = cvs.createLinearGradient(this.dx,this.dy,this.x,this.y);  
+					this.lGrd.addColorStop(0, '#4CAF50');  
+					this.lGrd.addColorStop(1, 'rgba(0,0,0,0)');  
+					cvs.strokeStyle = this.lGrd;  
+					cvs.stroke();
+					cvs.beginPath();
+	                cvs.drawImage(星星, this.dx-this.w/2, this.dy-this.h/2, this.w, this.h);
+	                this.pi +=50;
+					this.z += 0.1;
+	                return [this.dx,this.dy];
+	            }
+	 
+	        }
+	        window.onresize = function () {
+	            画板返回.width = window.innerWidth;
+	            画板返回.height = window.innerHeight;
+				星图 = 参数.背景星图(画板返回, 星星, 500);
+	        }
+	    });
+	</script>
    </body>
 </html>
