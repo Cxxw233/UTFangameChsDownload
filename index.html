@@ -8,13 +8,12 @@
 <link rel="icon" href="image/soul.ico" >
 <!--CSS样式-->
 <style>
-	    html,
-	    body {
-	        height: 100%;
-	        width: 100%;
-	        margin: 0px;
-	        padding: 0px;
-	    }
+	body {
+		width: 100%;
+		height: 100%;
+		background-color: var(--primary-color);
+		/*text-shadow: 1px 1px 0px gray;*/
+	}
 	@font-face {
 		font-family: undertalefont;
 		src: url(font/font.ttf);
@@ -22,42 +21,84 @@
 	.undertalefont {
 		font-family: undertalefont;
 		font-size: 20px;
-		background-color: white;
 		text-align: left;
-		color: black;
+		color: var(--secondary-color);
 		/*border: 5px;
 		border-color: white;
 		border-style: solid;*/
+	}
+	p {
+		background-color: var(--primary-color);
 	}
 	a {
 		color: red;
 	}
 	div {
 		padding: 10px;
-		padding-left: 10px;
 		margin: 10px;
+		background-color: var(--primary-color);
 	}
 	header {
 		font-family: undertalefont;
 		font-size: 30px;
 		text-align: center;
-		background-color: black;
+		background-color: grey;
 		color: white;
 		margin: 10px;
 		padding: 10px;
 	}
+	/*设置图片属性*/
+	#icon {
+		width: 30px;
+		cursor: pointer;
+		float: right;
+		margin-right: 25px;
+	}
+	/*设置深色模式属性*/
+	:root {
+		--primary-color: white;
+		--secondary-color: black;
+	}
+	.dark-theme {
+		--primary-color: black;
+		--secondary-color: white;
+	}
 </style>
 
 </head>
-<body style="background-color: white;">
+<body bgcolor="var(--primary-color)">
 	<!-- FBI OPEN THE DOOR -->
-	<header>UNDERTALE同人游戏汉化下载站</header>
-	<p style="text-align: center; font-family: undertalefont; font-size: 25px;">由 bilibili UP主 cxx_w 创建</p>
+
+	<header>UNDERTALE同人游戏汉化下载站<img src= "./image/moon.png" title= "点击我切换主题" id="icon"/></header>
+	<p style="text-align: center; font-family: undertalefont; font-size: 25px; color: var(--secondary-color);">
+		由 bilibili UP主 cxx_w 创建
+	</p>
+
+
+
+	<!--切换深色模式脚本-->
+	<script>
+		var icon = document.getElementById("icon");
+		icon.onclick = function(){
+			document.body.classList.toggle("dark-theme");
+			if(document.body.classList.contains("dark-theme")){
+				icon.src = "./image/sun.png";
+			}
+			else{
+				icon.src = "./image/moon.png";
+			}
+		}
+	</script>
+
+
+
+
+
 	<div class="undertalefont" >
 		<p>
 	<!--宇航_默语-->
 	<img src="image/yh.jpg" width="80" height="80" align="left">
-	<div style="background-color: yellow;">* 由<a href="https://b23.tv/rNuVZ02">@憨憨羊の宇航鸽鸽</a>制作的汉化项目</div>
+	<div style="background-color: yellow; color: black;">* 由<a href="https://b23.tv/rNuVZ02">@憨憨羊の宇航鸽鸽</a>制作的汉化项目</div>
     <!--<a href="https://b23.tv/rNuVZ02">TA的Bilibili账号<br>-->
     <a target="_blank" href="https://wopan.sgguo.com/s/68esr">渣渣新版SwapFell</a><br>
     <a target="_blank" href="https://yuhang233.lanzout.com/ijtmc035y5mf">完整版Ink Sans Fight made by TeamOrigin</a><br>
@@ -80,11 +121,11 @@
 	</div>
 	</p>
 	
-	<div class="undertalefont"">
+	<div class="undertalefont">
 		<p>
 	<!--AX暗星233-->
 	<img src="image/ax.jpg" width="80" height="80" align="left">
-    <div style="background-color: yellow;">* 由<a href="https://b23.tv/TkwY3TA">@AX暗星233</a>制作的汉化项目</div>
+    <div style="background-color: yellow; color: black;">* 由<a href="https://b23.tv/TkwY3TA">@AX暗星233</a>制作的汉化项目</div>
     <a target="_blank" href="https://wwp.lanzouy.com/ibiL1080kjib">Underverse Battles</a>由 AX暗星，幻 -_- 风，憨憨羊の宇航鸽鸽 制作<br>
     <a target="_blank" href="https://pan.baidu.com/s/1PUdrmis3aYwlR9vFDHHaug?pwd=AX23 ">Undertale:Bit And Pieces mod</a>提取码：AX23<br>
     <a target="_blank" href="https://pan.baidu.com/s/1yQSmcskwtJTrqqyUuVs4Ow">Undertale Together</a>提取码:gqkl<br>
@@ -97,7 +138,7 @@
 		<p>
 	<!--幻-_-风-->
 	<img src="image/hf.jpg" width="80" height="80" align="left">
-    <div style="background-color: yellow;">* 由<a href="https://b23.tv/kypTiqW">@幻 -_- 风</a>制作的汉化项目</div>
+    <div style="background-color: yellow; color: black;">* 由<a href="https://b23.tv/kypTiqW">@幻 -_- 风</a>制作的汉化项目</div>
     <a target="_blank" href="https://pan.baidu.com/s/1o3oxO9Zj0jq_Oby3vAKpdw">Othertale</a>提取码:OTHE<br>
     <a target="_blank" href="https://pan.baidu.com/s/1lmXSRdKceSBM-yosMZRkbA">QcCfF Underswap:Love Struck</a>提取码:papy 由@幻 -_- 风 @荷包蛋_official 制作<br>
     <a target="_blank" href="https://pan.baidu.com/s/17jaCg31Y90L_uWZFWZzAAA">Underfell Asgore</a>提取码:ASGO<br>
@@ -112,7 +153,7 @@
 		<p>
 	<!--荷包蛋-->
 	<img src="image/hbd.jpg" width="80" height="80" align="left">
-    <div style="background-color: yellow;">* 由<a href="https://b23.tv/PDZxFZ7">@荷包蛋_official</a>制作的汉化项目</div>
+    <div style="background-color: yellow; color: black;">* 由<a href="https://b23.tv/PDZxFZ7">@荷包蛋_official</a>制作的汉化项目</div>
 	<a target="_blank" href="https://egger233.lanzouy.com/iCqqt0a2y6fi">Gren Snas Fight</a><br>
     <a target="_blank" href="https://egger233.lanzouy.com/iI9G309lwjzc">SamsaraTale Sans</a><br>
     <a target="_blank" href="https://egger233.lanzouu.com/ioxYg057r0gb">Team Hardcore Dusttale Murder Sans Fight</a><br>
@@ -125,7 +166,7 @@
 		<p>
 	<!--Cxx_w-->
 	<img src="image/cxxsb.bmp" width="80" height="80" align="left">
-    <div style="background-color: yellow;">* 由<a href="https://b23.tv/taTppEI">@Cxx_w</a>制作的汉化项目</div>
+    <div style="background-color: yellow; color: black;">* 由<a href="https://b23.tv/taTppEI">@Cxx_w</a>制作的汉化项目</div>
     <a target="_blank" href="https://edge.lanzouq.com/is9sC077jl5a">Edgetale Sans Hard Mode</a><br>
     <a target="_blank" href="https://nm.lanzouq.com/i88Cd02jztpg">Underdove NM Fight</a><br>
     <a target="_blank" href="https://chinese.lanzouq.com/iYKydz9zjud">FDY Dusttale Murder Sans Fight</a><br>
