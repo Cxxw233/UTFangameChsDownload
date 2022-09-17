@@ -1,0 +1,65 @@
+* {
+    -webkit-font-smoothing:none;
+    -moz-osx-font-smoothing:none;
+}
+body {
+		width: 100%;
+		height: 100%;
+		background-color: var(--primary-color);
+		/*text-shadow: 1px 1px 0px gray;*/
+	}
+	@font-face {
+		font-family: undertalefont;
+		src: url(font/font.ttf);
+	}
+	.undertalefont {
+		font-family: undertalefont;
+		font-size: 20px;
+		text-align: left;
+		color: var(--secondary-color);
+		/*border: 5px;
+		border-color: white;
+		border-style: solid;*/
+	}
+	p {
+		background-color: var(--primary-color);
+	}
+	a {
+		color: red;
+        text-decoration: none;
+	}
+	div {
+		padding: 10px;
+		margin: 10px;
+		background-color: var(--primary-color);
+	}
+	header {
+		font-family: undertalefont;
+		font-size: 30px;
+		text-align: center;
+		background-color: grey;
+		color: white;
+		margin: 10px;
+		padding: 10px;
+	}
+	/*设置图片属性*/
+	#icon {
+		width: 30px;
+		cursor: pointer;
+		float: right;
+		margin-right: 25px;
+	}
+	/*设置深色模式属性*/
+	:root {
+		--primary-color: rgb(234, 234, 239);
+		--secondary-color: black;
+	}
+	.dark-theme {
+		--primary-color: rgb(27, 27, 27);
+		--secondary-color: white;
+	}
+summary{
+    margin: 10px;
+    padding-bottom: 10px;
+    list-style-type:"* ";
+}
