@@ -53,13 +53,43 @@ body {
 	:root {
 		--primary-color: rgb(234, 234, 239);
 		--secondary-color: black;
+		--c : gray;
 	}
 	.dark-theme {
 		--primary-color: rgb(27, 27, 27);
 		--secondary-color: white;
+		--c : white;
 	}
 summary{
     margin: 10px;
     padding-bottom: 10px;
     list-style-type:"* ";
+}
+/* 时钟效果样式 */
+.clock {
+	/* 禁止文本被拉取 */
+	user-select: none;
+	/* width: 200px; */
+	background-color: var(--primary-color); 
+	text-align: center;
+}
+.clock span{
+    text-align: center;
+    font-family: undertalefont;
+    font-size: 20px;
+    color: white;
+    /* 文字阴影 实现3D效果 */
+    text-shadow: 0 1px 0 #464646,
+    0 2px 0 #3c3c3c,
+    0 3px 0 #323232,
+    0 4px 0 #282828,
+    0 5px 0 #1e1e1e,
+    0 6px 0 #141414,
+    0 7px 0 #0a0a0a,
+    0 8px 0 #000000,
+    0 0 5px rgba(100, 100, 100, 0.0),
+    0 -1px 3px rgba(120, 120, 120, 0.2),
+    0 9px 9px rgba(140, 140, 140, 0.3),
+    0 12px 12px rgba(160, 160, 160, 0.3),
+    0 15px 15px rgba(180, 180, 180, 0.3);
 }
