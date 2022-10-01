@@ -1,6 +1,7 @@
 * {
     -webkit-font-smoothing:none;
     -moz-osx-font-smoothing:none;
+	margin: 0;
 }
 body {
 		width: 100%;
@@ -42,6 +43,11 @@ body {
 		margin: 10px;
 		padding: 10px;
 	}
+	canvas {
+		margin-right: 0 auto;
+		padding: 0 auto;
+		width: 1308px;
+	}
 	/*设置图片属性*/
 	#icon {
 		width: 30px;
@@ -70,8 +76,16 @@ summary{
 	/* 禁止文本被拉取 */
 	user-select: none;
 	/* width: 200px; */
-	background-color: var(--primary-color); 
+	background-color: black; 
 	text-align: center;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: white;
+	border-width: 5px;
+	width: 320px;
+	margin: 0 auto;
+	box-shadow: 1px 1px 5px white,
+	-1px -1px 5px white;
 }
 .clock span{
     text-align: center;
