@@ -68,8 +68,11 @@ body {
 	}
 summary{
     margin: 10px;
-    padding-bottom: 10px;
-    list-style-type:"* ";
+    list-style-type:none;
+	text-align: center;
+}
+details > p{
+	text-align: center;
 }
 /* 时钟效果样式 */
 .clock {
