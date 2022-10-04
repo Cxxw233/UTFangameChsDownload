@@ -1,7 +1,7 @@
 * {
     -webkit-font-smoothing:none;
     -moz-osx-font-smoothing:none;
-	margin: 0;
+	margin: auto;
 }
 body {
 		width: 100%;
@@ -31,7 +31,7 @@ body {
 	}
 	div {
 		padding: 10px;
-		margin: 10px;
+		margin: auto;
 		background-color: var(--primary-color);
 	}
 	header {
@@ -86,7 +86,7 @@ details > p{
 	border-color: white;
 	border-width: 5px;
 	width: 320px;
-	margin: 0 auto;
+	margin: auto;
 	box-shadow: 1px 1px 5px white,
 	-1px -1px 5px white;
 }
