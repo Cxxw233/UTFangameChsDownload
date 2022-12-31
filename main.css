@@ -110,3 +110,10 @@ details > p{
     0 12px 12px rgba(160, 160, 160, 0.3),
     0 15px 15px rgba(180, 180, 180, 0.3);
 }
+.end{
+	background-color: #868686;
+}
+dd > li{
+	list-style-type: none;
+	text-align: center;
+}
