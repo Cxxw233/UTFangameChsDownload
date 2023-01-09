@@ -26,8 +26,8 @@ body {
 		background-color: var(--primary-color);
 	}
 	a {
-		color: red;
-        text-decoration: none;
+		color: var(--link);
+    text-decoration: none;
 	}
 	div {
 		padding: 10px;
@@ -57,14 +57,18 @@ body {
 	}
 	/*设置深色模式属性*/
 	:root {
-		--primary-color: rgb(234, 234, 239);
-		--secondary-color: black;
-		--c : gray;
+		--primary-color: rgb(234, 234, 239); /*背景色*/
+		--secondary-color: black; /*文本色*/
+		--c : rgb(207, 207, 207); /*头像栏颜色*/
+		--link: rgb(0, 17, 255); /*链接颜色*/
+		--end-color: rgb(167, 167, 167); /*友情链接颜色*/
 	}
 	.dark-theme {
 		--primary-color: rgb(27, 27, 27);
 		--secondary-color: white;
-		--c : white;
+		--c : rgb(48, 48, 48);
+		--link: rgb(0, 162, 255);
+		--end-color: rgb(54, 54, 54);
 	}
 summary{
     margin: 10px;
@@ -85,7 +89,7 @@ details > p{
 	border-radius: 10px;
 	border-color: white;
 	border-width: 5px;
-	width: 320px;
+	width: 340px;
 	margin: auto;
 	box-shadow: 1px 1px 5px white,
 	-1px -1px 5px white;
@@ -111,7 +115,7 @@ details > p{
     0 15px 15px rgba(180, 180, 180, 0.3);
 }
 .end{
-	background-color: #868686;
+	background-color: var(--end-color);
 }
 dd > li{
 	list-style-type: none;

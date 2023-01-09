@@ -10,45 +10,56 @@
 <link rel="stylesheet" href="main.css"/>
 <!-- 读取时间js脚本 -->
 <script type="text/javascript">
-        function myTime(){
-            let time=new Date();
-            let hh=time.getHours();  //时
-            let mm=time.getMinutes();  //分
-            let ss=time.getSeconds();  //秒
+  function myTime(){
+      let time=new Date();
+      let hh=time.getHours();  //时
+      let mm=time.getMinutes();  //分
+      let ss=time.getSeconds();  //秒
 			let year=time.getFullYear(); //年
 			let month=time.getMonth(); //月
 			let day=time.getDate(); //日
-            // Math.floor() 向下取整
+			let dayy=time.getDay(); //星期
+      //给日期设置条件，把得到的日期数字变为字符串(?)
+			switch(dayy)
+			  {
+			    case 1:dayy="周一 ";break;
+			    case 2:dayy="周二 ";break;
+			    case 3:dayy="周三 ";break;
+			    case 4:dayy="周四 ";break;
+			    case 5:dayy="周五 ";break;
+			    case 6:dayy="周六 ";break;
+			    case 0:dayy="周日 ";break;
+			    default:dayy="";break;
+			  }
+			// Math.floor() 向下取整
 			document.getElementById("year").innerText=Math.floor(year);
 			document.getElementById("month").innerText=Math.floor(month+1);
 			document.getElementById("day").innerText=Math.floor(day);
-            document.getElementById("1").innerText=Math.floor(hh/10);
-            document.getElementById("2").innerText=hh%10;
-            document.getElementById("4").innerText=Math.floor(mm/10);
-            document.getElementById("5").innerText=mm%10;
-            document.getElementById("7").innerText=Math.floor(ss/10);
-            document.getElementById("8").innerText=ss%10;
-        }
-        setInterval(myTime, 1000);
+			document.getElementById("dayy").innerText=dayy;
+      document.getElementById("1").innerText=Math.floor(hh/10);
+      document.getElementById("2").innerText=hh%10;
+      document.getElementById("4").innerText=Math.floor(mm/10);
+      document.getElementById("5").innerText=mm%10;
+      document.getElementById("7").innerText=Math.floor(ss/10);
+      document.getElementById("8").innerText=ss%10;
+    }
+    setInterval(myTime, 1000);
     </script>
 </head>
-<body bgcolor="var(--primary-color)">
+<body style="background-color: var(--primary-color);">
 	<!-- FBI OPEN THE DOOR -->
 
 	<header>	
 	UNDERTALE同人游戏汉化下载站
 	<img src= "./image/moon.png" title= "点击我切换主题" id="icon"/></header>
 
-	<p style="text-align: center; font-family: undertalefont; font-size: 25px; color: var(--secondary-color);">
-		由 bilibili UP主 cxx_w 创建 <br />
-		集成了许多链接，跳转到百度网盘等页面是正常的，请不必担心 <br />
-		现以改为网站内置，强烈建议你使用IDM、FDM等下载器加快下载速度
+	<p style="text-align: center; font-family: undertalefont; font-size: 25px; color: var(--secondary-color); padding-bottom: 10px;">
+		由 bilibili UP主 cxx_w 创建
 	</p>
 	<!-- 显示时钟 -->
 	<div class="clock">
-		<span>现在时间:</span>
 		<span id="year">0000</span><span>/</span><span id="month">00</span><span>/</span><span id="day">00</span>
-		
+		<span>| </span><span id="dayy">日期</span><span> |</span>
         <span id="1">0</span><span id="2">0</span><span id="3">:</span><span id="4">0</span><span id="5">0</span><span id="6">:</span><span id="7">0</span><span id="8">0</span>
     </div>
 
@@ -74,7 +85,7 @@
 		<div style="background-color: aqua; color: black; text-align: center;margin: 0 auto; width: 600px;">* 由个人制作的汉化项目 (单击黄色区域展开/收起)</div>
 	<details>
 	<!--宇航_默语-->
-	<summary style="background-color: yellow; color: black;"><img src="image/yh.jpg" width="80" height="80" align="middle"/>* 由<a href="https://b23.tv/rNuVZ02">@憨憨羊の宇航鸽鸽</a>制作的汉化项目</summary>
+	<summary style="background-color: var(--c); color: var(--secondary-color);"><img src="image/yh.jpg" width="80" height="80" align="middle" title="憨憨羊の宇航鸽鸽"/>* 由<a href="https://b23.tv/rNuVZ02">@憨憨羊の宇航鸽鸽</a>制作的汉化项目</summary>
     <!--<a href="https://b23.tv/rNuVZ02">TA的Bilibili账号<br />-->
     <p><a target="_blank" href="https://www.123pan.com/s/KPMSVv-JtPjv">渣渣新版SwapFell</a></p>
     <p><a target="_blank" href="https://yuhang233.lanzout.com/ijtmc035y5mf">完整版Ink Sans Fight made by TeamOrigin</a>
@@ -103,7 +114,7 @@
 <div class="undertalefont">
 	<details>
 	<!--AX暗星233-->
-    <summary style="background-color: yellow; color: black;"><img src="image/ax.jpg" width="80" height="80" align="middle"/>* 由<a href="https://b23.tv/TkwY3TA">@AX暗星233</a>制作的汉化项目</summary>
+    <summary style="background-color: var(--c); color: var(--secondary-color);"><img src="image/ax.jpg" width="80" height="80" align="middle" title="AX暗星233"/>* 由<a href="https://b23.tv/TkwY3TA">@AX暗星233</a>制作的汉化项目</summary>
 	<p><a target="_blank" href="https://wwoe.lanzouy.com/i9FyE0jsf5dg">Deltarune Chaser</a></p>
 	<p>Colossus!Fell (TC!Underfell) by AX暗星233、幻-_-风、年糕_yx  <a target="_blank" href="https://wwoe.lanzouy.com/ik3Ca0jw029i">windows</a> <a target="_blank" href="https://wwoe.lanzouy.com/inI7v0jw02fe
 ">android(密码1876)</a></p>
@@ -126,7 +137,7 @@
 <div class="undertalefont">
 	<details>
 	<!--幻-_-风-->
-    <summary style="background-color: yellow; color: black;"><img src="image/hf.jpg" width="80" height="80" align="middle">* 由<a href="https://b23.tv/kypTiqW">@幻 -_- 风</a>制作的汉化项目</summary>
+    <summary style="background-color: var(--c); color: var(--secondary-color);"><img src="image/hf.jpg" width="80" height="80" align="middle" title="幻-_-风">* 由<a href="https://b23.tv/kypTiqW">@幻 -_- 风</a>制作的汉化项目</summary>
 	<p><a target="_blank" href="https://pan.baidu.com/s/1tGb_53MYQJPWRMBZ3Rg5pQ">undertale revenge：the unseen ending繁体中文版</a> 提取码：UTUE</p>
 	<p><a target="_blank" href="https://pan.baidu.com/s/1y-JjIzPY2E4qHFud9hiCDw">Horrorswap</a>提取码：XDDD</p>
     <p><a target="_blank" href="https://pan.baidu.com/s/1o3oxO9Zj0jq_Oby3vAKpdw">Othertale</a>提取码:OTHE</p>
@@ -144,7 +155,7 @@
 <div class="undertalefont">	
 	<details>
 	<!--荷包蛋-->
-    <summary style="background-color: yellow; color: black;"><img src="image/hbd.jpg" width="80" height="80" align="middle">* 由<a href="https://b23.tv/PDZxFZ7">@荷包蛋_official</a>制作的汉化项目</summary>
+  <summary style="background-color: var(--c); color: var(--secondary-color);"><img src="image/hbd.jpg" width="80" height="80" align="middle" title="荷包蛋Official">* 由<a href="https://b23.tv/PDZxFZ7">@荷包蛋_official</a>制作的汉化项目</summary>
 	<p><a target="_blank" href="https://egger233.lanzouy.com/icE8p0fsed5g">TS！Underswap Fdy重置PTV改版ver.1</a></p>
 	<p><a target="_blank" href="https://egger233.lanzouy.com/iCqqt0a2y6fi">Gren Snas Fight</a></p>
     <p><a target="_blank" href="https://egger233.lanzouy.com/iI9G309lwjzc">SamsaraTale Sans</a></p>
@@ -159,7 +170,7 @@
 <div class="undertalefont">
 	<details>
 	<!--Cxx_w-->
-    <summary style="background-color: yellow; color: black;"><img src="image/cxxsb.bmp" width="80" height="80" align="middle">* 由<a href="https://b23.tv/taTppEI">@Cxx_w</a>制作的汉化项目</summary>
+    <summary style="background-color: var(--c); color: var(--secondary-color);"><img src="image/cxxsb.bmp" width="80" height="80" align="middle" title="Cxx_W">* 由<a href="https://b23.tv/taTppEI">@Cxx_w</a>制作的汉化项目</summary>
     <p><a target="_blank" href="https://edge.lanzouq.com/is9sC077jl5a">Edgetale Sans Hard Mode</a></p>
     <p><a target="_blank" href="https://nm.lanzouq.com/i88Cd02jztpg">Underdove NM Fight</a></p>
     <p><a target="_blank" href="https://chinese.lanzouq.com/iYKydz9zjud">FDY Dusttale Murder Sans Fight</a></p>
@@ -178,10 +189,11 @@
 <div class="undertalefont">
 	<details>
 		<!--年糕_yx-->
-		<summary style="background-color: yellow;color: black;"><img src="image/ng_yx.jpg" width="80" height="80" align="middle">* 由<a href="https://space.bilibili.com/1508403677">@年糕_yx</a>制作的汉化项目</summary>
+		<summary style="background-color: var(--c);color: var(--secondary-color);"><img src="image/ng_yx.jpg" width="80" height="80" align="middle" title="年糕_yx">* 由<a href="https://space.bilibili.com/1508403677">@年糕_yx</a>制作的汉化项目</summary>
 		<!--<p><a target="_blank" href="https://niangao-yx.lanzouo.com/iNhtf0js7xad">TeamColossus！Underfell</a></p>-->
+		<!--<p>Disbelief(官方版) <a traget="_blank" href="https://www.123pan.com/s/r3SSVv-gnrWd">Windows</a> <a target="_blank" href="https://www.123pan.com/s/r3SSVv-FnrWd">Android</a> </p>-->
 		<p><a traget="_blank" href="https://niangao-yx.lanzouo.com/i7BCa0ikxsfa">NothingTale Sans Fight</a></p>
-		<p><a traget="_blank" href=""></a></p>
+		
 	</details>
 </div>
 
@@ -192,8 +204,8 @@
 		<p>
 			<div style="background-color: aqua; color: black; margin: 0 auto;text-align: center;width: 400px;">* 由团队制作的汉化项目</div>
 			<div style="text-align: center;">
-			<img src="image/bnpLogoImg.png" height="144" align="middle">
-			<p><a target="_blank" href="https://www.mediafire.com/file/afsi8wcm31doa74/utbnp-v4.2.3b-Fixed.zip/file">Undertale:Bit And Pieces mod</a></p>
+			<img src="image/bnpLogoImg.png" height="144" align="middle" title="Undertale: Bits and Pieces mod 标志(logo)">
+			<p><a target="_blank" href="https://pan.baidu.com/s/1_gsirDYUGoSzvtrA5LF74A?pwd=542b">Undertale:Bit And Pieces mod</a>	提取码：542b </p>
 			</div>
 		</p>
 	
@@ -358,7 +370,7 @@
 	    });
 	</script>
 	-->
-	<footer style="background-color: gray; padding: 20px; line-height: 10px; text-align: center;" ><p style="background-color: gray; ">网站创始者：Cxx | 网站贡献者：Cxx、暗星、宇航 | 摸鱼的：宇航</p></footer>
+	<footer style="background-color: #6b6b6b; padding: 20px; line-height: 10px; text-align: center;" ><p style="background-color: #6b6b6b;">网站创始者：Cxx | 网站贡献者：Cxx、暗星、宇航 | 摸鱼的：宇航</p></footer>
 	<div class="end">
 		<dd>
 			<li>友情链接</li>
@@ -370,5 +382,6 @@
 	</div><br>
 	<p align="center">最后更改于：2023/1/9</p>
 	<!--由AX暗星233进行网站设置（草，这什么鬼注释，删了删了（不））-->
+	<!--43E341FAEC313193CB0C179157C910B925F2028A246526263B24FBBF48274D9E-->
    </body>
 </html>
