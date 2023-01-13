@@ -53,10 +53,18 @@ canvas {
 	width: 1308px;
 }
 /*设置图片属性*/
-#icon {
+button {
+	margin: 0;
+	padding: 0;
+}
+button#change-accent {
+	background: transparent;
+    border: 0;
 	width: calc(var(--main-font-size) * 1.5);
-	cursor: pointer;
 	float: right;
+}
+button#change-accent img {
+	width: 100%;
 }
 /*设置深色模式属性*/
 :root {

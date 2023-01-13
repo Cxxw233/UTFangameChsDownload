@@ -72,10 +72,11 @@
 		<!-- FBI OPEN THE DOOR -->
 
 		<header>
-			<img
+			<button id="change-accent" title="点击我切换主题"><img
 				src="assets/images/ui/accent_dark.png"
-				title="点击我切换主题"
-				id="icon" />
+				data-dark-icon="assets/images/ui/accent_dark.png"
+				data-light-icon="assets/images/ui/accent_light.png"
+				title="点击我切换主题" /></button>
 			<span>UNDERTALE同人游戏汉化下载站</span>
 		</header>
 
@@ -101,15 +102,16 @@
 
 		<!--切换深色模式脚本-->
 		<script>
-			var icon = document.getElementById("icon");
-			icon.onclick = function () {
+			var icon = document.getElementById("change-accent");
+			icon.addEventListener("click", function () {
 				document.body.classList.toggle("dark-theme");
+				var iconImage = document.querySelector("#change-accent img");
 				if (document.body.classList.contains("dark-theme")) {
-					icon.src = "./image/sun.png";
+					iconImage.src = iconImage.dataset.lightIcon;
 				} else {
-					icon.src = "./image/moon.png";
+					iconImage.src = iconImage.dataset.darkIcon;
 				}
-			};
+			});
 		</script>
 
 		<div class="undertalefont">
