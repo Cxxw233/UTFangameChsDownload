@@ -45,6 +45,12 @@ body {
 		float: right;
 		margin-right: 25px;
 	}
+	#github {
+		width: 30px;
+		cursor: pointer;
+		float: left;
+		margin-right: 25px;
+	}
 	/*设置深色模式属性*/
 	:root {
 		--primary-color: rgb(234, 234, 239); /*背景色*/
@@ -115,6 +121,11 @@ body {
 	box-shadow: 5px 5px 20px #333333;
 	user-select: none;
 }
+.title2{
+	display: flex;
+	box-shadow: 5px 5px 20px #333333;
+	user-select: none;
+}
 .lable { 
 	margin: auto;
 }
@@ -132,15 +143,27 @@ body {
 	color: var(--secondary-color);
 	float: center;
 }
+.title2 li{
+	flex: 1;
+	padding: 10px 0;
+	text-align: center;
+	color: var(--secondary-color);
+	float: center;
+}
 .title li.active{
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
-	border-top: 5px solid yellow;
+	border-top: 5px solid blue;
 }
 .title1 li.active1{
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
-	border-top: 5px solid yellow;
+	border-top: 5px solid blue;
+}
+.title2 li.active2{
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border-top: 5px solid blue;
 }
 .content p {
 	padding-left: 20px;
@@ -156,6 +179,9 @@ body {
 .content1 p {
 	padding-left: 20px;
 }
+.content2 p {
+	padding-left: 20px;
+}
 .content1 > li {
 	padding-top: 10px;
 	display: block;
@@ -164,7 +190,18 @@ body {
 	box-shadow: 5px 5px 15px #333333;
 	padding-bottom: 10px;
 }
+.content2 > li {
+	padding-top: 10px;
+	display: block;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+	box-shadow: 5px 5px 15px #333333;
+	padding-bottom: 10px;
+}
 .content1 > li > p {
+	margin-bottom: 10px;
+}
+.content2 > li > p {
 	margin-bottom: 10px;
 }
 .footer-dog {
