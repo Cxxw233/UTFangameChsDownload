@@ -1,26 +1,21 @@
 * {
     -webkit-font-smoothing:none;
     -moz-osx-font-smoothing:none;
-	margin: auto;
+		margin: auto;
+		padding: 0;
+		list-style-type: none;
+		font-family: undertalefont;
+		font-size: 20px;
+		color: var(--secondary-color);
 }
 body {
 		width: 100%;
 		height: 100%;
 		background-color: var(--primary-color);
-		/*text-shadow: 1px 1px 0px gray;*/
 	}
 	@font-face {
 		font-family: undertalefont;
 		src: url(font/font.ttf);
-	}
-	.undertalefont {
-		font-family: undertalefont;
-		font-size: 20px;
-		text-align: left;
-		color: var(--secondary-color);
-		/*border: 5px;
-		border-color: white;
-		border-style: solid;*/
 	}
 	p {
 		background-color: var(--primary-color);
@@ -42,11 +37,6 @@ body {
 		color: white;
 		margin: 10px;
 		padding: 10px;
-	}
-	canvas {
-		margin-right: 0 auto;
-		padding: 0 auto;
-		width: 1308px;
 	}
 	/*设置图片属性*/
 	#icon {
@@ -70,14 +60,7 @@ body {
 		--link: rgb(0, 162, 255);
 		--end-color: rgb(54, 54, 54);
 	}
-summary{
-    margin: 10px;
-    list-style-type:none;
-	text-align: center;
-}
-details > p{
-	text-align: center;
-}
+
 /* 时钟效果样式 */
 .clock {
 	/* 禁止文本被拉取 */
@@ -114,10 +97,82 @@ details > p{
     0 12px 12px rgba(160, 160, 160, 0.3),
     0 15px 15px rgba(180, 180, 180, 0.3);
 }
-.end{
+.end > dd > li{
 	background-color: var(--end-color);
-}
-dd > li{
 	list-style-type: none;
 	text-align: center;
+	padding: 5px 0;
+}
+
+/*选项卡样式*/
+.title{
+	display: flex;
+	box-shadow: 5px 5px 20px #333333;
+	user-select: none;
+}
+.title1{
+	display: flex;
+	box-shadow: 5px 5px 20px #333333;
+	user-select: none;
+}
+.lable { 
+	margin: auto;
+}
+.title li{
+	flex: 1;
+	padding: 10px 0;
+	text-align: center;
+	color: var(--secondary-color);
+	float: center;
+}
+.title1 li{
+	flex: 1;
+	padding: 10px 0;
+	text-align: center;
+	color: var(--secondary-color);
+	float: center;
+}
+.title li.active{
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border-top: 5px solid yellow;
+}
+.title1 li.active1{
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border-top: 5px solid yellow;
+}
+.content p {
+	padding-left: 20px;
+}
+.content > li {
+	padding-top: 10px;
+	display: block;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+	box-shadow: 5px 5px 20px #333333;
+	padding-bottom: 10px;
+}
+.content1 p {
+	padding-left: 20px;
+}
+.content1 > li {
+	padding-top: 10px;
+	display: block;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+	box-shadow: 5px 5px 15px #333333;
+	padding-bottom: 10px;
+}
+.content1 > li > p {
+	margin-bottom: 10px;
+}
+.footer-dog {
+	position: relative;
+	left: -10px;
+	bottom: 28px;
+	background-size: 50px 50px;
+}
+.footer-dog:hover>img{
+	content: url("image/dog-bark.svg");
 }
