@@ -1,11 +1,10 @@
 name: "UNDERTALE汉化下崽站"
 
 plugins:
-  - jekyll-default-layout
-  - jekyll-include-cache
-  - jekyll-optional-front-matter
-  - jekyll-paginate-v2
-  - jekyll-relative-links
-  - jekyll-feed
-  - jekyll-sitemap
-
+ - jekyll-default-layout
+ - jekyll-include-cache
+ - jekyll-optional-front-matter
+ - jekyll-paginate-v2
+ - jekyll-relative-links
+ - jekyll-feed
+ - jekyll-sitemap

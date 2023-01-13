@@ -1,81 +1,101 @@
 * {
-    -webkit-font-smoothing:none;
-    -moz-osx-font-smoothing:none;
+	-webkit-font-smoothing: none;
+	-moz-osx-font-smoothing: none;
 	margin: auto;
 }
 body {
-		width: 100%;
-		height: 100%;
-		background-color: var(--primary-color);
-		/*text-shadow: 1px 1px 0px gray;*/
-	}
-	@font-face {
-		font-family: undertalefont;
-		src: url(font/font.ttf);
-	}
-	.undertalefont {
-		font-family: undertalefont;
-		font-size: 20px;
-		text-align: left;
-		color: var(--secondary-color);
-		/*border: 5px;
+	width: 100%;
+	height: 100%;
+	background-color: var(--primary-color);
+    font-size: var(--secondary-font-size);
+	color: var(--secondary-color);
+	/*text-shadow: 1px 1px 0px gray;*/
+}
+@font-face {
+	font-family: undertalefont;
+	src: url(undertalefont.ttf);
+}
+.undertalefont {
+	font-family: undertalefont;
+	font-size: var(--main-font-size);
+	text-align: left;
+	/*border: 5px;
 		border-color: white;
 		border-style: solid;*/
-	}
-	p {
-		background-color: var(--primary-color);
-	}
-	a {
-		color: var(--link);
-    text-decoration: none;
-	}
-	div {
-		padding: 10px;
-		margin: auto;
-		background-color: var(--primary-color);
-	}
-	header {
-		font-family: undertalefont;
-		font-size: 30px;
-		text-align: center;
-		background-color: grey;
-		color: white;
-		margin: 10px;
-		padding: 10px;
-	}
-	canvas {
-		margin-right: 0 auto;
-		padding: 0 auto;
-		width: 1308px;
-	}
-	/*设置图片属性*/
-	#icon {
-		width: 30px;
-		cursor: pointer;
-		float: right;
-		margin-right: 25px;
-	}
-	/*设置深色模式属性*/
-	:root {
-		--primary-color: rgb(234, 234, 239); /*背景色*/
-		--secondary-color: black; /*文本色*/
-		--c : rgb(207, 207, 207); /*头像栏颜色*/
-		--link: rgb(0, 17, 255); /*链接颜色*/
-		--end-color: rgb(167, 167, 167); /*友情链接颜色*/
-	}
-	.dark-theme {
-		--primary-color: rgb(27, 27, 27);
-		--secondary-color: white;
-		--c : rgb(48, 48, 48);
-		--link: rgb(0, 162, 255);
-		--end-color: rgb(54, 54, 54);
-	}
-summary{
-    margin: 10px;
-    list-style-type:none;
-	text-align: center;
 }
-details > p{
+p {
+	background-color: var(--primary-color);
+}
+a {
+	color: var(--link);
+	text-decoration: none;
+}
+div {
+	padding: 10px;
+	margin: auto;
+	background-color: var(--primary-color);
+}
+header {
+	font-family: undertalefont;
+	font-size: var(--main-heading-font-size);
+	background-color: grey;
+	color: white;
+	margin: 10px;
+	padding: 10px;
+}
+header span {
+	text-align: center;
+	display: block;
+}
+canvas {
+	margin-right: 0 auto;
+	padding: 0 auto;
+	width: 1308px;
+}
+/*设置图片属性*/
+#icon {
+	width: calc(var(--main-font-size) * 1.5);
+	cursor: pointer;
+	float: right;
+}
+/*设置深色模式属性*/
+:root {
+	--primary-color: rgb(234, 234, 239); /*背景色*/
+	--secondary-color: black; /*文本色*/
+	--c: rgb(207, 207, 207); /*头像栏颜色*/
+	--link: rgb(0, 17, 255); /*链接颜色*/
+	--end-color: rgb(167, 167, 167); /*友情链接颜色*/
+	--main-font-size: 20px;
+    --secondary-font-size: 18px;
+    --main-heading-font-size: 30px;
+    --secondary-heading-font-size: 24px;
+}
+@media screen and (max-width: 720px) {
+    :root {
+	    --main-font-size: 18px;
+    	--secondary-font-size: 16px;
+    	--main-heading-font-size: 24px;
+    	--secondary-heading-font-size: 20px;
+	}
+}
+.dark-theme {
+	--primary-color: rgb(27, 27, 27);
+	--secondary-color: white;
+	--c: rgb(48, 48, 48);
+	--link: rgb(0, 162, 255);
+	--end-color: rgb(54, 54, 54);
+}
+summary {
+	margin: 10px;
+	list-style-type: none;
+}
+summary:before {
+	content: "* ";
+}
+summary > img {
+	display: inline-block;
+}
+details > p {
 	text-align: center;
 }
 /* 时钟效果样式 */
@@ -83,41 +103,33 @@ details > p{
 	/* 禁止文本被拉取 */
 	user-select: none;
 	/* width: 200px; */
-	background-color: black; 
+	background-color: black;
 	text-align: center;
 	border-style: solid;
 	border-radius: 10px;
 	border-color: white;
 	border-width: 5px;
-	width: 340px;
+    max-width: 320px;
+	max-height: 60px;
 	margin: auto;
-	box-shadow: 1px 1px 5px white,
-	-1px -1px 5px white;
+	box-shadow: 1px 1px 5px white, -1px -1px 5px white;
 }
-.clock span{
-    text-align: center;
-    font-family: undertalefont;
-    font-size: 20px;
-    color: white;
-    /* 文字阴影 实现3D效果 */
-    text-shadow: 0 1px 0 #464646,
-    0 2px 0 #3c3c3c,
-    0 3px 0 #323232,
-    0 4px 0 #282828,
-    0 5px 0 #1e1e1e,
-    0 6px 0 #141414,
-    0 7px 0 #0a0a0a,
-    0 8px 0 #000000,
-    0 0 5px rgba(100, 100, 100, 0.0),
-    0 -1px 3px rgba(120, 120, 120, 0.2),
-    0 9px 9px rgba(140, 140, 140, 0.3),
-    0 12px 12px rgba(160, 160, 160, 0.3),
-    0 15px 15px rgba(180, 180, 180, 0.3);
+.clock span {
+	text-align: center;
+	font-family: undertalefont;
+	font-size: var(--main-font-size);
+	color: white;
+	/* 文字阴影 实现3D效果 */
+	text-shadow: 0 1px 0 #464646, 0 2px 0 #3c3c3c, 0 3px 0 #323232, 0 4px 0 #282828,
+		0 5px 0 #1e1e1e, 0 6px 0 #141414, 0 7px 0 #0a0a0a, 0 8px 0 #000000,
+		0 0 5px rgba(100, 100, 100, 0), 0 -1px 3px rgba(120, 120, 120, 0.2),
+		0 9px 9px rgba(140, 140, 140, 0.3), 0 12px 12px rgba(160, 160, 160, 0.3),
+		0 15px 15px rgba(180, 180, 180, 0.3);
 }
-.end{
+.end {
 	background-color: var(--end-color);
 }
-dd > li{
+dd > li {
 	list-style-type: none;
 	text-align: center;
 }

@@ -1,18 +1,18 @@
 {
-  "name": "utfangamechsdownload",
-  "private": true,
-  "version": "0.0.0",
-  "description": "UNDERTALE汉化下崽站",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Cxxw233/UTFangameChsDownload.git"
-  },
-  "author": "cxx_w, AX_233",
-  "bugs": {
-    "url": "https://github.com/Cxxw233/UTFangameChsDownload/issues"
-  },
-  "homepage": "https://github.com/Cxxw233/UTFangameChsDownload#readme",
-  "devDependencies": {
-    "prettier": "2.8.2"
-  }
+	"name": "utfangamechsdownload",
+	"private": true,
+	"version": "0.0.0",
+	"description": "UNDERTALE汉化下崽站",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Cxxw233/UTFangameChsDownload.git"
+	},
+	"author": "cxx_w, AX_233",
+	"bugs": {
+		"url": "https://github.com/Cxxw233/UTFangameChsDownload/issues"
+	},
+	"homepage": "https://github.com/Cxxw233/UTFangameChsDownload#readme",
+	"devDependencies": {
+		"prettier": "2.8.2"
+	}
 }
