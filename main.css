@@ -43,13 +43,13 @@ body {
 		width: 30px;
 		cursor: pointer;
 		float: right;
-		margin-right: 25px;
+		margin-right: auto;
 	}
 	#github {
 		width: 30px;
 		cursor: pointer;
 		float: left;
-		margin-right: 25px;
+		margin-left: auto;
 	}
 	/*设置深色模式属性*/
 	:root {
@@ -78,7 +78,7 @@ body {
 	border-radius: 10px;
 	border-color: white;
 	border-width: 5px;
-	width: 340px;
+	width: 350px;
 	margin: auto;
 	box-shadow: 1px 1px 5px white,
 	-1px -1px 5px white;
@@ -203,13 +203,4 @@ body {
 }
 .content2 > li > p {
 	margin-bottom: 10px;
-}
-.footer-dog {
-	position: relative;
-	left: -10px;
-	bottom: 28px;
-	background-size: 50px 50px;
-}
-.footer-dog:hover>img{
-	content: url("image/dog-bark.svg");
 }
