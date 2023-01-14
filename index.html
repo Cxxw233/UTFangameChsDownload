@@ -11,6 +11,7 @@
 		<!--CSS样式-->
 		<link rel="stylesheet" href="assets/style.css" />
 		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<!-- 读取时间js脚本 -->
 		<script type="text/javascript">
 			function myTime() {
@@ -68,474 +69,434 @@
 		</script>
 	</head>
 
-	<body style="background-color: var(--primary-color)">
+	<body>
 		<!-- FBI OPEN THE DOOR -->
-
 		<header>
-			<button id="change-accent" title="点击我切换主题">
-				<img
-					src="assets/images/ui/accent_dark.png"
-					data-dark-icon="assets/images/ui/accent_dark.png"
-					data-light-icon="assets/images/ui/accent_light.png"
-					title="点击我切换主题" />
-			</button>
-			<span>UNDERTALE同人游戏汉化下载站</span>
+			<div class="title">
+				<button id="change-accent" title="点击我切换主题">
+					<img
+						src="assets/images/ui/accent_dark.png"
+						data-dark-icon="assets/images/ui/accent_dark.png"
+						data-light-icon="assets/images/ui/accent_light.png"
+						title="点击我切换主题" />
+				</button>
+				<span>UNDERTALE同人游戏汉化下载站</span>
+			</div>
+
+			<div class="fake-2nd-heading">由 bilibili UP主 cxx_w 创建</div>
+
+			<!-- 显示时钟 -->
+			<div class="clock">
+				<span id="year">0000</span><span>/</span><span id="month">00</span
+				><span>/</span><span id="day">00</span> <span>| </span
+				><span id="dayy">日期</span><span> |</span> <span id="1">0</span
+				><span id="2">0</span><span id="3">:</span><span id="4">0</span
+				><span id="5">0</span><span id="6">:</span><span id="7">0</span
+				><span id="8">0</span>
+			</div>
+
+			<!--切换深色模式脚本-->
+			<script>
+				var icon = document.getElementById("change-accent");
+				icon.addEventListener("click", function () {
+					document.body.classList.toggle("dark-theme");
+					var iconImage = document.querySelector("#change-accent img");
+					if (document.body.classList.contains("dark-theme")) {
+						iconImage.src = iconImage.dataset.lightIcon;
+					} else {
+						iconImage.src = iconImage.dataset.darkIcon;
+					}
+				});
+			</script>
 		</header>
 
-		<p
-			style="
-				text-align: center;
-				font-family: undertalefont;
-				font-size: var(--secondary-heading-font-size);
-				color: var(--secondary-color);
-				padding-bottom: 10px;
-			">
-			由 bilibili UP主 cxx_w 创建
-		</p>
-		<!-- 显示时钟 -->
-		<div class="clock">
-			<span id="year">0000</span><span>/</span><span id="month">00</span
-			><span>/</span><span id="day">00</span> <span>| </span
-			><span id="dayy">日期</span><span> |</span> <span id="1">0</span
-			><span id="2">0</span><span id="3">:</span><span id="4">0</span
-			><span id="5">0</span><span id="6">:</span><span id="7">0</span
-			><span id="8">0</span>
-		</div>
-
-		<!--切换深色模式脚本-->
-		<script>
-			var icon = document.getElementById("change-accent");
-			icon.addEventListener("click", function () {
-				document.body.classList.toggle("dark-theme");
-				var iconImage = document.querySelector("#change-accent img");
-				if (document.body.classList.contains("dark-theme")) {
-					iconImage.src = iconImage.dataset.lightIcon;
-				} else {
-					iconImage.src = iconImage.dataset.darkIcon;
-				}
-			});
-		</script>
-
-		<div class="undertalefont">
-			<div
-				style="
-					background-color: aqua;
-					color: black;
-					text-align: center;
-					margin: 0 auto;
-					max-width: 600px;
-					max-height: 60px;
-				">
-				由个人制作的汉化项目(单击灰色区域展开/收起)
+		<div id="main-content">
+			<div class="projects-section">
+				<h2>由个人制作的汉化项目(单击灰色区域展开/收起)</h2>
+				<details>
+					<!--宇航_默语-->
+					<summary>
+						<img
+							src="assets/images/authors/yh.jpg"
+							width="80"
+							height="80"
+							title="憨憨羊の宇航鸽鸽" />由<a href="https://b23.tv/rNuVZ02"
+							>@憨憨羊の宇航鸽鸽</a
+						>制作的汉化项目
+					</summary>
+					<!--<a href="https://b23.tv/rNuVZ02">TA的Bilibili账号<br />-->
+					<p>
+						<a target="_blank" href="https://www.123pan.com/s/KPMSVv-JtPjv"
+							>渣渣新版SwapFell</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/ijtmc035y5mf"
+							>完整版Ink Sans Fight made by TeamOrigin</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/i9K6K011zi2d"
+							>PTV OS-T Sans Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/icRvl00pu1yb"
+							>Undertale King</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/ijxqq00ptyrg"
+							>Undertale Jevil</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/iv1x300oqr1e"
+							>Ink Sans Fight Phase 4</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/i4zOe00nmvna"
+							>HELP_tale Sans Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/iElsf00bj4je"
+							>PTV Hard Mode Sans Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/ifUPaz9u0gf"
+							>OMORITALE Basil Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/i69flz3w50f"
+							>REVENGE Papyrus Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/ix5ZOz3cikd"
+							>CLASSIC Dusttrust Sans Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/i17jsz2iv0b"
+							>B-TTale Sans Fight(OS-T)</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/iLtNFz04suh"
+							>Vs.Frisk 第一版</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/1XUsCUlVvxor-S3a0FHl0Ew"
+							>Vs.Frisk 第二版(提取码:1145)</a
+						>由<a href="https://b23.tv/0FkSEVs">@幻 -_- 风</a>修改
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/iLTp2yzx0vi"
+							>Ink Sans Phase 3</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/itcZrz1c6mb"
+							>Siki Gerson Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/ipbOtyy3w0d"
+							>FDY UnderSwap Papyrus Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://yuhang233.lanzout.com/i9cZjyzcfri"
+							>Bulb Ink Sans Fight</a
+						>
+					</p>
+				</details>
+				<details>
+					<!--AX暗星233-->
+					<summary>
+						<img
+							src="assets/images/authors/ax.jpg"
+							width="80"
+							height="80"
+							title="AX暗星233" />由<a href="https://b23.tv/TkwY3TA">@AX暗星233</a
+						>制作的汉化项目
+					</summary>
+					<p>
+						<a target="_blank" href="https://wwoe.lanzouy.com/i9FyE0jsf5dg"
+							>Deltarune Chaser</a
+						>
+					</p>
+					<p>
+						Colossus!Fell (TC!Underfell) by AX暗星233、幻-_-风、年糕_yx
+						<a target="_blank" href="https://wwoe.lanzouy.com/ik3Ca0jw029i"
+							>windows</a
+						>
+						<a target="_blank" href="https://wwoe.lanzouy.com/inI7v0jw02fe"
+							>android(密码1876)</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://wwoe.lanzouy.com/iu7Sf0hio5rc"
+							>Deltarune十六夜战</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://wwp.lanzouy.com/iJtAF0dbphqd"
+							>Deltarune八云紫战</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://wwp.lanzouy.com/iBa8n0d9mdeh"
+							>Vs.Frisk 第三版</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://wwp.lanzouy.com/ivFF00d1o1za"
+							>Undertale True Genocide</a
+						>
+					</p>
+					<p>
+						<a
+							target="_blank"
+							href="https://www.mediafire.com/file/slafrrd1tf64m6m/bedlumpCN_v1.03.zip/file"
+							>UNDERTALE BedLump</a
+						>由 AX暗星 制作
+					</p>
+					<p>
+						<a target="_blank" href="https://wwp.lanzouy.com/ibiL1080kjib"
+							>Underverse Battles</a
+						>由 AX暗星，幻 -_- 风，憨憨羊の宇航鸽鸽 制作
+					</p>
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/1yQSmcskwtJTrqqyUuVs4Ow"
+							>Undertale Together</a
+						>提取码:gqkl
+					</p>
+					<p>
+						<a target="_blank" href="https://wwp.lanzouy.com/iezu80240qha"
+							>Deltarune Chapter 1 60FPS mod</a
+						>提取码:53dq
+					</p>
+					<br />
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/1ltgZLXv3-NrlTnKAm7ONuQ"
+							>Deltarune FUN MODE CHAOS EDITION</a
+						>提取码：smd5
+					</p>
+				</details>
+				<details>
+					<!--幻-_-风-->
+					<summary>
+						<img
+							src="assets/images/authors/hf.jpg"
+							width="80"
+							height="80"
+							title="幻-_-风" />由<a href="https://b23.tv/kypTiqW">@幻 -_- 风</a
+						>制作的汉化项目
+					</summary>
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/1tGb_53MYQJPWRMBZ3Rg5pQ"
+							>undertale revenge：the unseen ending繁体中文版</a
+						>
+						提取码：UTUE
+					</p>
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/1y-JjIzPY2E4qHFud9hiCDw"
+							>Horrorswap</a
+						>提取码：XDDD
+					</p>
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/1o3oxO9Zj0jq_Oby3vAKpdw"
+							>Othertale</a
+						>提取码:OTHE
+					</p>
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/1kCAvfdyi2BayD4M-KRsqNQ"
+							>QcCfF Underswap:Love Struck</a
+						>提取码:USUN 由@幻 -_- 风 @荷包蛋_official 制作
+					</p>
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/17jaCg31Y90L_uWZFWZzAAA"
+							>Underfell Asgore</a
+						>提取码:ASGO
+					</p>
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/1C-0AHJmMBqBerwvc9zoxGg"
+							>Uppertale</a
+						>提取码:RICK
+					</p>
+					<p>
+						<a target="_blank" href="https://pan.bilnn.com/s/Aq7OTD"
+							>Underswitch Undyne</a
+						>由：幻 -_- 风，憨憨羊の宇航鸽鸽 制作
+					</p>
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/1q45og51Tc_WmEz-Dn30YEg"
+							>Lvtale Papyrus</a
+						>
+						提取码：LOVE
+					</p>
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/1ETyira-VRqWgSX7RMhBsQw"
+							>Undertale:Revenge T.U.E</a
+						>提取码:KDTM
+					</p>
+				</details>
+				<details>
+					<!--荷包蛋-->
+					<summary>
+						<img
+							src="assets/images/authors/egger.jpg"
+							width="80"
+							height="80"
+							title="荷包蛋Official" />由<a href="https://b23.tv/PDZxFZ7"
+							>@荷包蛋_official</a
+						>制作的汉化项目
+					</summary>
+					<p>
+						<a target="_blank" href="https://egger233.lanzouy.com/iynB20kk9xtc"
+							>Hard mode sans fight remake by kosh</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://egger233.lanzouy.com/icE8p0fsed5g"
+							>TS！Underswap Fdy重置PTV改版ver.1</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://egger233.lanzouy.com/iCqqt0a2y6fi"
+							>Gren Snas Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://egger233.lanzouy.com/iI9G309lwjzc"
+							>SamsaraTale Sans</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://egger233.lanzouu.com/ioxYg057r0gb"
+							>Team Hardcore Dusttale Murder Sans Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://egger233.lanzouu.com/iGGDn04r9h8b"
+							>Undercure ZERO Papyrus Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://wwd.lanzouy.com/iFvYr0466mti"
+							>XMTX The New Chance</a
+						>
+					</p>
+				</details>
+				<details>
+					<!--Cxx_w-->
+					<summary>
+						<img
+							src="assets/images/authors/cxx.png"
+							width="80"
+							height="80"
+							title="Cxx_W" />由<a href="https://b23.tv/taTppEI">@Cxx_w</a
+						>制作的汉化项目
+					</summary>
+					<p>
+						<a target="_blank" href="https://edge.lanzouq.com/is9sC077jl5a"
+							>Edgetale Sans Hard Mode</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://nm.lanzouq.com/i88Cd02jztpg"
+							>Underdove NM Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://chinese.lanzouq.com/iYKydz9zjud"
+							>FDY Dusttale Murder Sans Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://chinese.lanzouq.com/icIz8z3xgna"
+							>FDY OLD Dusttrust phase 1</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://pan.baidu.com/s/1IjKJ_QdPSOoMb8Soow__0g"
+							>FDY OLD Dusttale phase 2</a
+						>提取码:cxxw
+					</p>
+					<p>
+						<a target="_blank" href="https://share.weiyun.com/rOlNGJxn"
+							>FDY OLD Dusttrust phase 3-4</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://chinese.lanzouq.com/iYW5uz3xm9c"
+							>FDY OLD Dusttrust phase 5</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://chinese.lanzouq.com/iGXMCyxc9mf"
+							>OS-T sans fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://chinese.lanzouq.com/iyK1myuicqf"
+							>TO!ISF 旧新版</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://chinese.lanzouq.com/iCzJiytqjkd"
+							>FDY Undertale Hard Mode Sans Fight</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://chineseversion.lanzouq.com/iSLYByj9ygh"
+							>UNDERTALE:Genocide Asgore</a
+						>
+					</p>
+				</details>
+				<details>
+					<!--年糕_yx-->
+					<summary>
+						<img
+							src="assets/images/authors/ng_yx.jpg"
+							width="80"
+							height="80"
+							title="年糕_yx" />由<a href="https://space.bilibili.com/1508403677"
+							>@年糕_yx</a
+						>制作的汉化项目
+					</summary>
+					<!--<p><a target="_blank" href="https://niangao-yx.lanzouo.com/iNhtf0js7xad">TeamColossus！Underfell</a></p>-->
+					<p>
+						Disbelief(官方版)
+						<a target="_blank" href="https://www.123pan.com/s/r3SSVv-PnrWd"
+							>Windows</a
+						>
+						<a target="_blank" href="https://www.123pan.com/s/r3SSVv-XnrWd"
+							>Android</a
+						>
+					</p>
+					<p>
+						<a target="_blank" href="https://niangao-yx.lanzouo.com/i7BCa0ikxsfa"
+							>NothingTale Sans Fight</a
+						>
+					</p>
+				</details>
 			</div>
-			<details>
-				<!--宇航_默语-->
-				<summary style="background-color: var(--c); color: var(--secondary-color)">
-					<img
-						src="assets/images/authors/yh.jpg"
-						width="80"
-						height="80"
-						align="middle"
-						title="憨憨羊の宇航鸽鸽" />
-					由<a href="https://b23.tv/rNuVZ02">@憨憨羊の宇航鸽鸽</a>制作的汉化项目
-				</summary>
-				<!--<a href="https://b23.tv/rNuVZ02">TA的Bilibili账号<br />-->
-				<p>
-					<a target="_blank" href="https://www.123pan.com/s/KPMSVv-JtPjv"
-						>渣渣新版SwapFell</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/ijtmc035y5mf"
-						>完整版Ink Sans Fight made by TeamOrigin</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/i9K6K011zi2d"
-						>PTV OS-T Sans Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/icRvl00pu1yb"
-						>Undertale King</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/ijxqq00ptyrg"
-						>Undertale Jevil</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/iv1x300oqr1e"
-						>Ink Sans Fight Phase 4</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/i4zOe00nmvna"
-						>HELP_tale Sans Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/iElsf00bj4je"
-						>PTV Hard Mode Sans Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/ifUPaz9u0gf"
-						>OMORITALE Basil Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/i69flz3w50f"
-						>REVENGE Papyrus Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/ix5ZOz3cikd"
-						>CLASSIC Dusttrust Sans Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/i17jsz2iv0b"
-						>B-TTale Sans Fight(OS-T)</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/iLtNFz04suh"
-						>Vs.Frisk 第一版</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/1XUsCUlVvxor-S3a0FHl0Ew"
-						>Vs.Frisk 第二版(提取码:1145)</a
-					>由<a href="https://b23.tv/0FkSEVs">@幻 -_- 风</a>修改
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/iLTp2yzx0vi"
-						>Ink Sans Phase 3</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/itcZrz1c6mb"
-						>Siki Gerson Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/ipbOtyy3w0d"
-						>FDY UnderSwap Papyrus Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://yuhang233.lanzout.com/i9cZjyzcfri"
-						>Bulb Ink Sans Fight</a
-					>
-				</p>
-			</details>
-		</div>
 
-		<div class="undertalefont">
-			<details>
-				<!--AX暗星233-->
-				<summary style="background-color: var(--c); color: var(--secondary-color)">
+			<div class="projects-section">
+				<h2>由团队制作的汉化项目</h2>
+				<p>
 					<img
-						src="assets/images/authors/ax.jpg"
-						width="80"
-						height="80"
-						align="middle"
-						title="AX暗星233" />由<a href="https://b23.tv/TkwY3TA">@AX暗星233</a
-					>制作的汉化项目
-				</summary>
-				<p>
-					<a target="_blank" href="https://wwoe.lanzouy.com/i9FyE0jsf5dg"
-						>Deltarune Chaser</a
-					>
+						src="assets/images/posters/utbnp.png"
+						title="Undertale: Bits and Pieces mod 标志(logo)"
+						width="50%" />
 				</p>
-				<p>
-					Colossus!Fell (TC!Underfell) by AX暗星233、幻-_-风、年糕_yx
-					<a target="_blank" href="https://wwoe.lanzouy.com/ik3Ca0jw029i">windows</a>
-					<a target="_blank" href="https://wwoe.lanzouy.com/inI7v0jw02fe"
-						>android(密码1876)</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://wwoe.lanzouy.com/iu7Sf0hio5rc"
-						>Deltarune十六夜战</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://wwp.lanzouy.com/iJtAF0dbphqd"
-						>Deltarune八云紫战</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://wwp.lanzouy.com/iBa8n0d9mdeh"
-						>Vs.Frisk 第三版</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://wwp.lanzouy.com/ivFF00d1o1za"
-						>Undertale True Genocide</a
-					>
-				</p>
-				<p>
-					<a
-						target="_blank"
-						href="https://www.mediafire.com/file/slafrrd1tf64m6m/bedlumpCN_v1.03.zip/file"
-						>UNDERTALE BedLump</a
-					>由 AX暗星 制作
-				</p>
-				<p>
-					<a target="_blank" href="https://wwp.lanzouy.com/ibiL1080kjib"
-						>Underverse Battles</a
-					>由 AX暗星，幻 -_- 风，憨憨羊の宇航鸽鸽 制作
-				</p>
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/1yQSmcskwtJTrqqyUuVs4Ow"
-						>Undertale Together</a
-					>提取码:gqkl
-				</p>
-				<p>
-					<a target="_blank" href="https://wwp.lanzouy.com/iezu80240qha"
-						>Deltarune Chapter 1 60FPS mod</a
-					>提取码:53dq
-				</p>
-				<br />
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/1ltgZLXv3-NrlTnKAm7ONuQ"
-						>Deltarune FUN MODE CHAOS EDITION</a
-					>提取码：smd5
-				</p>
-			</details>
-		</div>
-
-		<div class="undertalefont">
-			<details>
-				<!--幻-_-风-->
-				<summary style="background-color: var(--c); color: var(--secondary-color)">
-					<img
-						src="assets/images/authors/hf.jpg"
-						width="80"
-						height="80"
-						align="middle"
-						title="幻-_-风" />由<a href="https://b23.tv/kypTiqW">@幻 -_- 风</a
-					>制作的汉化项目
-				</summary>
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/1tGb_53MYQJPWRMBZ3Rg5pQ"
-						>undertale revenge：the unseen ending繁体中文版</a
-					>
-					提取码：UTUE
-				</p>
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/1y-JjIzPY2E4qHFud9hiCDw"
-						>Horrorswap</a
-					>提取码：XDDD
-				</p>
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/1o3oxO9Zj0jq_Oby3vAKpdw"
-						>Othertale</a
-					>提取码:OTHE
-				</p>
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/1kCAvfdyi2BayD4M-KRsqNQ"
-						>QcCfF Underswap:Love Struck</a
-					>提取码:USUN 由@幻 -_- 风 @荷包蛋_official 制作
-				</p>
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/17jaCg31Y90L_uWZFWZzAAA"
-						>Underfell Asgore</a
-					>提取码:ASGO
-				</p>
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/1C-0AHJmMBqBerwvc9zoxGg"
-						>Uppertale</a
-					>提取码:RICK
-				</p>
-				<p>
-					<a target="_blank" href="https://pan.bilnn.com/s/Aq7OTD"
-						>Underswitch Undyne</a
-					>由：幻 -_- 风，憨憨羊の宇航鸽鸽 制作
-				</p>
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/1q45og51Tc_WmEz-Dn30YEg"
-						>Lvtale Papyrus</a
-					>
-					提取码：LOVE
-				</p>
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/1ETyira-VRqWgSX7RMhBsQw"
-						>Undertale:Revenge T.U.E</a
-					>提取码:KDTM
-				</p>
-			</details>
-		</div>
-
-		<div class="undertalefont">
-			<details>
-				<!--荷包蛋-->
-				<summary style="background-color: var(--c); color: var(--secondary-color)">
-					<img
-						src="assets/images/authors/egger.jpg"
-						width="80"
-						height="80"
-						align="middle"
-						title="荷包蛋Official" />由<a href="https://b23.tv/PDZxFZ7"
-						>@荷包蛋_official</a
-					>制作的汉化项目
-				</summary>
-				<p>
-					<a target="_blank" href="https://egger233.lanzouy.com/iynB20kk9xtc"
-						>Hard mode sans fight remake by kosh</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://egger233.lanzouy.com/icE8p0fsed5g"
-						>TS！Underswap Fdy重置PTV改版ver.1</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://egger233.lanzouy.com/iCqqt0a2y6fi"
-						>Gren Snas Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://egger233.lanzouy.com/iI9G309lwjzc"
-						>SamsaraTale Sans</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://egger233.lanzouu.com/ioxYg057r0gb"
-						>Team Hardcore Dusttale Murder Sans Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://egger233.lanzouu.com/iGGDn04r9h8b"
-						>Undercure ZERO Papyrus Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://wwd.lanzouy.com/iFvYr0466mti"
-						>XMTX The New Chance</a
-					>
-				</p>
-			</details>
-		</div>
-
-		<div class="undertalefont">
-			<details>
-				<!--Cxx_w-->
-				<summary style="background-color: var(--c); color: var(--secondary-color)">
-					<img
-						src="assets/images/authors/cxxsb.bmp"
-						width="80"
-						height="80"
-						align="middle"
-						title="Cxx_W" />由<a href="https://b23.tv/taTppEI">@Cxx_w</a
-					>制作的汉化项目
-				</summary>
-				<p>
-					<a target="_blank" href="https://edge.lanzouq.com/is9sC077jl5a"
-						>Edgetale Sans Hard Mode</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://nm.lanzouq.com/i88Cd02jztpg"
-						>Underdove NM Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://chinese.lanzouq.com/iYKydz9zjud"
-						>FDY Dusttale Murder Sans Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://chinese.lanzouq.com/icIz8z3xgna"
-						>FDY OLD Dusttrust phase 1</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://pan.baidu.com/s/1IjKJ_QdPSOoMb8Soow__0g"
-						>FDY OLD Dusttale phase 2</a
-					>提取码:cxxw
-				</p>
-				<p>
-					<a target="_blank" href="https://share.weiyun.com/rOlNGJxn"
-						>FDY OLD Dusttrust phase 3-4</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://chinese.lanzouq.com/iYW5uz3xm9c"
-						>FDY OLD Dusttrust phase 5</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://chinese.lanzouq.com/iGXMCyxc9mf"
-						>OS-T sans fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://chinese.lanzouq.com/iyK1myuicqf"
-						>TO!ISF 旧新版</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://chinese.lanzouq.com/iCzJiytqjkd"
-						>FDY Undertale Hard Mode Sans Fight</a
-					>
-				</p>
-				<p>
-					<a target="_blank" href="https://chineseversion.lanzouq.com/iSLYByj9ygh"
-						>UNDERTALE:Genocide Asgore</a
-					>
-				</p>
-			</details>
-		</div>
-
-		<div class="undertalefont">
-			<details>
-				<!--年糕_yx-->
-				<summary style="background-color: var(--c); color: var(--secondary-color)">
-					<img
-						src="assets/images/authors/ng_yx.jpg"
-						width="80"
-						height="80"
-						align="middle"
-						title="年糕_yx" />由<a href="https://space.bilibili.com/1508403677"
-						>@年糕_yx</a
-					>制作的汉化项目
-				</summary>
-				<!--<p><a target="_blank" href="https://niangao-yx.lanzouo.com/iNhtf0js7xad">TeamColossus！Underfell</a></p>-->
-				<p>
-					Disbelief(官方版)
-					<a target="_blank" href="https://www.123pan.com/s/r3SSVv-PnrWd">Windows</a>
-					<a target="_blank" href="https://www.123pan.com/s/r3SSVv-XnrWd">Android</a>
-				</p>
-				<p>
-					<a target="_blank" href="https://niangao-yx.lanzouo.com/i7BCa0ikxsfa"
-						>NothingTale Sans Fight</a
-					>
-				</p>
-			</details>
-		</div>
-
-		<div class="undertalefont">
-			<div
-				style="
-					background-color: aqua;
-					color: black;
-					margin: 0 auto;
-					text-align: center;
-					max-width: 400px;
-					max-height: 60px;
-				">
-				由团队制作的汉化项目
-			</div>
-			<div style="text-align: center; max-width: 400px">
-				<img
-					src="assets/images/posters/utbnp.png"
-					height="144"
-					align="middle"
-					title="Undertale: Bits and Pieces mod 标志(logo)" />
 				<p>
 					<a
 						target="_blank"
@@ -547,203 +508,37 @@
 			</div>
 		</div>
 
-		<!-- 
-	<canvas id="画板id"></canvas>
-	<script>
-	    var 参数 = {
-	        画板载入: function (can) {
-	                var canvas = document.getElementById(can);
-	                canvas.width = document.body.offsetWidth;
-	                canvas.height = document.body.offsetHeight;
-	                canvas.style.backgroundColor = "rgb(255, 255, 255)";
-	                return canvas;
-	            },
-	            二D配置: function (canvas) {
-	                var cvs = canvas.getContext('2d');
-	                return cvs;
-	            },
-	            星星配置: function () {
-	                var 星图 = 绘图.星星("","","");
-	                var image = new Image();
-	                image.src = 星图;
-	                return image;
-	            },
-	            背景星图: function (画板返回, 星星, size) {
-	                var x = 画板返回.width,
-	                    y = 画板返回.height,
-	                    rgba;
-	                var eko = 备用画板(x, y);
-	                var context = eko[1],
-	                    canvas = eko[0];
-	                context.clearRect(0, 0, canvas.width, canvas.height);
-	                for (var i = 0; i < size; i++) {
-	                    var moadl = Math.random() * 9;
-	                    context.drawImage(星星, Math.random() * x, Math.random() * y, moadl, moadl);
-	                }
-	                canvas.parentNode.removeChild(canvas);
-	                var image = new Image();
-	                image.src = canvas.toDataURL("assets/images/authors/png");
-	                return image;
-	            },
-				文字:function(){
-					var eko = 备用画板(500, 500);
-					
-				}
-	    }
-	    var 绘图 = {
-	        星星: function (x, y, rgba) {
-	            var eko = 备用画板(x, y);
-	            var context = eko[1],
-	                civ = eko[0];
-	            context.clearRect(0, 0, civ.width, civ.height);
-	            var grd = context.createRadialGradient(civ.width / 2, civ.height / 2, 1, civ.width / 2, civ.height / 2, civ.width / 2);
-	            grd.addColorStop(0, 'rgba(231,223,174,0.5)');
-	            grd.addColorStop(1, 'rgba(231,223,174,0)');
-	            context.fillStyle = grd;
-	            context.fillRect(0, 0, civ.width, civ.height);
-	            context.moveTo(cos(0)[0], cos(0)[1]);
-	            context.lineTo(sin(0.78539815)[0], sin(0.78539815)[1]);
-	            context.lineTo(cos(1.5707963)[0], cos(1.5707963)[1]);
-	            context.lineTo(sin(2.35619445)[0], sin(2.35619445)[1]);
-	            context.lineTo(cos(3.1415926)[0], cos(3.1415926)[1]);
-	            context.lineTo(sin(0.78539815 + Math.PI)[0], sin(0.78539815 + Math.PI)[1]);
-	            context.lineTo(cos(1.5707963 + Math.PI)[0], cos(1.5707963 + Math.PI)[1]);
-	            context.lineTo(sin(2.35619445 + Math.PI)[0], sin(2.35619445 + Math.PI)[1]);
-	            context.lineTo(cos(3.1415926 + Math.PI)[0], cos(3.1415926 + Math.PI)[1]);
-	            context.fillStyle = rgba || "rgb(255, 249, 100)";
-	            context.fill();
-	            context.beginPath();
-	            civ.parentNode.removeChild(civ);
-	            return civ.toDataURL("assets/images/authors/png");
-	            function cos(cos) {
-	                return [Math.cos(cos) * (civ.width / 2) + civ.width / 2, Math.sin(cos) * (civ.height / 2) + civ.height / 2]
-	            }
-	 
-	            function sin(sin) {
-	                return [Math.cos(sin) * (civ.width / 2 / 3) + civ.width / 2, Math.sin(sin) * (civ.height / 2 / 3) + civ.height / 2]
-	            }
-	        }
-	    }
-	    var 备用画板 = function (x, y, rgba) {
-	        var civ = document.createElement("canvas");
-	        civ.width = x || document.body.offsetWidth / 100;
-	        civ.height = y || document.body.offsetWidth / 100;
-	        civ.id = "stpc";
-	        civ.style = "display:none; z-index:-9999";
-	        document.body.appendChild(civ);
-	        var canvas = document.getElementById("stpc");
-	        var context = canvas.getContext("2d");
-	        return [canvas, context];
-	    }
-	    var 修改 = {
-	        修改背景: function (canvas, color) {
-	            canvas.style.backgroundColor = color;
-	            return true;
-	        }
-	    }
-	    var 载入 = function (载入) {
-	        return new 载入();
-	    }
-	    载入(function () {
-	        var 画板返回 = 参数.画板载入("画板id");
-	        修改.修改背景(画板返回, "rgb(9, 11, 31)");
-	        var cvs = 参数.二D配置(画板返回);
-	        var 星星 = 参数.星星配置();
-	        var 星图 = 参数.背景星图(画板返回, 星星, 500);
-	        var cexiao = 画板返回.width;
-	        var cexiaox = 0;
-	        var nico = [];
-	        var maki = "";
-	        (function donghua() {
-	            cvs.clearRect(0, 0, 画板返回.width, 画板返回.height);
-	            cvs.drawImage(星图, 0, 0);
-	            var mrs = Math.random()*10+5;
-	            if (nico.length < 10) {
-	                var naive = new Naive(Math.random() * 画板返回.width * 2, -Math.random()*画板返回.height, mrs, mrs, Math.random() * 2 + 10,2.8,0,0);
-	                nico.push(naive);
-	            }
-	            for (i = 0; i < nico.length; i++) {
-	                maki = nico[i];
-	                var tty = maki.shan();
-	                if (tty[0]<-画板返回.width&&tty[1]>画板返回.height*2) {
-	                    nico.splice(i,1);
-	                }
-	            }
-	            requestAnimationFrame(donghua);
-	        })();
-	        function Naive(x, y, w, h, s,d,pi,hw,z) {
-	            this.x = x;
-	            this.y = y;
-	            this.w = w;
-	            this.h = h;
-	            this.s = s;
-				this.pi = pi;
-				this.d = d;
-				this.z = z;
-	            this.shan = function () {
-					this.dx = this.pi*Math.cos(this.d)+this.x;
-					this.dy = this.pi*Math.sin(this.d)+this.y;
-					cvs.beginPath();
-					cvs.moveTo(this.dx,this.dy);
-					cvs.lineTo(this.x,this.y);
-					cvs.lineWidth = 1;
-					this.lGrd = cvs.createLinearGradient(this.dx,this.dy,this.x,this.y);  
-					this.lGrd.addColorStop(0, '#4CAF50');  
-					this.lGrd.addColorStop(1, 'rgba(0,0,0,0)');  
-					cvs.strokeStyle = this.lGrd;  
-					cvs.stroke();
-					cvs.beginPath();
-	                cvs.drawImage(星星, this.dx-this.w/2, this.dy-this.h/2, this.w, this.h);
-	                this.pi +=50;
-					this.z += 0.1;
-	                return [this.dx,this.dy];
-	            }
-	 
-	        }
-	        window.onresize = function () {
-	            画板返回.width = window.innerWidth;
-	            画板返回.height = window.innerHeight;
-				星图 = 参数.背景星图(画板返回, 星星, 500);
-	        }
-	    });
-	</script>
-	-->
-		<footer
-			style="
-				background-color: #6b6b6b;
-				padding: 20px;
-				line-height: 90%;
-				text-align: center;
-			">
-			网站创始者：Cxx | 网站贡献者：Cxx、暗星、宇航 | 摸鱼的：宇航
+		<footer>
+			<div class="footer-1">
+				网站创始者：Cxx | 网站贡献者：Cxx、暗星、宇航 | 摸鱼的：宇航
+			</div>
+			<div class="end">
+				<dd>
+					<li>友情链接</li>
+					<li>
+						<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=hqIxhHHx"
+							>Undertale: Bits and Pieces交流群</a
+						>
+					</li>
+					<li>
+						<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=PPmsM9gU"
+							>Facing Demons官方中文交流群</a
+						>
+					</li>
+					<li>
+						<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=voIlslSg"
+							>UT同人汉化讨论群</a
+						>
+					</li>
+					<li>
+						<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=YBumZ2Xs"
+							>Cxxの交♂流群</a
+						>
+					</li>
+				</dd>
+			</div>
+			<div>最后更改于：{{ site.time | date: "%Y/%m/%d" }}</div>
 		</footer>
-		<div class="end">
-			<dd>
-				<li>友情链接</li>
-				<li>
-					<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=hqIxhHHx"
-						>Undertale: Bits and Pieces交流群</a
-					>
-				</li>
-				<li>
-					<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=PPmsM9gU"
-						>Facing Demons官方中文交流群</a
-					>
-				</li>
-				<li>
-					<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=voIlslSg"
-						>UT同人汉化讨论群</a
-					>
-				</li>
-				<li>
-					<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=YBumZ2Xs"
-						>Cxxの交♂流群</a
-					>
-				</li>
-			</dd>
-		</div>
-		<br />
-		<p align="center">最后更改于：{{ site.time | date: "%Y/%m/%d" }}</p>
 		<!--由AX暗星233进行网站设置（草，这什么鬼注释，删了删了（不））-->
 		<!--43E341FAEC313193CB0C179157C910B925F2028A246526263B24FBBF48274D9E-->
 	</body>

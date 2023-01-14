@@ -1,69 +1,90 @@
-* {
-	-webkit-font-smoothing: none;
-	-moz-osx-font-smoothing: none;
-	margin: auto;
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-moz-tab-size: 4;
+	tab-size: 4;
 }
 body {
 	width: 100%;
 	height: 100%;
+	margin: 0;
 	background-color: var(--primary-color);
 	font-size: var(--secondary-font-size);
 	color: var(--secondary-color);
-	/*text-shadow: 1px 1px 0px gray;*/
+	font-family: var(--system-fonts);
 }
 @font-face {
 	font-family: undertalefont;
 	src: url(undertalefont.ttf);
 }
-.undertalefont {
-	font-family: undertalefont;
-	font-size: var(--main-font-size);
-	text-align: left;
-	/*border: 5px;
-		border-color: white;
-		border-style: solid;*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header .fake-2nd-heading {
+	text-align: center;
+	font-weight: normal;
+	margin: 10px;
 }
-p {
-	background-color: var(--primary-color);
+h2,
+header .fake-2nd-heading {
+	font-size: var(--secondary-heading-font-size);
+	color: var(--secondary-color);
+}
+.projects-section > h2 {
+	font-size: var(--secondary-font-size);
+	background-color: aqua;
+	color: black;
+	padding: 10px 20px;
+	width: fit-content;
+	margin: 10px auto;
+}
+header,
+body #main-content {
+	font-family: undertalefont;
+	-webkit-font-smoothing: none;
+	-moz-osx-font-smoothing: none;
+}
+body #main-content {
+	font-size: var(--main-font-size);
 }
 a {
 	color: var(--link);
 	text-decoration: none;
 }
-div {
-	padding: 10px;
-	margin: auto;
-	background-color: var(--primary-color);
+a:hover {
+	text-decoration: underline;
 }
-header {
-	font-family: undertalefont;
+header .title {
 	font-size: var(--main-heading-font-size);
 	background-color: grey;
 	color: white;
-	margin: 10px;
 	padding: 10px;
+	margin: 10px;
 }
-header span {
+header .title span {
 	text-align: center;
 	display: block;
 }
-canvas {
-	margin-right: 0 auto;
-	padding: 0 auto;
-	width: 1308px;
-}
-/*设置图片属性*/
-button {
+/*设置色调切换按钮属性*/
+header button#change-accent {
 	margin: 0;
 	padding: 0;
-}
-button#change-accent {
 	background: transparent;
-    border: 0;
+	border: 0;
 	width: calc(var(--main-font-size) * 1.5);
 	float: right;
+	display: inline;
 }
-button#change-accent img {
+header button#change-accent img {
 	width: 100%;
 }
 /*设置深色模式属性*/
@@ -77,6 +98,8 @@ button#change-accent img {
 	--secondary-font-size: 18px;
 	--main-heading-font-size: 30px;
 	--secondary-heading-font-size: 24px;
+	--system-fonts: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji";
 }
 @media screen and (max-width: 720px) {
 	:root {
@@ -93,38 +116,30 @@ button#change-accent img {
 	--link: rgb(0, 162, 255);
 	--end-color: rgb(54, 54, 54);
 }
-summary {
-	margin: 10px;
-	list-style-type: none;
-}
-summary:before {
-	content: "* ";
-}
-summary > img {
-	display: inline-block;
-}
-details > p {
+.projects-section {
 	text-align: center;
+}
+.projects-section summary {
+	list-style-type: none;
+	background-color: var(--c);
+	color: var(--secondary-color);
+	margin: 10px;
+	text-align: left;
 }
 /* 时钟效果样式 */
 .clock {
 	/* 禁止文本被拉取 */
 	user-select: none;
-	/* width: 200px; */
 	background-color: black;
 	text-align: center;
 	border-style: solid;
 	border-radius: 10px;
 	border-color: white;
 	border-width: 5px;
-	max-width: 320px;
-	max-height: 60px;
-	margin: auto;
+	padding: 10px 20px;
+	margin: 0 auto;
+	max-width: fit-content;
 	box-shadow: 1px 1px 5px white, -1px -1px 5px white;
-}
-.clock span {
-	text-align: center;
-	font-family: undertalefont;
 	font-size: var(--main-font-size);
 	color: white;
 	/* 文字阴影 实现3D效果 */
@@ -134,10 +149,20 @@ details > p {
 		0 9px 9px rgba(140, 140, 140, 0.3), 0 12px 12px rgba(160, 160, 160, 0.3),
 		0 15px 15px rgba(180, 180, 180, 0.3);
 }
-.end {
+footer {
+	text-align: center;
+}
+footer div {
+	padding: 20px;
+}
+footer div.footer-1 {
+	background-color: #6b6b6b;
+	line-height: 90%;
+}
+footer div.end {
 	background-color: var(--end-color);
 }
-dd > li {
+footer div.end dd {
 	list-style-type: none;
-	text-align: center;
+	margin: auto;
 }
