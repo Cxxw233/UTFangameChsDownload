@@ -5,7 +5,6 @@ plugins:
  - jekyll-default-layout
  - jekyll-include-cache
  - jekyll-optional-front-matter
- - jekyll-paginate-v2
  - jekyll-relative-links
  - jekyll-feed
  - jekyll-sitemap
