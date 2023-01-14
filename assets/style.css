@@ -14,10 +14,13 @@ body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
+	padding: 0;
 	background-color: var(--primary-color);
-	font-size: var(--secondary-font-size);
+	font-size: var(--main-font-size);
 	color: var(--secondary-color);
-	font-family: var(--system-fonts);
+	font-family: undertalefont;
+	-webkit-font-smoothing: none;
+	-moz-osx-font-smoothing: none;
 }
 @font-face {
 	font-family: undertalefont;
@@ -29,32 +32,37 @@ h3,
 h4,
 h5,
 h6,
-header .fake-2nd-heading {
+header .fake-2nd-heading,
+header .fake-3rd-heading {
 	text-align: center;
 	font-weight: normal;
 	margin: 10px;
 }
 h2,
-header .fake-2nd-heading {
-	font-size: var(--secondary-heading-font-size);
+h3,
+h4,
+h5,
+h6 {
 	color: var(--secondary-color);
 }
+header .fake-2nd-heading {
+	font-size: var(--secondary-heading-font-size);
+}
+header .fake-3rd-heading {
+	font-size: var(--thirdary-heading-font-size);
+}
+header .fake-3rd-heading > p,
+header .fake-3rd-heading > br,
+footer .footer-1 > p {
+	margin: 0 auto;
+}
 .projects-section > h2 {
-	font-size: var(--secondary-font-size);
+	font-size: var(--main-font-size);
 	background-color: aqua;
 	color: black;
 	padding: 10px 20px;
 	width: fit-content;
 	margin: 10px auto;
-}
-header,
-body #main-content {
-	font-family: undertalefont;
-	-webkit-font-smoothing: none;
-	-moz-osx-font-smoothing: none;
-}
-body #main-content {
-	font-size: var(--main-font-size);
 }
 a {
 	color: var(--link);
@@ -63,28 +71,37 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-header .title {
+header .header-title {
 	font-size: var(--main-heading-font-size);
 	background-color: grey;
 	color: white;
 	padding: 10px;
 	margin: 10px;
 }
-header .title span {
+header .header-title span {
 	text-align: center;
 	display: block;
 }
-/*设置色调切换按钮属性*/
-header button#change-accent {
-	margin: 0;
-	padding: 0;
-	background: transparent;
-	border: 0;
-	width: calc(var(--main-font-size) * 1.5);
-	float: right;
+/*设置按钮属性*/
+header .buttons {
 	display: inline;
 }
-header button#change-accent img {
+header .buttons * {
+	margin: 0;
+	padding: 0;
+	width: 30px;
+}
+header .buttons #github {
+	float: left;
+}
+header .buttons #change-accent {
+	float: right;
+}
+header .buttons button {
+	background: transparent;
+	border: 0;
+}
+header .buttons button#change-accent > img {
 	width: 100%;
 }
 /*设置深色模式属性*/
@@ -95,16 +112,14 @@ header button#change-accent img {
 	--link: rgb(0, 17, 255); /*链接颜色*/
 	--end-color: rgb(167, 167, 167); /*友情链接颜色*/
 	--main-font-size: 20px;
-	--secondary-font-size: 18px;
+	--thirdary-heading-font-size: 18px;
 	--main-heading-font-size: 30px;
 	--secondary-heading-font-size: 24px;
-	--system-fonts: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-		"Apple Color Emoji", "Segoe UI Emoji";
 }
 @media screen and (max-width: 720px) {
 	:root {
 		--main-font-size: 18px;
-		--secondary-font-size: 16px;
+		--thirdary-heading-font-size: 16px;
 		--main-heading-font-size: 24px;
 		--secondary-heading-font-size: 20px;
 	}
@@ -152,17 +167,71 @@ header button#change-accent img {
 footer {
 	text-align: center;
 }
+footer #dog {
+	padding: auto;
+	position: relative;
+	margin: auto;
+	top: -18px;
+}
+footer #dog > img {
+	float: right;
+}
 footer div {
 	padding: 20px;
 }
 footer div.footer-1 {
 	background-color: #6b6b6b;
-	line-height: 90%;
 }
-footer div.end {
+footer div.end > dd {
 	background-color: var(--end-color);
-}
-footer div.end dd {
 	list-style-type: none;
 	margin: auto;
+	padding: 5px 0;
+}
+
+/*选项卡样式*/
+.label {
+	margin: 10px;
+}
+.title {
+	display: flex;
+	box-shadow: 5px 5px 20px #333333;
+	user-select: none;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+	height: auto;
+	float: center;
+}
+.title li {
+	flex: 1;
+	padding: 10px 5px;
+	text-align: center;
+	list-style-type: none;
+	min-width: 25vw;
+	width: fit-content;
+	border-top: 5px solid transparent;
+	word-wrap: break-word;
+}
+.title li.active {
+	background-color: var(--primary-color);
+	border-color: blue;
+}
+.label-table-content {
+	padding: 0;
+	margin: 0;
+}
+.label-table-content .label-table-content-hidden {
+	display: none;
+}
+.label-table-content p {
+	padding: 0 1.5em;
+}
+.label-table-content > li {
+	display: block;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+	box-shadow: 5px 5px 20px #333333;
+	padding: 5px 0;
+	list-style-type: none;
 }
