@@ -1,5 +1,4 @@
 name: "UNDERTALE同人游戏汉化下载站"
-name_alt: "UNDERTALE汉化下崽站"
 
 plugins:
  - jekyll-default-layout

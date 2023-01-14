@@ -167,6 +167,15 @@ header .buttons button#change-accent > img {
 footer {
 	text-align: center;
 }
+footer #dog {
+	padding: auto;
+	position: relative;
+	margin: auto;
+	top: -18px;
+}
+footer #dog > img {
+	float: right;
+}
 footer div {
 	padding: 20px;
 }
