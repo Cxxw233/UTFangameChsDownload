@@ -5,5 +5,3 @@ plugins:
  - jekyll-include-cache
  - jekyll-optional-front-matter
  - jekyll-relative-links
- - jekyll-feed
- - jekyll-sitemap
