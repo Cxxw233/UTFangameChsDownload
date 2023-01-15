@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+{%- capture table1 -%} fart<!--||-->fart {%- endcapture -%} {%- capture table2
+-%} fart<!--||-->{%- include gen_table.liquid.html content=table1 -%}<!--//-->
+fart<!--||-->{%- include gen_table.liquid.html content=table1 -%} {%- endcapture
+-%} {%- include gen_table.liquid.html content=table2 -%}

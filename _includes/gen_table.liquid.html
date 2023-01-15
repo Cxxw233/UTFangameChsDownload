@@ -1,0 +1,16 @@
+{%- assign sep_namevalue = "<!--||-->" -%} {%- assign sep_tab = "<!--//-->" -%}
+{%- assign content_tabs = include.content | split: sep_tab -%}
+<div class="label">
+	<ul class="title">
+		{%- for tab in content_tabs %}
+		<li {%- if forloop.first %} class="active" {% endif %}>
+			{{ tab | split: sep_namevalue | slice: 0 }}
+		</li>
+		{% endfor -%}
+	</ul>
+	<ul class="label-table-content">
+		{%- for tab in content_tabs %}
+		<li>{{ tab | split: sep_namevalue | slice: 1 }}</li>
+		{% endfor -%}
+	</ul>
+</div>
