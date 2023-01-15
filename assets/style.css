@@ -164,10 +164,10 @@ footer div.end > dd {
 }
 
 /*选项卡样式*/
-.label {
+.tabbed-table {
 	margin: 10px;
 }
-.title {
+.tabbed-table-title {
 	display: flex;
 	box-shadow: 5px 5px 20px #333333;
 	user-select: none;
@@ -177,7 +177,7 @@ footer div.end > dd {
 	height: auto;
 	float: center;
 }
-.title li {
+.tabbed-table-title li {
 	flex: 1;
 	padding: 10px 5px;
 	text-align: center;
@@ -187,21 +187,21 @@ footer div.end > dd {
 	border-top: 5px solid transparent;
 	word-wrap: break-word;
 }
-.title li.active {
+.tabbed-table-title li.tabbed-table-title-active {
 	background-color: var(--primary-color);
 	border-color: blue;
 }
-.label-table-content {
+.tabbed-table-content {
 	padding: 0;
 	margin: 0;
 }
-.label-table-content .label-table-content-hidden {
+.tabbed-table-content .tabbed-table-content-hidden {
 	display: none;
 }
-.label-table-content p {
+.tabbed-table-content p {
 	padding: 0 1.5em;
 }
-.label-table-content > li {
+.tabbed-table-content > li {
 	display: block;
 	color: var(--secondary-color);
 	background-color: var(--primary-color);

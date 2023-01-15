@@ -1,5 +1,5 @@
-let title = document.querySelectorAll("div.label > ul.title");
-let content = document.querySelectorAll("div.label > ul.label-table-content");
+let title = document.querySelectorAll("div.tabbed-table > ul.tabbed-table-title");
+let content = document.querySelectorAll("div.tabbed-table > ul.tabbed-table-content");
 for (let tabi = 0; tabi < title.length; tabi++) {
 	let titleelem = title[tabi];
 	let titlelist = titleelem.children;
@@ -10,12 +10,12 @@ for (let tabi = 0; tabi < title.length; tabi++) {
 	}
 	function activateTab(i) {
 		let active = titleelem.getElementsByClassName("active");
-		if (active.length > 0) active[0].classList.remove("active");
-		titlelist[i].classList.add("active");
+		if (active.length > 0) active[0].classList.remove("tabbed-table-title-active");
+		titlelist[i].classList.add("tabbed-table-title-active");
 		for (let j = 0; j < contentlist.length; j++) {
-			contentlist[j].classList.add("label-table-content-hidden");
+			contentlist[j].classList.add("tabbed-table-content-hidden");
 		}
-		contentlist[i].classList.remove("label-table-content-hidden");
+		contentlist[i].classList.remove("tabbed-table-content-hidden");
 	}
 	activateTab(0);
 	for (let i = 0; i < titlelist.length; i++) {
