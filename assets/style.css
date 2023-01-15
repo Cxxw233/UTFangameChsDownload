@@ -139,6 +139,7 @@ header .buttons button#change-accent > img {
 }
 footer {
 	text-align: center;
+	margin: auto;
 }
 footer #dog {
 	padding: auto;
@@ -154,12 +155,12 @@ footer div {
 }
 footer div.footer-1 {
 	background-color: #6b6b6b;
+	margin: 0 20px;
 }
 footer div.end > dd {
 	background-color: var(--end-color);
 	list-style-type: none;
 	margin: auto;
-	padding: 5px 0;
 }
 
 /*选项卡样式*/
