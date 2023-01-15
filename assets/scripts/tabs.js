@@ -10,8 +10,7 @@ for (let tabi = 0; tabi < title.length; tabi++) {
 	}
 	function activateTab(i) {
 		let active = titleelem.getElementsByClassName("active");
-		if (active.length > 0)
-			active[0].classList.remove("active");
+		if (active.length > 0) active[0].classList.remove("active");
 		titlelist[i].classList.add("active");
 		for (let j = 0; j < contentlist.length; j++) {
 			contentlist[j].classList.add("label-table-content-hidden");

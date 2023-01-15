@@ -2,29 +2,22 @@
 layout: home
 ---
 
-{%- capture personal_projects_table_data -%}
-憨憨羊の宇航鸽鸽<!--||-->{% include display_items/personal/yh %}<!--//-->
+{%- capture personal_projects_table_data -%} 憨憨羊の宇航鸽鸽<!--||-->{% include
+display_items/personal/yh %}<!--//-->
 AX暗星233<!--||-->{% include display_items/personal/ax %}<!--//-->
 Cxx_w<!--||-->{% include display_items/personal/cxx %}<!--//-->
 幻-_-风<!--||-->{% include display_items/personal/hf %}<!--//-->
 荷包蛋_official<!--||-->{% include display_items/personal/egger %}<!--//-->
-年糕_yx<!--||-->{% include display_items/personal/ng_yx %}
-{%- endcapture -%}
-{%- capture personal_projects_table -%}
-{% include _includes/gen_table.liquid.html content=personal_projects_table_data %}
-{%- endcapture -%}
-
-{%- capture team_projects_table_data -%}
-Undertale: Bits And Pieces官方授权简中本地化组<!--||-->{% include display_items/team/bnp %}<!--//-->
+年糕_yx<!--||-->{% include display_items/personal/ng_yx %} {%- endcapture -%}
+{%- capture personal_projects_table -%} {% include
+_includes/gen_table.liquid.html content=personal_projects_table_data %} {%-
+endcapture -%} {%- capture team_projects_table_data -%} Undertale: Bits And
+Pieces官方授权简中本地化组<!--||-->{% include display_items/team/bnp %}<!--//-->
 TS! Underswap官方简中本地化组<!--||-->{% include display_items/team/tsus %}<!--//-->
-Facing Demons官方简中本地化组<!--||-->{% include display_items/team/fd %}
-{%- endcapture -%}
-{%- capture team_projects_table -%}
-{% include _includes/gen_table.liquid.html content=team_projects_table_data %}
-{%- endcapture -%}
-
-{%- capture main_table_data -%}
-个人项目<!--||-->{{ personal_projects_table }}<!--//-->
-团队项目<!--||-->{{ team_projects_table }}
-{%- endcapture -%}
-{%- include _includes/gen_table.liquid.html content=main_table_data -%}
+Facing Demons官方简中本地化组<!--||-->{% include display_items/team/fd %} {%-
+endcapture -%} {%- capture team_projects_table -%} {% include
+_includes/gen_table.liquid.html content=team_projects_table_data %} {%-
+endcapture -%} {%- capture main_table_data -%} 个人项目<!--||-->{{
+personal_projects_table }}<!--//-->
+团队项目<!--||-->{{ team_projects_table }} {%- endcapture -%} {%- include
+_includes/gen_table.liquid.html content=main_table_data -%}
