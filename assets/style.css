@@ -56,14 +56,6 @@ header .fake-3rd-heading > br,
 footer .footer-1 > p {
 	margin: 0 auto;
 }
-.projects-section > h2 {
-	font-size: var(--main-font-size);
-	background-color: aqua;
-	color: black;
-	padding: 10px 20px;
-	width: fit-content;
-	margin: 10px auto;
-}
 a {
 	color: var(--link);
 	text-decoration: none;
@@ -116,30 +108,12 @@ header .buttons button#change-accent > img {
 	--main-heading-font-size: 30px;
 	--secondary-heading-font-size: 24px;
 }
-@media screen and (max-width: 720px) {
-	:root {
-		--main-font-size: 18px;
-		--thirdary-heading-font-size: 16px;
-		--main-heading-font-size: 24px;
-		--secondary-heading-font-size: 20px;
-	}
-}
 .dark-theme {
 	--primary-color: rgb(27, 27, 27);
 	--secondary-color: white;
 	--c: rgb(48, 48, 48);
 	--link: rgb(0, 162, 255);
 	--end-color: rgb(54, 54, 54);
-}
-.projects-section {
-	text-align: center;
-}
-.projects-section summary {
-	list-style-type: none;
-	background-color: var(--c);
-	color: var(--secondary-color);
-	margin: 10px;
-	text-align: left;
 }
 /* 时钟效果样式 */
 .clock {
@@ -151,7 +125,7 @@ header .buttons button#change-accent > img {
 	border-radius: 10px;
 	border-color: white;
 	border-width: 5px;
-	padding: 10px 20px;
+	padding: 10px 15px;
 	margin: 0 auto;
 	max-width: fit-content;
 	box-shadow: 1px 1px 5px white, -1px -1px 5px white;
