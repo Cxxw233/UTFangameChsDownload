@@ -103,10 +103,10 @@ header .buttons button#change-accent > img {
 	--c: rgb(207, 207, 207); /*头像栏颜色*/
 	--link: rgb(0, 17, 255); /*链接颜色*/
 	--end-color: rgb(167, 167, 167); /*友情链接颜色*/
-	--main-font-size: 20px;
-	--main-heading-font-size: 30px;
+	--main-font-size: 18px;
+	--main-heading-font-size: 28px;
 	--secondary-heading-font-size: 24px;
-	--thirdary-heading-font-size: 18px;
+	--thirdary-heading-font-size: 20px;
 }
 .dark-theme {
 	--primary-color: rgb(27, 27, 27);
