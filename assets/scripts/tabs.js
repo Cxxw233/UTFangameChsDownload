@@ -9,6 +9,10 @@ for (let tabi = 0; tabi < title.length; tabi++) {
 		continue;
 	}
 	function activateTab(i) {
+		let active = titleelem.getElementsByClassName("active");
+		if (active.length > 0)
+			active[0].classList.remove("active");
+		titlelist[i].classList.add("active");
 		for (let j = 0; j < contentlist.length; j++) {
 			contentlist[j].classList.add("label-table-content-hidden");
 		}
@@ -16,11 +20,7 @@ for (let tabi = 0; tabi < title.length; tabi++) {
 	}
 	activateTab(0);
 	for (let i = 0; i < titlelist.length; i++) {
-		let item = titlelist[i];
-		item.addEventListener("click", () => {
-			let active = titleelem.getElementsByClassName("active")[0];
-			active.classList.remove("active");
-			item.classList.add("active");
+		titlelist[i].addEventListener("click", () => {
 			activateTab(i);
 		});
 	}

@@ -3,7 +3,7 @@
 <div class="label">
 	<ul class="title">
 		{%- for tab in content_tabs %}
-		<li {%- if forloop.first %} class="active" {% endif %}>
+		<li>
 			{{ tab | split: sep_namevalue | slice: 0 }}
 		</li>
 		{% endfor -%}
