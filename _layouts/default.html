@@ -4,19 +4,15 @@
 <!DOCTYPE html>
 <html lang="zh_CN">
 	<head>
-	  {% include head.html %}
+		{% include head.html %}
 	</head>
 
 	<body>
 		<!-- FBI OPEN THE DOOR -->
-    {% include header.html %}
+		{% include header.html %}
 
-		<div id="main-content">
-		  {{ content }}
-		</div>
+		<div id="main-content">{{ content }}</div>
 
-    {% include footer.html %}
-		
-		{% include scripts_end_of_body.html %}
+		{% include footer.html %} {% include scripts_end_of_body.html %}
 	</body>
 </html>
