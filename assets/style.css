@@ -104,9 +104,9 @@ header .buttons button#change-accent > img {
 	--link: rgb(0, 17, 255); /*链接颜色*/
 	--end-color: rgb(167, 167, 167); /*友情链接颜色*/
 	--main-font-size: 20px;
-	--thirdary-heading-font-size: 18px;
 	--main-heading-font-size: 30px;
 	--secondary-heading-font-size: 24px;
+	--thirdary-heading-font-size: 18px;
 }
 .dark-theme {
 	--primary-color: rgb(27, 27, 27);
