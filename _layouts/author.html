@@ -1,7 +1,4 @@
 ---
 ---
 
-{%- assign tls = site.translations | find_exp: "authors", "authors contains page.slug" -%}
-{%- assign page.tls_count = tls | size -%}
-
-{% include author.html author=page %}
+{%- include author.html author=page -%}

@@ -1,0 +1,35 @@
+---
+---
+
+<p>
+{%- assign main_file = page.links[0] -%}
+
+{%- comment -%} WTF?? {%- endcomment -%}
+{%- if main_file -%}{%- unless main_file.name -%}
+{%- assign has_main_file = true -%}
+{%- endunless -%}{%- endif -%}
+
+{%- if has_main_file -%}
+{%- include tl_file.html file=main_file -%}
+{%- else -%}
+{{ page.title }}
+{%- endif -%}
+
+{%- assign other_files = page.links -%}
+{%- if has_main_file -%}
+{%- assign other_files = page.links | slice: 1 -%}
+{%- endif -%}
+{%- for file in other_files %}
+{% include tl_file.html file=file %}
+{%- endfor -%}
+
+{%- assign authors_num = page.authors | size -%}
+{%- if authors_num > 1 %}
+由 {% for author in page.authors -%}
+{%- assign author_profile = site.authors
+	| find: "slug", author -%}
+{{ author_profile.title }}
+{%- unless forloop.last -%}，{%- endunless -%}
+{%- endfor %} 制作
+{%- endif -%}
+</p>

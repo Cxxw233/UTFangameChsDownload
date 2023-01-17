@@ -11,17 +11,15 @@ plugins:
  - jekyll-relative-links
 
 collections:
+  translations:
+    # 汉化作品
+    # 作者页面的每行
+
+    output: true
   authors:
     # 汉化作者
     # 本合集内页面的代号可以用于 translation
     # 合集里的页面来注明汉化作者
-
-    output: false
-    sort_by: tls_count
-
-  translations:
-    # 汉化作品
-    # 作者页面的每行
 
     output: false
 
