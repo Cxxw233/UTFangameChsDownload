@@ -16,6 +16,7 @@ collections:
     # 作者页面的每行
 
     output: true
+
   authors:
     # 汉化作者
     # 本合集内页面的代号可以用于 translation
@@ -76,3 +77,6 @@ jekyll_compose:
           passcode: ""
           # 可以放“压缩包提取码”之类的东西
           notes: ""
+
+  # 为什么必须要在这里设置这个选项？？
+  auto_open: true

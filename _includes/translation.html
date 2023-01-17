@@ -1,0 +1,33 @@
+<p>
+{%- assign main_file = include.page.links[0] -%}
+
+{%- comment -%} WTF?? {%- endcomment -%}
+{%- assign has_main_file = nil -%}
+{%- if main_file -%}{%- unless main_file.name -%}
+{%- assign has_main_file = true -%}
+{%- endunless -%}{%- endif -%}
+
+{%- if has_main_file -%}
+{%- include tl_file.html file=main_file name_default=include.page.title -%}
+{%- else -%}
+{{ include.page.title }}
+{%- endif -%}
+
+{%- assign other_files = include.page.links -%}
+{%- if has_main_file -%}
+{%- assign other_files = include.page.links | slice: 1 -%}
+{%- endif -%}
+{%- for file in other_files %}
+{% include tl_file.html file=file %}
+{%- endfor -%}
+
+{%- assign authors_num = include.page.authors | size -%}
+{%- if authors_num > 1 %}
+由 {% for author in include.page.authors -%}
+{%- assign author_profile = site.authors | find: "slug", author -%}
+{{ author_profile.title }}
+{%- unless forloop.last -%}，{%- endunless -%}
+{%- endfor %} 制作
+{%- endif -%}
+</p>
+{{ include.page.content | markdownify }}
