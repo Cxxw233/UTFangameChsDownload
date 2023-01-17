@@ -31,7 +31,11 @@ defaults:
       path: "_authors"
     values:
       layout: "author"
-      # category: "authors"
+  -
+    scope:
+      path: "_translations"
+    values:
+      layout: "translation"
 
 # 便于用 jekyll compose 自动生成页面
 # $ bundle exec jekyll compose -c xxx yyy
@@ -55,3 +59,22 @@ jekyll_compose:
 
       # 文章内容：显示在页面下方
       # 建议填入团队成员
+    
+    translations:
+      # 完全用不到的东西
+      layout: "请删除本行"
+      date: "请删除本行"
+
+      title: ""
+      # 汉化作者
+      authors:
+        - ""
+      links:
+        -
+          # 如果只有一个文件则不需要 name
+          name: ""
+          url: ""
+          # 网盘提取码
+          passcode: ""
+          # 可以放“压缩包提取码”之类的东西
+          notes: ""
