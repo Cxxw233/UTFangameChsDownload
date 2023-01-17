@@ -9,3 +9,44 @@ plugins:
  - jekyll-include-cache
  - jekyll-optional-front-matter
  - jekyll-relative-links
+
+collections:
+  authors:
+    # 已知的汉化作者
+    # 本合集内页面的代号可以用于 translation
+    # 合集里的页面来注明汉化作者
+
+    # TODO: 考虑为各位作者单独渲染页面
+    output: false
+    # sort_by: works_num
+
+defaults:
+  -
+    scope:
+      path: "_authors"
+    values:
+      layout: "author"
+      # category: "authors"
+
+# 便于用 jekyll compose 自动生成页面
+# $ bundle exec jekyll compose -c xxx yyy
+# （倒也不怎么方便）
+# 同时也可以当作文档
+jekyll_compose:
+  default_front_matter:
+    authors:
+      # 完全用不到的东西
+      layout: "请删除本行"
+      date: "请删除本行"
+
+      # 作者的显示名称
+      title: ""
+      # 如果为真（不为空），则作者为团队
+      team: ""
+      # 作者的头像（对团队暂时无效）
+      image: "xxx.jpg"
+      # 作者的主页（对团队无效）
+      homepage: "https://space.bilibili.com/xxx"
+
+      # 文章内容：显示在页面下方
+      # 建议填入团队成员

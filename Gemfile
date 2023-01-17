@@ -16,6 +16,8 @@ group :jekyll_plugins do
   gem "jekyll-optional-front-matter", "~> 0.3.2"
   gem "jekyll-relative-links", "~> 0.6.1"
   gem "jekyll-paginate-v2", "~> 3.0.0"
+
+  gem "jekyll-compose", "~> 0.12.0"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
