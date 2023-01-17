@@ -12,13 +12,18 @@ plugins:
 
 collections:
   authors:
-    # 已知的汉化作者
+    # 汉化作者
     # 本合集内页面的代号可以用于 translation
     # 合集里的页面来注明汉化作者
 
-    # TODO: 考虑为各位作者单独渲染页面
     output: false
-    # sort_by: works_num
+    sort_by: tls_count
+
+  translations:
+    # 汉化作品
+    # 作者页面的每行
+
+    output: false
 
 defaults:
   -

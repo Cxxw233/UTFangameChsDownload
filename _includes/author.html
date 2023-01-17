@@ -1,0 +1,10 @@
+{%- assign tls = site.translations | find_exp: "author", "item contains include.author.title" -%}
+
+<p>
+	<img src="{{ '/assets/images/authors/' | append: include.author.image | relative_url }}" width="80" height="80" align="middle" title="{{ include.author.title }}" />
+	* 由<a href="{{ include.author.homepage }}">@{{ include.author.title }}</a>制作的汉化项目
+</p>
+
+{%- for tl in tls -%}
+{{ tl.content | markdownify }}
+{%- endfor -%}
