@@ -1,5 +1,5 @@
 <a href="{{ include.file.url | uri_escape }}" target="_blank"
-	>{{ include.file.name | default: include.name_default }}</a
+	>{{ include.name | default: include.file.name }}</a
 >
 {%- if include.file.passcode or include.file.notes -%}（ {%- if include.file.passcode -%} 提取码：{{
 include.file.passcode }} {%- if include.file.notes -%} ； {%- endif -%} {%- endif -%}{{

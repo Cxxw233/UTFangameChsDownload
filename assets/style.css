@@ -34,8 +34,19 @@ h5,
 h6,
 header .fake-2nd-heading,
 header .fake-3rd-heading {
-	text-align: center;
 	font-weight: normal;
+	margin: 0;
+	margin-bottom: 10px;
+}
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header h6,
+header .fake-2nd-heading,
+header .fake-3rd-heading {
+	text-align: center;
 	margin: 10px;
 }
 h2,
@@ -99,6 +110,7 @@ header .buttons button#change-accent > img {
 /*设置深色模式属性*/
 :root {
 	--primary-color: rgb(234, 234, 239); /*背景色*/
+    --post-background-color: rgb(255, 255, 255);
 	--secondary-color: black; /*文本色*/
 	--c: rgb(207, 207, 207); /*头像栏颜色*/
 	--link: rgb(0, 17, 255); /*链接颜色*/
@@ -110,6 +122,7 @@ header .buttons button#change-accent > img {
 }
 .dark-theme {
 	--primary-color: rgb(27, 27, 27);
+    --post-background-color: rgb(20, 20, 20);
 	--secondary-color: white;
 	--c: rgb(48, 48, 48);
 	--link: rgb(0, 162, 255);
@@ -152,15 +165,17 @@ footer #dog > img {
 }
 footer div {
 	padding: 20px;
+	margin: 0 10px;
 }
 footer div.footer-1 {
 	background-color: #6b6b6b;
-	margin: 0 20px;
 }
-footer div.end > dd {
+footer div.end {
 	background-color: var(--end-color);
 	list-style-type: none;
-	margin: auto;
+}
+footer div.end > dd {
+	margin: 0;
 }
 
 /*选项卡样式*/
@@ -208,4 +223,11 @@ footer div.end > dd {
 	box-shadow: 5px 5px 20px #333333;
 	padding: 5px 0;
 	list-style-type: none;
+}
+
+.page {
+  background-color: var(--post-background-color);
+  color: var(--secondary-color);
+  margin: 10px;
+  padding: 20px;
 }
