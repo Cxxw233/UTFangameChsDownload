@@ -14,13 +14,8 @@ permalink: search.json
       {{ author_post.title | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
       {%- endfor -%}
     ],
-    "content": {{ post.output | jsonify }}
+    "links": {{ post.links | jsonify }}
   }{%- unless forloop.last -%},{%- endunless -%}
   {%- endfor -%}
-  ],
-  "authors": [
-    {%- for author in site.authors -%}
-    {{ author.title | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
-    {%- endfor -%}
   ]
 ]
