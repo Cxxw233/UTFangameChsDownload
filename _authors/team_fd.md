@@ -20,3 +20,5 @@ team: true
 \* Chara中文配音：[@一只chara路过](https://space.bilibili.com/478857921)
 
 \* IGB团队官方监制：[@IGBTeam](https://space.bilibili.com/1603675278)（Lepeha）
+
+在做了，你先别急

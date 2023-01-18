@@ -1,5 +1,6 @@
 ---
 ---
 
-{%- assign author = site.authors | find: "slug", "hf" -%}
+{%- for author in site.authors -%}
 {{ author.output }}
+{%- endfor -%}
