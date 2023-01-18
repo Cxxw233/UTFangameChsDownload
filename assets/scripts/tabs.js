@@ -9,7 +9,7 @@ for (let tabi = 0; tabi < title.length; tabi++) {
 		continue;
 	}
 	function activateTab(i) {
-		let active = titleelem.getElementsByClassName("active");
+		let active = titleelem.getElementsByClassName("tabbed-table-title-active");
 		if (active.length > 0) active[0].classList.remove("tabbed-table-title-active");
 		titlelist[i].classList.add("tabbed-table-title-active");
 		for (let j = 0; j < contentlist.length; j++) {

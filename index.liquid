@@ -2,32 +2,55 @@
 layout: home
 permalink: index.html
 ---
-{%- capture personal_projects_table_data -%}
-憨憨羊の宇航鸽鸽<!--||-->{% include display_items/personal/yh.html %}<!--//-->
-AX暗星233<!--||-->{% include display_items/personal/ax.html %}<!--//-->
-Cxx_w<!--||-->{% include display_items/personal/cxx.html %}<!--//-->
-幻-_-风<!--||-->{% include display_items/personal/hf.html %}<!--//-->
-荷包蛋_official<!--||-->{% include display_items/personal/egger.html %}<!--//-->
-年糕_yx<!--||-->{% include display_items/personal/ng_yx.html %}
+
+{%- capture sorted_authors -%}
+  {%- for author in site.authors -%}
+    {%- assign tls = site.translations | where_exp: "item", "item.authors contains author.slug" -%}
+    {{ tls | size | minus: 99999 }},{{ author.slug }},{{ author.team }};
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign sorted_authors = sorted_authors | split: ';' | sort -%}
+{%- assign person_in_order = "" -%}
+{%- assign team_in_order = "" -%}
+{%- for author in sorted_authors -%}
+    {%- assign items = author | split: ',' -%}
+    {%- assign author_id = items[1] -%}
+    {%- unless items[2] -%}
+      {%- assign person_in_order = person_in_order | append: "," | append: author_id -%}
+    {%- else -%}
+      {%- assign team_in_order = team_in_order | append: "," | append: author_id -%}
+    {%- endunless -%}
+{%- endfor -%}
+{%- assign person_in_order = person_in_order | split: "," | shift -%}
+{%- assign team_in_order = team_in_order | split: "," | shift -%}
+
+{%- capture personal_projects_table -%}
+{%- for author in person_in_order -%}
+  {%- assign post = site.authors | find: "slug", author -%}
+  {{ post.title }}<!--||-->{{ post.output }}
+  {%- unless forloop.last -%}<!--//-->{%- endunless -%}
+{%- endfor -%}
 {%- endcapture -%}
 {%- capture personal_projects_table -%}
-{% include gen_table.liquid content=personal_projects_table_data %}
+{% include gen_table.liquid content=personal_projects_table %}
 {%- endcapture -%}
 
-{%- capture team_projects_table_data -%}
-Undertale: Bits And Pieces官方授权简中本地化组<!--||-->{% include display_items/team/bnp.html %}<!--//-->
-TS! Underswap官方简中本地化组<!--||-->{% include display_items/team/tsus.html %}<!--//-->
-Facing Demons官方简中本地化组<!--||-->{% include display_items/team/fd.html %}
+{%- capture team_projects_table -%}
+{%- for author in team_in_order -%}
+  {%- assign post = site.authors | find: "slug", author -%}
+  {{ post.title }}<!--||-->{{ post.output }}
+  {%- unless forloop.last -%}<!--//-->{%- endunless -%}
+{%- endfor -%}
 {%- endcapture -%}
 {%- capture team_projects_table -%}
-{% include gen_table.liquid content=team_projects_table_data %}
+{% include gen_table.liquid content=team_projects_table %}
 {%- endcapture -%}
 
-{%- capture main_table_data -%}
+{%- capture main_table -%}
 个人项目<!--||-->{{ personal_projects_table }}<!--//-->
 团队项目<!--||-->{{ team_projects_table }}
 {%- endcapture -%}
 {%-
 	include gen_table.liquid
-	content=main_table_data
+	content=main_table
 -%}
