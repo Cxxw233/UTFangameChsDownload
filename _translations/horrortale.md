@@ -1,5 +1,5 @@
 ---
-title: "HORRORTALE"
+title: "Horrortale"
 authors:
   - hf
 links:
