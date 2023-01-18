@@ -1,8 +1,7 @@
 ---
 title: "FDY OLD Dusttrust Phase 1"
 authors:
-  - cxx
+ - cxx
 links:
-  - url: "https://chinese.lanzouq.com/icIz8z3xgna"
+ - url: "https://chinese.lanzouq.com/icIz8z3xgna"
 ---
-

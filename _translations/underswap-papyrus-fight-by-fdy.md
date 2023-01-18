@@ -1,7 +1,7 @@
 ---
 title: "FDY UnderSwap Papyrus Fight"
 authors:
-  - yh
+ - yh
 links:
-  - url: "https://yuhang233.lanzout.com/ipbOtyy3w0d"
+ - url: "https://yuhang233.lanzout.com/ipbOtyy3w0d"
 ---

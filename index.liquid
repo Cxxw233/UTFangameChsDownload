@@ -2,7 +2,6 @@
 layout: home
 permalink: index.html
 ---
-
 {%- capture sorted_authors -%}
   {%- for author in site.authors -%}
     {%- assign tls = site.translations | where_exp: "item", "item.authors contains author.slug" -%}
@@ -10,19 +9,19 @@ permalink: index.html
   {%- endfor -%}
 {%- endcapture -%}
 {%- assign sorted_authors = sorted_authors | split: ';' | sort -%}
-{%- assign person_in_order = "" -%}
-{%- assign team_in_order = "" -%}
+{%- assign person_in_order = '' -%}
+{%- assign team_in_order = '' -%}
 {%- for author in sorted_authors -%}
-    {%- assign items = author | split: ',' -%}
-    {%- assign author_id = items[1] -%}
-    {%- unless items[2] -%}
-      {%- assign person_in_order = person_in_order | append: "," | append: author_id -%}
-    {%- else -%}
-      {%- assign team_in_order = team_in_order | append: "," | append: author_id -%}
-    {%- endunless -%}
+	{%- assign items = author | split: ',' -%}
+	{%- assign author_id = items[1] -%}
+	{%- unless items[2] -%}
+		{%- assign person_in_order = person_in_order | append: ',' | append: author_id -%}
+	{%- else -%}
+		{%- assign team_in_order = team_in_order | append: ',' | append: author_id -%}
+	{%- endunless -%}
 {%- endfor -%}
-{%- assign person_in_order = person_in_order | split: "," | shift -%}
-{%- assign team_in_order = team_in_order | split: "," | shift -%}
+{%- assign person_in_order = person_in_order | split: ',' | shift -%}
+{%- assign team_in_order = team_in_order | split: ',' | shift -%}
 
 {%- capture personal_projects_table -%}
 {%- for author in person_in_order -%}

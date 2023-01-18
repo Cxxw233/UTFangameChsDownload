@@ -1,8 +1,7 @@
 ---
 title: "FDY Dusttale Murder Sans Fight"
 authors:
-  - cxx
+ - cxx
 links:
-  - url: "https://chinese.lanzouq.com/iYKydz9zjud"
+ - url: "https://chinese.lanzouq.com/iYKydz9zjud"
 ---
-

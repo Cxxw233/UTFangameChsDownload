@@ -1,8 +1,7 @@
 ---
 title: "XMTX The New Chance"
 authors:
-  - egger
+ - egger
 links:
-  - url: "https://wwd.lanzouy.com/iFvYr0466mti"
+ - url: "https://wwd.lanzouy.com/iFvYr0466mti"
 ---
-

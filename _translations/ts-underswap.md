@@ -1,8 +1,8 @@
 ---
 title: "TS!Underswap"
 authors:
-  - team_tsus
+ - team_tsus
 links:
-  - url: "https://xitieshiz.lanzouy.com/b0118mtli"
-    passcode: tsus
+ - url: "https://xitieshiz.lanzouy.com/b0118mtli"
+   passcode: tsus
 ---

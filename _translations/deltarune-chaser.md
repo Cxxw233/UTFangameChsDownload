@@ -1,7 +1,7 @@
 ---
 title: "Deltarune Chaser"
 authors:
-  - ax
+ - ax
 links:
-  - url: "https://wwoe.lanzouy.com/i9FyE0jsf5dg"
+ - url: "https://wwoe.lanzouy.com/i9FyE0jsf5dg"
 ---

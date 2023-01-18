@@ -1,8 +1,7 @@
 ---
 title: "Underdove NM Fight"
 authors:
-  - cxx
+ - cxx
 links:
-  - url: "https://nm.lanzouq.com/i88Cd02jztpg"
+ - url: "https://nm.lanzouq.com/i88Cd02jztpg"
 ---
-

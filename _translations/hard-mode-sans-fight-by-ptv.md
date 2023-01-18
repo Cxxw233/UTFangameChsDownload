@@ -1,7 +1,7 @@
 ---
 title: "PTV Hard Mode Sans Fight"
 authors:
-  - yh
+ - yh
 links:
-  - url: "https://yuhang233.lanzout.com/iElsf00bj4je"
+ - url: "https://yuhang233.lanzout.com/iElsf00bj4je"
 ---

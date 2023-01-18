@@ -1,7 +1,7 @@
 ---
 title: Deltarune八云紫战
 authors:
-  - ax
+ - ax
 links:
-  - url: "https://wwp.lanzouy.com/iJtAF0dbphqd"
+ - url: "https://wwp.lanzouy.com/iJtAF0dbphqd"
 ---

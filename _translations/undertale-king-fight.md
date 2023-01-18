@@ -1,7 +1,7 @@
 ---
 title: "Undertale King"
 authors:
-  - yh
+ - yh
 links:
-  - url: "https://yuhang233.lanzout.com/icRvl00pu1yb"
+ - url: "https://yuhang233.lanzout.com/icRvl00pu1yb"
 ---

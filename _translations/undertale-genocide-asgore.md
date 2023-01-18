@@ -1,8 +1,7 @@
 ---
 title: "UNDERTALE:Genocide Asgore"
 authors:
-  - cxx
+ - cxx
 links:
-  - url: "https://chineseversion.lanzouq.com/iSLYByj9ygh"
+ - url: "https://chineseversion.lanzouq.com/iSLYByj9ygh"
 ---
-

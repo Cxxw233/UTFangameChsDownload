@@ -1,8 +1,7 @@
 ---
 title: "Team Hardcore Dusttale Murder Sans Fight"
 authors:
-  - egger
+ - egger
 links:
-  - url: "https://egger233.lanzouu.com/ioxYg057r0gb"
+ - url: "https://egger233.lanzouu.com/ioxYg057r0gb"
 ---
-

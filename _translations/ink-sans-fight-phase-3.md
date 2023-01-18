@@ -1,7 +1,7 @@
 ---
 title: "Ink Sans Phase 3"
 authors:
-  - yh
+ - yh
 links:
-  - url: "https://yuhang233.lanzout.com/iLTp2yzx0vi"
+ - url: "https://yuhang233.lanzout.com/iLTp2yzx0vi"
 ---

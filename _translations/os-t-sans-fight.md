@@ -1,8 +1,7 @@
 ---
 title: "OS-T Sans Fight"
 authors:
-  - cxx
+ - cxx
 links:
-  - url: "https://chinese.lanzouq.com/iGXMCyxc9mf"
+ - url: "https://chinese.lanzouq.com/iGXMCyxc9mf"
 ---
-

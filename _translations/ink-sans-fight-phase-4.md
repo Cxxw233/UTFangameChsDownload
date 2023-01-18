@@ -1,7 +1,7 @@
 ---
 title: "Ink Sans Fight Phase 4"
 authors:
-  - yh
+ - yh
 links:
-  - url: "https://yuhang233.lanzout.com/iv1x300oqr1e"
+ - url: "https://yuhang233.lanzout.com/iv1x300oqr1e"
 ---

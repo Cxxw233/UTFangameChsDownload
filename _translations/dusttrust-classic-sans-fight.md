@@ -1,7 +1,7 @@
 ---
 title: "CLASSIC Dusttrust Sans Fight"
 authors:
-  - yh
+ - yh
 links:
-  - url: "https://yuhang233.lanzout.com/ix5ZOz3cikd"
+ - url: "https://yuhang233.lanzout.com/ix5ZOz3cikd"
 ---

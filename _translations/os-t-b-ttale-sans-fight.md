@@ -1,7 +1,7 @@
 ---
 title: "B-TTale Sans Fight(OS-T)"
 authors:
-  - yh
+ - yh
 links:
-  - url: "https://yuhang233.lanzout.com/i17jsz2iv0b"
+ - url: "https://yuhang233.lanzout.com/i17jsz2iv0b"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Deltarune十六夜战"
 authors:
-  - ax
+ - ax
 links:
-  - url: https://wwoe.lanzouy.com/iu7Sf0hio5rc
+ - url: https://wwoe.lanzouy.com/iu7Sf0hio5rc
 ---

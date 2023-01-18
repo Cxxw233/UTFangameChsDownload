@@ -1,8 +1,7 @@
 ---
 title: "FDY Undertale Hard Mode Sans Fight"
 authors:
-  - cxx
+ - cxx
 links:
-  - url: "https://chinese.lanzouq.com/iCzJiytqjkd"
+ - url: "https://chinese.lanzouq.com/iCzJiytqjkd"
 ---
-

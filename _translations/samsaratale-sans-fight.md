@@ -1,8 +1,7 @@
 ---
 title: "SamsaraTale Sans"
 authors:
-  - egger
+ - egger
 links:
-  - url: "https://egger233.lanzouy.com/iI9G309lwjzc"
+ - url: "https://egger233.lanzouy.com/iI9G309lwjzc"
 ---
-

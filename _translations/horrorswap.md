@@ -1,8 +1,8 @@
 ---
 title: "Horrorswap"
 authors:
-  - hf
+ - hf
 links:
-  - url: "https://pan.baidu.com/s/1y-JjIzPY2E4qHFud9hiCDw"
-    passcode: xddd
+ - url: "https://pan.baidu.com/s/1y-JjIzPY2E4qHFud9hiCDw"
+   passcode: xddd
 ---

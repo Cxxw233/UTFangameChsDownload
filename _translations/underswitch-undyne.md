@@ -1,8 +1,8 @@
 ---
 title: "Underswitch Undyne"
 authors:
-  - hf
-  - yh
+ - hf
+ - yh
 links:
-  - url: "https://pan.bilnn.com/s/Aq7OTD"
+ - url: "https://pan.bilnn.com/s/Aq7OTD"
 ---
