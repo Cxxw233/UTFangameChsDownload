@@ -30,4 +30,6 @@
 {%- endfor %} 制作
 {%- endif -%}
 </p>
+{%- comment -%} reduce newlines {%- endcomment -%}
 {{ include.page.content | markdownify }}
+{%- comment -%} reduce newlines {%- endcomment -%}

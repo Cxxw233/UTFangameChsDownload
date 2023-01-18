@@ -1,5 +1,5 @@
 ---
-title: "Undertale:Revenge T.U.E"
+title: "Undertale: REVENGE - The Unseen Ending"
 authors:
   - hf
 links:
