@@ -4,9 +4,6 @@
 	"version": "0.0.0",
 	"description": "UNDERTALE汉化下崽站",
 	"scripts": {
-		"depinstall": "yarn run depinstall:prod && yarn run depinstall:dev",
-		"depinstall:prod": "cd assets && yarn install",
-		"depinstall:dev": "yarn install",
 		"build": "bundle exec jekyll build",
 		"serve": "bundle exec jekyll serve"
 	},
@@ -19,8 +16,5 @@
 	"devDependencies": {
 		"@shopify/prettier-plugin-liquid": "^1.0.5",
 		"prettier": "2.8.3"
-	},
-	"dependencies": {
-		"fuse.js": "^6.6.2"
 	}
 }
