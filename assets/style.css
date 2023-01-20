@@ -110,9 +110,10 @@ header .header-title {
 	padding: 10px;
 	margin: 10px;
 }
-header .header-title span {
+header .header-title a {
 	text-align: center;
 	display: block;
+	color: white;
 }
 
 /*设置按钮属性*/
