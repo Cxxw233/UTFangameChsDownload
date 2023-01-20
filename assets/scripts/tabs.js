@@ -13,9 +13,9 @@ for (let tabi = 0; tabi < title.length; tabi++) {
 		if (active.length > 0) active[0].classList.remove("tabbed-table-title-active");
 		titlelist[i].classList.add("tabbed-table-title-active");
 		for (let j = 0; j < contentlist.length; j++) {
-			contentlist[j].classList.add("tabbed-table-content-hidden");
+			contentlist[j].style.display = "none";
 		}
-		contentlist[i].classList.remove("tabbed-table-content-hidden");
+		contentlist[i].style.display = "";
 	}
 	activateTab(0);
 	for (let i = 0; i < titlelist.length; i++) {

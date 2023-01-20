@@ -6,9 +6,14 @@ layout: page
 <div class="search-form-container">
 <form id="search-form" action="" method="GET">
 <label for="query" class="search-form-label-hide">搜索汉化</label>
-<input type="text" name="query" required placeholder="搜索汉化" />
-<input type="submit" value="搜索" />
+<input type="text" name="query" required placeholder="搜索汉化" readonly />
+<input type="submit" value="搜索" disabled />
 </form>
+</div>
+
+<div class="search-screens">
+<div class="search-loading">加载中</div>
+<div class="search-results" style="display: none"></div>
 </div>
 
 <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.common.min.js"></script>

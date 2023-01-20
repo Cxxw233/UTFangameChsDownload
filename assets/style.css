@@ -210,9 +210,6 @@ footer div.end > dd {
 	padding: 0;
 	margin: 0;
 }
-.tabbed-table-content .tabbed-table-content-hidden {
-	display: none;
-}
 .tabbed-table-content p {
 	padding: 0 1.5em;
 }
@@ -234,6 +231,7 @@ footer div.end > dd {
 
 .search-form-container {
 	width: 100%;
+	margin-bottom: 10px;
 }
 #search-form {
 	display: flex;
@@ -266,4 +264,15 @@ footer div.end > dd {
 }
 .search-form-label-hide {
 	display: none;
+}
+
+.search-screens {
+	width: 100%;
+}
+.search-screens div {
+	height: auto;
+}
+.search-loading {
+	padding: 25%;
+	text-align: center;
 }

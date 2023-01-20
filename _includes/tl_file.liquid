@@ -8,12 +8,11 @@
 	{{ filename }}
 {%- endif -%}
 
-{%- if include.file.passcode or include.file.notes -%}
-	（
+{%- if include.file.passcode or include.file.notes -%}（
 	{%- if include.file.passcode -%}
 		提取码：{{ include.file.passcode }}
 		{%- if include.file.notes -%}；{%- endif -%}
 	{%- endif -%}
 	{{ include.file.notes }}
-	）
-{%- endif -%}
+{%- comment -%} whitespace {%- endcomment -%}
+）{%- endif -%}
