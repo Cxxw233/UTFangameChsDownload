@@ -3,4 +3,14 @@ title: 搜索
 layout: page
 ---
 
-鸡你太美
+<div class="search-form-container">
+<form id="search-form" action="" method="GET">
+<label for="query" class="search-form-label-hide">搜索汉化</label>
+<input type="text" name="query" required placeholder="搜索汉化" />
+<input type="submit" value="搜索" />
+</form>
+</div>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.common.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>
+<script src="assets/scripts/search.js"></script>
