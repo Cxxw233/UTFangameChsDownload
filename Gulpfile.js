@@ -6,7 +6,7 @@ const bowerNormalizer = require("gulp-bower-normalize");
 function normalizeLibs() {
 	return gulp
 		.src(bower(), { base: "./bower_components" })
-		.pipe(bowerNormalizer({ bowerJson: "./bower.json" }))
+		.pipe(bowerNormalizer({ bowerJson: "./bower.json", flatten: true }))
 		.pipe(gulp.dest("./assets/scripts/libs/"));
 }
 

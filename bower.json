@@ -9,5 +9,12 @@
 	"ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
 	"dependencies": {
 		"fuse": "^6.6.2"
+	},
+    "overrides": {
+        "normalizeMulti": [
+			"normalize": {
+				".": ["**/*.js"]
+			}
+		]
 	}
 }
