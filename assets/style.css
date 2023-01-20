@@ -122,9 +122,9 @@ header .buttons button#change-accent > img {
 }
 .dark-theme {
 	--primary-color: rgb(27, 27, 27);
-	--post-background-color: rgb(20, 20, 20);
+	--post-background-color: rgb(48, 48, 48);
 	--secondary-color: white;
-	--c: rgb(48, 48, 48);
+	--c: rgb(72, 72, 72);
 	--link: rgb(0, 162, 255);
 	--end-color: rgb(54, 54, 54);
 }
@@ -251,14 +251,14 @@ footer div.end > dd {
 	padding: 10px;
 	margin-right: 5px;
 	flex-grow: 8;
-	border: 1px solid var(--secondary-color);
+	border: 1px solid var(--c);
 }
 #search-form input[name="query"]:focus {
 	outline-style: solid;
 }
 #search-form input[type="submit"] {
 	flex-basis: 80px;
-	border: 1px solid var(--secondary-color);
+	border: 1px solid var(--c);
 	background-color: lightgray;
 }
 #search-form input[type="submit"]:hover {
