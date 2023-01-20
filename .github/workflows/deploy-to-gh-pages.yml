@@ -32,9 +32,16 @@ jobs:
       rubygems: latest
       bundler-cache: true
       cache-version: 0 # Increment this number if you need to re-download cached gems
+   - name: 配置包管理器
+     uses: actions/setup-node@v3
+     with:
+      node-version: 16
+      cache: yarn
    - name: 配置 Pages
      id: pages
      uses: actions/configure-pages@v2
+   - name: 安装依赖项
+     run: yarn run depinstall:prod
    - name: 生成网站
      run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
      env:

@@ -2,7 +2,7 @@ title: "UNDERTALE同人游戏汉化下载站"
 
 exclude:
  - package.json
- - package-lock.json
+ - yarn.lock
 
 plugins:
  - jekyll-default-layout
