@@ -1,6 +1,6 @@
 {%- assign sep_namevalue = '<!--||-->' -%}
 {%- assign sep_tab = '<!--//-->' -%}
-{%- assign content_tabs = include.content | split: sep_tab -%}
+{%- assign content_tabs = include.content | split: sep_tab | compact -%}
 <div class="tabbed-table">
 	<ul class="tabbed-table-title">
 		{%- for tab in content_tabs %}

@@ -5,29 +5,19 @@ permalink: index.html
 {%- capture sorted_authors -%}
   {%- for author in site.authors -%}
     {%- assign tls = site.translations | where_exp: "item", "item.authors contains author.slug" -%}
-    {{ tls | size | minus: 99999 }},{{ author.slug }},{{ author.team }};
+    {{ tls | size | plus: 100000 }},{{ author.title }},{{ forloop.index0 }},{{ author.team }};
   {%- endfor -%}
 {%- endcapture -%}
-{%- assign sorted_authors = sorted_authors | split: ';' | sort -%}
-{%- assign person_in_order = '' -%}
-{%- assign team_in_order = '' -%}
-{%- for author in sorted_authors -%}
-	{%- assign items = author | split: ',' -%}
-	{%- assign author_id = items[1] -%}
-	{%- unless items[2] -%}
-		{%- assign person_in_order = person_in_order | append: ',' | append: author_id -%}
-	{%- else -%}
-		{%- assign team_in_order = team_in_order | append: ',' | append: author_id -%}
-	{%- endunless -%}
-{%- endfor -%}
-{%- assign person_in_order = person_in_order | split: ',' | shift -%}
-{%- assign team_in_order = team_in_order | split: ',' | shift -%}
+{%- assign sorted_authors = sorted_authors | split: ';' | sort | reverse -%}
 
 {%- capture personal_projects_table -%}
-{%- for author in person_in_order -%}
-  {%- assign post = site.authors | find: "slug", author -%}
-  {{ post.title }}<!--||-->{{ post.output }}
-  {%- unless forloop.last -%}<!--//-->{%- endunless -%}
+{%- for author in sorted_authors -%}
+  {%- assign items = author | split: ',' -%}
+  {%- assign author_id = items[2] | plus: 0 -%}
+  {%- assign post = site.authors[author_id] -%}
+  {%- unless items[3] -%}
+  {{ post.title }}<!--||-->{{ post.output }}<!--//-->
+  {%- endunless -%}
 {%- endfor -%}
 {%- endcapture -%}
 {%- capture personal_projects_table -%}
@@ -35,10 +25,13 @@ permalink: index.html
 {%- endcapture -%}
 
 {%- capture team_projects_table -%}
-{%- for author in team_in_order -%}
-  {%- assign post = site.authors | find: "slug", author -%}
-  {{ post.title }}<!--||-->{{ post.output }}
-  {%- unless forloop.last -%}<!--//-->{%- endunless -%}
+{%- for author in sorted_authors -%}
+  {%- assign items = author | split: ',' -%}
+  {%- assign author_id = items[2] | plus: 0 -%}
+  {%- assign post = site.authors[author_id] -%}
+  {%- if items[3] -%}
+  {{ post.title }}<!--||-->{{ post.output }}<!--//-->
+  {%- endif -%}
 {%- endfor -%}
 {%- endcapture -%}
 {%- capture team_projects_table -%}
