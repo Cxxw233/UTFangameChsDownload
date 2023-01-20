@@ -253,8 +253,16 @@ footer div.end > dd {
 	flex-grow: 8;
 	border: 1px solid var(--secondary-color);
 }
+#search-form input[name="query"]:focus {
+	outline-style: solid;
+}
 #search-form input[type="submit"] {
 	flex-basis: 80px;
+	border: 1px solid var(--secondary-color);
+	background-color: lightgray;
+}
+#search-form input[type="submit"]:hover {
+	background-color: darkgray;
 }
 .search-form-label-hide {
 	display: none;
