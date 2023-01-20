@@ -1,9 +1,35 @@
+@font-face {
+	font-family: undertalefont;
+	src: url(undertalefont.ttf);
+}
+
+/*设置深色模式属性*/
+:root {
+	--primary-color: rgb(234, 234, 239); /*背景色*/
+	--post-background-color: rgb(255, 255, 255);
+	--secondary-color: black; /*文本色*/
+	--c: rgb(207, 207, 207); /*头像栏颜色*/
+	--link: rgb(0, 17, 255); /*链接颜色*/
+	--end-color: rgb(167, 167, 167); /*友情链接颜色*/
+	--main-font-size: 18px;
+	--main-heading-font-size: 28px;
+	--secondary-heading-font-size: 24px;
+	--thirdary-heading-font-size: 20px;
+}
+.dark-theme {
+	--primary-color: rgb(27, 27, 27);
+	--post-background-color: rgb(48, 48, 48);
+	--secondary-color: white;
+	--c: rgb(72, 72, 72);
+	--link: rgb(0, 162, 255);
+	--end-color: rgb(54, 54, 54);
+}
+
 *,
 ::before,
 ::after {
 	box-sizing: border-box;
 }
-
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
@@ -22,10 +48,15 @@ body {
 	-webkit-font-smoothing: none;
 	-moz-osx-font-smoothing: none;
 }
-@font-face {
-	font-family: undertalefont;
-	src: url(undertalefont.ttf);
+
+a {
+	color: var(--link);
+	text-decoration: none;
 }
+a:hover {
+	text-decoration: underline;
+}
+
 h1,
 h2,
 h3,
@@ -38,12 +69,6 @@ header .fake-3rd-heading {
 	margin: 0;
 	margin-bottom: 10px;
 }
-header h1,
-header h2,
-header h3,
-header h4,
-header h5,
-header h6,
 header .fake-2nd-heading,
 header .fake-3rd-heading {
 	text-align: center;
@@ -56,24 +81,21 @@ h5,
 h6 {
 	color: var(--secondary-color);
 }
-header .fake-2nd-heading {
+h2, header .fake-2nd-heading {
 	font-size: var(--secondary-heading-font-size);
 }
-header .fake-3rd-heading {
+h3, header .fake-3rd-heading {
 	font-size: var(--thirdary-heading-font-size);
+}
+h4 {
+	font-size: 18px;
 }
 header .fake-3rd-heading > p,
 header .fake-3rd-heading > br,
 footer .footer-1 > p {
 	margin: 0 auto;
 }
-a {
-	color: var(--link);
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
+
 header .header-title {
 	font-size: var(--main-heading-font-size);
 	background-color: grey;
@@ -85,6 +107,7 @@ header .header-title span {
 	text-align: center;
 	display: block;
 }
+
 /*设置按钮属性*/
 header .buttons {
 	display: inline;
@@ -107,27 +130,7 @@ header .buttons button {
 header .buttons button#change-accent > img {
 	width: 100%;
 }
-/*设置深色模式属性*/
-:root {
-	--primary-color: rgb(234, 234, 239); /*背景色*/
-	--post-background-color: rgb(255, 255, 255);
-	--secondary-color: black; /*文本色*/
-	--c: rgb(207, 207, 207); /*头像栏颜色*/
-	--link: rgb(0, 17, 255); /*链接颜色*/
-	--end-color: rgb(167, 167, 167); /*友情链接颜色*/
-	--main-font-size: 18px;
-	--main-heading-font-size: 28px;
-	--secondary-heading-font-size: 24px;
-	--thirdary-heading-font-size: 20px;
-}
-.dark-theme {
-	--primary-color: rgb(27, 27, 27);
-	--post-background-color: rgb(48, 48, 48);
-	--secondary-color: white;
-	--c: rgb(72, 72, 72);
-	--link: rgb(0, 162, 255);
-	--end-color: rgb(54, 54, 54);
-}
+
 /* 时钟效果样式 */
 .clock {
 	/* 禁止文本被拉取 */
@@ -150,6 +153,7 @@ header .buttons button#change-accent > img {
 		0 -1px 3px rgba(120, 120, 120, 0.2), 0 9px 9px rgba(140, 140, 140, 0.3),
 		0 12px 12px rgba(160, 160, 160, 0.3), 0 15px 15px rgba(180, 180, 180, 0.3);
 }
+
 footer {
 	text-align: center;
 	margin: auto;
