@@ -5,7 +5,7 @@ team: true
 
 \* 目前成员名单：
 
-\* 项目负责人：[@AX暗星233](https://space.bilibili.com/443074427)
+\* 项目负责人：[@AX 暗星 233](https://space.bilibili.com/443074427)
 
 \* 文本校正：[@Bronie\_](https://space.bilibili.com/616770040)
 
@@ -17,7 +17,7 @@ team: true
 
 \* Metta 中文配音：[@纳塔斯威尔森](https://space.bilibili.com/279554110)
 
-\* Chara 中文配音：[@一只chara路过](https://space.bilibili.com/478857921)
+\* Chara 中文配音：[@一只 chara 路过](https://space.bilibili.com/478857921)
 
 \* IGB 团队官方监制：[@IGBTeam](https://space.bilibili.com/1603675278)（Lepeha）
 

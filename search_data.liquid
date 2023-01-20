@@ -2,20 +2,15 @@
 layout: null
 permalink: search.json
 ---
-
-[
-  "translations": [
-  {%- for post in site.translations -%}
-  {
-    "title": {{ post.title | jsonify }},
-    "authors": [
-      {%- for author in post.authors -%}
-      {%- assign author_post = site.authors | find: "slug", author -%}
-      {{ author_post.title | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
-      {%- endfor -%}
-    ],
-    "links": {{ post.links | jsonify }}
-  }{%- unless forloop.last -%},{%- endunless -%}
-  {%- endfor -%}
-  ]
-]
+[ "translations": [
+{%- for post in site.translations -%}
+	{ "title": {{ post.title | jsonify }}, "authors": {{ post.authors | jsonify }}, "links":
+	{{ post.links | jsonify }} }
+	{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+], "authors": {
+{%- for author in site.authors -%}
+	{{ author.slug | jsonify }}: {{ author.title | jsonify }}
+	{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+} ]
