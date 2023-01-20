@@ -3,6 +3,12 @@
 	"private": true,
 	"version": "0.0.0",
 	"description": "UNDERTALE汉化下崽站",
+	"scripts": {
+		"bower:install": "bower install",
+		"bowerder": "bowerder"
+		"build": "bundle exec jekyll build",
+		"serve": "bundle exec jekyll serve"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Cxxw233/UTFangameChsDownload.git"
@@ -13,8 +19,8 @@
 	},
 	"homepage": "https://github.com/Cxxw233/UTFangameChsDownload#readme",
 	"devDependencies": {
+		"prettier": "2.8.3",
 		"@shopify/prettier-plugin-liquid": "^1.0.5",
-		"bower": "^1.8.14",
-		"prettier": "2.8.3"
+		"bower": "^1.8.14"
 	}
 }

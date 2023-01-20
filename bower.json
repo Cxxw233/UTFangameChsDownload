@@ -1,13 +1,23 @@
 {
-	"name": "utfangamechsdownload",
-	"description": "UNDERTALE汉化下崽站",
-	"main": "",
-	"authors": ["cxx_w", "AX_233"],
-	"license": "SEE LICENSE IN LICENSE.txt",
-	"homepage": "https://github.com/Cxxw233/UTFangameChsDownload",
-	"private": true,
-	"ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
-	"dependencies": {
-		"fuse": "^6.6.2"
-	}
+  "name": "utfangamechsdownload",
+  "description": "UNDERTALE汉化下崽站",
+  "main": "",
+  "authors": [
+    "cxx_w",
+    "AX_233"
+  ],
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "homepage": "https://github.com/Cxxw233/UTFangameChsDownload",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fuse": "^6.6.2",
+    "bowerder": "^0.7.5"
+  }
 }
