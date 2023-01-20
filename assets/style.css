@@ -258,7 +258,7 @@ footer div.end > dd {
 }
 #search-form input[type="submit"] {
 	flex-basis: 80px;
-	border: 1px solid var(--c);
+	border: 2px solid var(--c);
 	background-color: lightgray;
 }
 #search-form input[type="submit"]:hover {
