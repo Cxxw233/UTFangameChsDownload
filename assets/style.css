@@ -49,6 +49,13 @@ body {
 	-moz-osx-font-smoothing: none;
 }
 
+.page {
+	background-color: var(--post-background-color);
+	color: var(--secondary-color);
+	margin: 10px;
+	padding: 20px;
+}
+
 a {
 	color: var(--link);
 	text-decoration: none;
@@ -214,7 +221,8 @@ footer div.end > dd {
 	padding: 0;
 	margin: 0;
 }
-.tabbed-table-content p {
+.tabbed-table-content p,
+.tabbed-table-content div.author-avatar-pres {
 	padding: 0 1.5em;
 }
 .tabbed-table-content > li {
@@ -226,11 +234,13 @@ footer div.end > dd {
 	list-style-type: none;
 }
 
-.page {
-	background-color: var(--post-background-color);
-	color: var(--secondary-color);
-	margin: 10px;
-	padding: 20px;
+.author-avatar-pres {
+	display: flex;
+	align-items: center;
+	margin: auto;
+}
+.author-avatar-pres img {
+	margin-right: 10px;
 }
 
 .search-form-container {
