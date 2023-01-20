@@ -223,7 +223,7 @@ footer div.end > dd {
 }
 .tabbed-table-content p,
 .tabbed-table-content div.author-avatar-pres {
-	padding: 0 1.5em;
+	padding: 0 15px;
 }
 .tabbed-table-content > li {
 	display: block;
