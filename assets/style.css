@@ -264,25 +264,24 @@ footer div.end > dd {
 }
 
 .search-form-container {
-	width: 100%;
 	margin-bottom: 10px;
 }
 form[name="search-form"] {
 	display: flex;
-	width: auto;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	justify-content: center;
+	align-items: center;
 	font-size: 16px;
 	height: 40px;
 }
 form[name="search-form"] input[type="search"] {
 	appearance: none;
 	-webkit-appearance: none;
-	flex-basis: 50%;
-	max-width: 70%;
-	padding: 0 10px;
 	border: 1px solid var(--c);
 	background: white;
+	margin: 0;
+	padding: 0 10px;
+	min-width: 0;
 }
 form[name="search-form"] input[type="search"]:disabled {
 	background: lightgray;
@@ -303,8 +302,8 @@ form[name="search-form"] button:hover {
 	background-color: darkgray;
 }
 form[name="search-form"] button[type="submit"] {
-	flex-basis: 80px;
 	margin: 0 5px;
+	flex-basis: 80px;
 }
 
 .search-screens {
