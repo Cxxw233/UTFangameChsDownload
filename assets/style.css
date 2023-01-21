@@ -188,7 +188,8 @@ header .header-title * {
 header .buttons * {
 	margin: 0;
 	padding: 0;
-	width: 30px;
+	width: 32px;
+	font-size: 32px;
 }
 header .buttons-left {
 	float: left;
