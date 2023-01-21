@@ -59,8 +59,7 @@ function setLoading(isLoading) {
 		screens.classList.add("search-loading");
 	} else {
 		setFormEnabled(form, true);
-		if (!screens.classList.contains("search-ready"))
-			screens.classList.add("search-ready");
+		if (!screens.classList.contains("search-ready")) screens.classList.add("search-ready");
 		searchResultsBackup.replaceChildren();
 	}
 	return isLoading;
