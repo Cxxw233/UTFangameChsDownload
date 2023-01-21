@@ -301,16 +301,53 @@ form[name="search-form"] button[type="submit"] {
 	margin: 0 5px;
 }
 .search-form-label-hide {
-	display: none;
+	visibility: hidden;
+	position: absolute;
+	top: -999px;
 }
 
 .search-screens {
-	width: 100%;
+	display: grid;
+	min-height: 150px;
 }
-.search-screens div {
-	height: auto;
+.search-screens > div {
+	grid-area: 1 / 1;
 }
-.search-loading {
-	padding: 25%;
+
+/* 我在 CSS 里写显示逻辑 :!!: */
+
+#search-initial-screen {
+	margin: auto;
 	text-align: center;
+	display: none;
+}
+.search-screens:not(.search-ready) #search-initial-screen {
+	display: block;
+}
+
+#search-loading-overlay {
+	background-color: rgba(0, 0, 0, 0.125);
+	opacity: 0;
+	transition: opacity 0.1s;
+	pointer-events: none;
+}
+.search-screens.search-loading #search-loading-overlay {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.search-results {
+	display: none;
+}
+.search-screens:is(.search-ready)
+.search-results {
+	display: block;
+}
+.search-screens:not(.search-loading)
+#search-results-backup {
+	display: none;
+}
+.search-screens.search-loading
+#search-results {
+    display: none;
 }

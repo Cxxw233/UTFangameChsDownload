@@ -12,8 +12,10 @@ layout: page
 </div>
 
 <div class="search-screens">
-<div class="search-loading">加载中</div>
-<div class="search-results" style="display: none"></div>
+<div id="search-initial-screen">加载中</div>
+<div class="search-results" id="search-results"></div>
+<div class="search-results" id="search-results-backup"></div>
+<div id="search-loading-overlay"></div>
 </div>
 
 <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.common.min.js"></script>
