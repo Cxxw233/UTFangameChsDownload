@@ -2,7 +2,7 @@
 layout: null
 permalink: search.json
 ---
-[ "translations": [
+{ "translations": [
 {%- for post in site.translations -%}
 	{ "title": {{ post.title | jsonify }}, "authors": {{ post.authors | jsonify }}, "links":
 	{{ post.links | jsonify }} }
@@ -13,4 +13,4 @@ permalink: search.json
 	{{ author.slug | jsonify }}: {{ author.title | jsonify }}
 	{%- unless forloop.last -%},{%- endunless -%}
 {%- endfor -%}
-} ]
+} }

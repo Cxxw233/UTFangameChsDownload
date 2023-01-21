@@ -3,10 +3,12 @@ title: 搜索
 layout: page
 ---
 
+<link name="search-data" href="{{ '/search.json' | relative_url }}" />
+
 <div class="search-form-container">
 <form name="search-form" action="" method="GET">
-<label for="query" class="aria-hidden">搜索汉化</label>
-<input disabled type="search" name="query" id="query" required placeholder="搜索汉化" />
+<label for="query" class="aria-hidden">输入查询词</label>
+<input disabled type="search" name="query" id="query" required placeholder="搜索汉化..." />
 <button disabled type="submit">搜索</button>
 </form>
 </div>
@@ -20,6 +22,18 @@ layout: page
 <div id="search-loading-overlay"></div>
 </div>
 
-<script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.common.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>
+<script id="template-search-result" type="text/html+ejs-tmpl">
+	<h4><% if (results.length > 0) { _%><%= results.length %> 个<%_ } else { _%>没有<% } %>结果</h4>
+
+	<% if (results.length > 0) { -%>
+	<ul class="search-results-listing">
+		<% results.forEach(function(item) { _%>
+			<li><%= item %></li>
+		<% }) -%>
+	</ul>
+	<% } %>
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6/dist/fuse.basic.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ejs@3/ejs.min.js"></script>
 <script src="assets/scripts/search.js"></script>
