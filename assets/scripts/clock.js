@@ -3,36 +3,46 @@
 let clock;
 
 function Clock(element) {
-	this.element = element;
+	this.element = null;
+	this.parts = {};
+	this.updateInterval = null;
+	this.time = null;
 
-	this.parts = {
-		year: null,
-		month: null,
-		day: null,
-		dayy: null,
-		hour: null,
-		minute: null,
-		second: null
-	};
-	for (let i of Object.keys(this.parts)) this.parts[i] = this.element.querySelector(".clock-" + i);
-
-	this.update();
-	this.interval = setInterval(this.update.bind(this));
+	if (element) this.setElement(element);
 }
 
-Clock.prototype.setTime = function (time) {
-	this.setPart("year", time.getFullYear(), 4);
-	this.setPart("month", time.getMonth() + 1);
-	this.setPart("day", time.getDate());
-	this.setPart("dayy", this.getLocalizedDay(time.getDay()), -1);
-	this.setPart("hour", time.getHours());
-	this.setPart("minute", time.getMinutes());
-	this.setPart("second", time.getSeconds());
+Clock.prototype.setElement = function (element) {
+	this.element = null;
+	this.parts = {};
+	if (this.updateInterval) clearInterval(this.updateInterval);
+	this.updateInterval = null;
+	if (!element) {
+		return;
+	}
+	this.element = element;
+	for (let i of ["year", "month", "date", "day", "hour", "minute", "second"])
+		this.parts[i] = this.element.querySelector(".clock-" + i);
+	this.update();
+	this.updateInterval = setInterval(this.update.bind(this));
 };
 
-Clock.prototype.setPart = function (part, num, padToLength = 2, padString = "0") {
+Clock.prototype.setTime = function (time) {
+	this.time = time;
+	this.setPart("year", this.time.getFullYear());
+	this.setPart("month", this.time.getMonth() + 1);
+	this.setPart("date", this.time.getDate());
+	this.setPart("day", this.getLocalizedDay(this.time.getDay()));
+	this.setPart("hour", this.time.getHours());
+	this.setPart("minute", this.time.getMinutes());
+	this.setPart("second", this.time.getSeconds());
+};
+
+Clock.prototype.setPart = function (part, num) {
 	let str = num.toString();
-	if (padToLength > 0) str = str.padStart(padToLength, padString);
+	if (typeof num == "number") {
+		let padToLength = part == "year" ? 4 : 2;
+		str = str.padStart(padToLength, "0");
+	}
 	this.parts[part].innerText = str;
 };
 
