@@ -67,7 +67,7 @@ function installAccentChanger() {
 
 function installClock() {
 	let clockElem = document.querySelector(".clock");
-	if (clockElem) let clock = new Clock(clockElem);
+	if (clockElem) new Clock(clockElem);
 }
 
 function installTabbedTables() {
