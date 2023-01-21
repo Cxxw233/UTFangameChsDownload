@@ -127,25 +127,22 @@ header .header-title {
 	padding: 10px;
 	margin: 10px;
 }
-header .header-title a {
+header .header-title * {
 	text-align: center;
 	display: block;
 	color: white;
 }
 
 /*设置按钮属性*/
-header .buttons {
-	display: inline;
-}
 header .buttons * {
 	margin: 0;
 	padding: 0;
 	width: 30px;
 }
-header .buttons #github {
+header .buttons-left {
 	float: left;
 }
-header .buttons #change-accent {
+header .buttons-right {
 	float: right;
 }
 header .buttons button {
@@ -160,25 +157,24 @@ header .buttons button#change-accent > img {
 
 /* 时钟效果样式 */
 .clock {
-	/* 禁止文本被拉取 */
-	user-select: none;
-	background-color: black;
+	padding: 10px 15px;
+	margin: 0 auto;
+	max-width: fit-content;
+	font-size: var(--main-font-size);
 	text-align: center;
+	color: white;
 	border-style: solid;
 	border-radius: 10px;
 	border-color: white;
 	border-width: 5px;
-	padding: 10px 15px;
-	margin: 0 auto;
-	max-width: fit-content;
 	box-shadow: 1px 1px 5px white, -1px -1px 5px white;
-	font-size: var(--main-font-size);
-	color: white;
+	background-color: black;
 	/* 文字阴影 实现3D效果 */
 	text-shadow: 0 1px 0 #464646, 0 2px 0 #3c3c3c, 0 3px 0 #323232, 0 4px 0 #282828, 0 5px 0 #1e1e1e,
 		0 6px 0 #141414, 0 7px 0 #0a0a0a, 0 8px 0 #000000, 0 0 5px rgba(100, 100, 100, 0),
 		0 -1px 3px rgba(120, 120, 120, 0.2), 0 9px 9px rgba(140, 140, 140, 0.3),
 		0 12px 12px rgba(160, 160, 160, 0.3), 0 15px 15px rgba(180, 180, 180, 0.3);
+	user-select: none;
 }
 
 footer {
@@ -250,12 +246,12 @@ footer div.end > dd {
 }
 .tabbed-table-content > li {
 	display: block;
+	list-style-type: none;
 	color: var(--secondary-color);
 	background-color: var(--primary-color);
 	box-shadow: 5px 5px 20px #333333;
 	border: 1px solid darkgray;
 	padding: 5px 0;
-	list-style-type: none;
 }
 
 .author-avatar-pres {
@@ -269,46 +265,53 @@ footer div.end > dd {
 
 .search-form-container {
 	margin-bottom: 10px;
+	height: 40px;
 }
 form[name="search-form"] {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
-	font-size: 16px;
-	height: 40px;
 }
-form[name="search-form"] input[type="search"] {
+
+input, button {
+	font-size: 16px;
+}
+
+input {
 	appearance: none;
 	-webkit-appearance: none;
 	background: white;
 	border: 0;
 	outline: 1px solid var(--c);
-	margin: 0;
 	padding: 10px;
 	min-width: 0;
 }
-form[name="search-form"] input[type="search"]:disabled {
+input::placeholder {
+	color: gray;
+}
+input:disabled {
 	background: lightgray;
 	color: gray;
 }
-form[name="search-form"] input[type="search"]:is(:focus, :active) {
+input:focus {
 	outline-color: var(--secondary-color);
 }
-form[name="search-form"] input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
+input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 	display: none;
 }
-form[name="search-form"] button {
+
+button {
+    appearance: none;
+    -webkit-appearance: none;
 	border: 1px solid var(--c);
 	background-color: lightgray;
 	padding: 10px;
-}
-form[name="search-form"] button:hover {
-	background-color: darkgray;
-}
-form[name="search-form"] button[type="submit"] {
+	width: 80px;
 	margin: 0 5px;
-	flex-basis: 80px;
+}
+button:hover {
+	background-color: darkgray;
 }
 
 .search-screens {
@@ -326,7 +329,8 @@ form[name="search-form"] button[type="submit"] {
 	text-align: center;
 	display: none;
 }
-.search-screens:not(.search-ready) #search-initial-screen {
+.search-screens:not(.search-ready)
+#search-initial-screen {
 	display: block;
 }
 
@@ -336,7 +340,8 @@ form[name="search-form"] button[type="submit"] {
 	transition: opacity 0.1s;
 	pointer-events: none;
 }
-.search-screens.search-loading #search-loading-overlay {
+.search-screens.search-loading
+#search-loading-overlay {
 	opacity: 1;
 	pointer-events: auto;
 }
