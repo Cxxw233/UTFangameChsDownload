@@ -48,6 +48,13 @@ body {
 	-webkit-font-smoothing: none;
 	-moz-osx-font-smoothing: none;
 }
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
 
 .page {
 	background-color: var(--post-background-color);
@@ -74,7 +81,7 @@ header .fake-2nd-heading,
 header .fake-3rd-heading {
 	font-weight: normal;
 	margin: 0;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 header .fake-2nd-heading,
 header .fake-3rd-heading {
@@ -132,6 +139,8 @@ header .buttons #change-accent {
 	float: right;
 }
 header .buttons button {
+	appearance: none;
+	-webkit-appearance: none;
 	background: transparent;
 	border: 0;
 }
@@ -196,27 +205,29 @@ footer div.end > dd {
 }
 .tabbed-table-title {
 	display: flex;
-	box-shadow: 5px 5px 20px #333333;
-	user-select: none;
+	border: 1px solid lightgray;
+	box-shadow: 5px 1px 20px #333333;
 	padding: 0;
 	margin: 0;
 	overflow: auto;
+	width: auto;
 	height: auto;
 	float: center;
 }
 .tabbed-table-title li {
-	flex: 1;
+	flex: 1 0 120px;
 	padding: 10px 5px;
 	text-align: center;
 	list-style-type: none;
-	min-width: 25vw;
 	width: fit-content;
+	/*outline: 1px solid #cccccc;*/
+	background: transparent;
 	border-top: 5px solid transparent;
 	word-wrap: break-word;
 }
 .tabbed-table-title li.tabbed-table-title-active {
-	background-color: var(--primary-color);
-	border-color: blue;
+	background: var(--primary-color);
+	border-color: var(--link);
 }
 .tabbed-table-content {
 	padding: 0;
@@ -232,6 +243,7 @@ footer div.end > dd {
 	color: var(--secondary-color);
 	background-color: var(--primary-color);
 	box-shadow: 5px 5px 20px #333333;
+	border: 1px solid darkgray;
 	padding: 5px 0;
 	list-style-type: none;
 }
@@ -249,34 +261,44 @@ footer div.end > dd {
 	width: 100%;
 	margin-bottom: 10px;
 }
-#search-form {
+form[name="search-form"] {
 	display: flex;
 	width: auto;
 	flex-flow: row wrap;
 	justify-content: center;
-}
-#search-form input {
-	height: 40px;
-	font-family: undertalefont;
 	font-size: 16px;
+	height: 40px;
 }
-#search-form input[name="query"] {
+form[name="search-form"] input[type="search"] {
+	appearance: none;
+	-webkit-appearance: none;
+	flex-basis: 50%;
 	max-width: 70%;
-	padding: 10px;
-	margin-right: 5px;
-	flex-grow: 8;
+	padding: 0 10px;
 	border: 1px solid var(--c);
+	background: white;
 }
-#search-form input[name="query"]:focus {
-	outline-style: solid;
+form[name="search-form"] input[type="search"]:disabled {
+	background: lightgray;
+	color: gray;
 }
-#search-form input[type="submit"] {
-	flex-basis: 80px;
+form[name="search-form"] input[type="search"]:is(:focus, :active) {
+	outline: 0;
+	border-color: var(--secondary-color);
+}
+form[name="search-form"] input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
+	display: none;
+}
+form[name="search-form"] button {
 	border: 2px solid var(--c);
 	background-color: lightgray;
 }
-#search-form input[type="submit"]:hover {
+form[name="search-form"] button:hover {
 	background-color: darkgray;
+}
+form[name="search-form"] button[type="submit"] {
+	flex-basis: 80px;
+	margin: 0 5px;
 }
 .search-form-label-hide {
 	display: none;
