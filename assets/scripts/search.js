@@ -14,6 +14,14 @@ const searchResultsBackup = document.querySelector("#search-results-backup");
 const searchInitScreen = document.querySelector("#search-initial-screen");
 const searchResultTemplate = document.querySelector("#template-search-result").innerHTML;
 
+function displayError(e, desc) {
+	alert(`${desc}
+
+下面是详尽的错误报告，可能会有用：
+
+${e.stack}`);
+}
+
 async function initSearcher() {
 	const response = await fetch(searchDataURL);
 	searchData = await response.json();
@@ -52,7 +60,13 @@ function setLoading(isLoading) {
 }
 
 async function renderSearchResults(results) {
-	const output = ejs.render(searchResultTemplate, { results: results });
+	let output;
+	try {
+		output = ejs.render(searchResultTemplate, { results: results });
+	} catch (e) {
+		displayError(e, "渲染搜索结果失败！这是网站的问题，请报告。");
+		return;
+	}
 	searchResults.innerHTML = output;
 }
 

@@ -28,8 +28,20 @@ layout: page
 	<% if (results.length > 0) { -%>
 	<ul class="search-results-listing">
 		<% results.forEach(function(result) { _%>
+			<% let item = result.item %>
 			<li>
-				<div><%= JSON.stringify(result.item) %></div>
+				<div>
+					<h3><%= item.title %></h3>
+					<p>by <%= item._authorsText.join("，") %></p>
+					<% item.links.forEach(function(link) { %>
+						<% let linkName = link.name ? link.name : "下载链接" %>
+						<p>
+						<% if (link.url) { _%>
+							<a href="<%= link.url %>"><%= linkName %></a><%_ } else { _%><%= linkName _%>
+						<%_ } _%><% if (link.notes || link.passcode) { _%>（<%= link.passcode ? `提取码：${link.passcode}` : "" _%><%= link.notes ? `${link.passcode ? "；" : ""}${link.notes}` : "" %>）<%_ } %>
+						</p>
+					<% }) %>
+				</div>
 			</li>
 		<% }) -%>
 	</ul>
