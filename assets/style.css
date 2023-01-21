@@ -313,7 +313,7 @@ form[name="search-form"] button[type="submit"] {
 
 .search-screens {
 	display: grid;
-	min-height: 150px;
+	min-height: 25vh;
 }
 .search-screens > div {
 	grid-area: 1 / 1;
