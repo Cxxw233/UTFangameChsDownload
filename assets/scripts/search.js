@@ -1,12 +1,13 @@
+"use strict";
+
 const searchDataURL = document.querySelector("link[name='search-data']").href;
 let searchData = {};
 let searcher;
 const searcherOptions = {
 	keys: [
 		"title",
-		"authors"
-	],
-	getFn: getSearchDataProp
+		"_authorsText"
+	]
 };
 
 const form = document.querySelector("form[name='search-form']");
@@ -19,20 +20,10 @@ const searchResultTemplate = document.querySelector("#template-search-result").i
 async function initSearcher() {
 	const response = await fetch(searchDataURL);
 	searchData = await response.json();
+	searchData.translations.forEach(x => {
+		x._authorsText = x.authors.map(y => searchData.authors[y]);
+	});
 	searcher = new Fuse(searchData.translations, searcherOptions);
-}
-
-function getSearchDataProp(obj, _path) {
-	let path = typeof _path == "string" ? _path.split(".") : _path.slice();
-	if (path[0] != "authors")
-		return Fuse.config.getFn(obj, path);
-
-	const translatedAuthors = obj.authors.map(x => searchData.authors[x]);
-
-	path.shift();
-	if (path.length == 0)
-		return translatedAuthors;
-	return Fuse.config.getFn(translatedAuthors, path);
 }
 
 function setFormEnabled(form, enabled) {

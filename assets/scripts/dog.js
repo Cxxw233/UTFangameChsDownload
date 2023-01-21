@@ -1,4 +1,4 @@
-let dog = document.querySelector("footer #dog img");
+let dog = document.querySelector("footer .dog img");
 dog.addEventListener("mouseover", () => {
 	dog.src = dog.dataset.bark;
 });
