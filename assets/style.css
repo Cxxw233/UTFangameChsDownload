@@ -50,6 +50,12 @@ body {
 	-moz-osx-font-smoothing: none;
 }
 
+.aria-hidden {
+	visibility: hidden;
+	position: absolute;
+	top: -999px;
+}
+
 .page {
 	background-color: var(--post-background-color);
 	color: var(--secondary-color);
@@ -83,10 +89,45 @@ textarea {
 	width: 100%;
 }
 
-.aria-hidden {
-	visibility: hidden;
-	position: absolute;
-	top: -999px;
+input,
+button {
+	font-size: 16px;
+}
+
+input {
+	appearance: none;
+	-webkit-appearance: none;
+	background: white;
+	border: 0;
+	outline: 1px solid var(--c);
+	padding: 10px;
+	min-width: 0;
+}
+input::placeholder {
+	color: gray;
+}
+input:disabled {
+	background: lightgray;
+	color: gray;
+}
+input:focus {
+	outline-color: var(--secondary-color);
+}
+input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
+	display: none;
+}
+
+button {
+	appearance: none;
+	-webkit-appearance: none;
+	border: 1px solid var(--c);
+	background-color: lightgray;
+	padding: 10px;
+	width: 80px;
+	margin: 0 5px;
+}
+button:hover {
+	background-color: darkgray;
 }
 
 h1,
@@ -276,47 +317,6 @@ form[name="search-form"] {
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
-}
-
-input,
-button {
-	font-size: 16px;
-}
-
-input {
-	appearance: none;
-	-webkit-appearance: none;
-	background: white;
-	border: 0;
-	outline: 1px solid var(--c);
-	padding: 10px;
-	min-width: 0;
-}
-input::placeholder {
-	color: gray;
-}
-input:disabled {
-	background: lightgray;
-	color: gray;
-}
-input:focus {
-	outline-color: var(--secondary-color);
-}
-input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
-	display: none;
-}
-
-button {
-	appearance: none;
-	-webkit-appearance: none;
-	border: 1px solid var(--c);
-	background-color: lightgray;
-	padding: 10px;
-	width: 80px;
-	margin: 0 5px;
-}
-button:hover {
-	background-color: darkgray;
 }
 
 .search-screens {
