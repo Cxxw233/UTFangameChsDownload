@@ -14,6 +14,8 @@
 
 		<div id="main-content">{{ content }}</div>
 
-		{%- include footer.html -%} {%- include scripts_end_of_body.html -%}
+		{%- include footer.html -%}
+
+		<script src="{{ '/assets/scripts/main.js' | relative_url }}"></script>
 	</body>
 </html>
