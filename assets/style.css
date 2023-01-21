@@ -71,6 +71,12 @@ a:hover {
 	text-decoration: underline;
 }
 
+.aria-hidden {
+	visibility: hidden;
+	position: absolute;
+	top: -999px;
+}
+
 h1,
 h2,
 h3,
@@ -299,11 +305,6 @@ form[name="search-form"] button:hover {
 form[name="search-form"] button[type="submit"] {
 	flex-basis: 80px;
 	margin: 0 5px;
-}
-.search-form-label-hide {
-	visibility: hidden;
-	position: absolute;
-	top: -999px;
 }
 
 .search-screens {

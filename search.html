@@ -5,7 +5,7 @@ layout: page
 
 <div class="search-form-container">
 <form name="search-form" action="" method="GET">
-<label for="query" class="search-form-label-hide">搜索汉化</label>
+<label for="query" class="aria-hidden">搜索汉化</label>
 <input disabled type="search" name="query" id="query" required placeholder="搜索汉化" />
 <button disabled type="submit">搜索</button>
 </form>
@@ -14,7 +14,9 @@ layout: page
 <div class="search-screens">
 <div id="search-initial-screen">加载中</div>
 <div class="search-results" id="search-results"></div>
-<div class="search-results" id="search-results-backup"></div>
+<div class="search-results" id="search-results-backup">
+<p class="aria-hidden">搜索中</p>
+</div>
 <div id="search-loading-overlay"></div>
 </div>
 
