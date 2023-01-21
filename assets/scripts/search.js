@@ -4,10 +4,7 @@ const searchDataURL = document.querySelector("link[name='search-data']").href;
 let searchData = {};
 let searcher;
 const searcherOptions = {
-	keys: [
-		"title",
-		"_authorsText"
-	]
+	keys: ["title", "_authorsText"]
 };
 
 const form = document.querySelector("form[name='search-form']");
@@ -20,8 +17,8 @@ const searchResultTemplate = document.querySelector("#template-search-result").i
 async function initSearcher() {
 	const response = await fetch(searchDataURL);
 	searchData = await response.json();
-	searchData.translations.forEach(x => {
-		x._authorsText = x.authors.map(y => searchData.authors[y]);
+	searchData.translations.forEach((x) => {
+		x._authorsText = x.authors.map((y) => searchData.authors[y]);
 	});
 	searcher = new Fuse(searchData.translations, searcherOptions);
 }
@@ -68,7 +65,7 @@ async function executeSearch(query) {
 	setLoading(false);
 }
 
-form.addEventListener("submit", e => {
+form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
 	const query = form.elements.query.value;
