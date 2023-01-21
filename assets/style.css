@@ -12,9 +12,10 @@
 	--link: rgb(0, 17, 255); /*链接颜色*/
 	--end-color: rgb(167, 167, 167); /*友情链接颜色*/
 	--main-font-size: 18px;
-	--main-heading-font-size: 28px;
-	--secondary-heading-font-size: 24px;
-	--thirdary-heading-font-size: 20px;
+	--main-heading-font-size: 2em;
+	--secondary-heading-font-size: 1.5em;
+	--thirdary-heading-font-size: 1.3em;
+	--fourthary-heading-font-size: 1em;
 }
 .dark-theme {
 	--primary-color: rgb(27, 27, 27);
@@ -87,14 +88,14 @@ h3,
 h4,
 h5,
 h6,
-header .fake-2nd-heading,
-header .fake-3rd-heading {
+header .title-pt2,
+header .title-pt3 {
 	font-weight: normal;
 	margin: 0;
 	margin-bottom: 15px;
 }
-header .fake-2nd-heading,
-header .fake-3rd-heading {
+header .title-pt2,
+header .title-pt3 {
 	text-align: center;
 	margin: 10px;
 }
@@ -105,23 +106,23 @@ h5,
 h6 {
 	color: var(--secondary-color);
 }
-h2, header .fake-2nd-heading {
+h2 {
 	font-size: var(--secondary-heading-font-size);
 }
-h3, header .fake-3rd-heading {
+h3, header .title-pt2 {
 	font-size: var(--thirdary-heading-font-size);
 }
-h4 {
-	font-size: 18px;
+h4, header .title-pt3 {
+	font-size: var(----fourthary-heading-font-size);
 }
-header .fake-3rd-heading > p,
-header .fake-3rd-heading > br,
+header .title-pt3 > p,
+header .title-pt3 > br,
 footer .footer-1 > p {
 	margin: 0 auto;
 }
 
 header .header-title {
-	font-size: var(--main-heading-font-size);
+	font-size: var(--secondary-heading-font-size);
 	background-color: grey;
 	color: white;
 	padding: 10px;
@@ -372,6 +373,6 @@ button:hover {
 	outline: 2px solid var(--c);
 	box-shadow: 0px 0px 5px #333333;
 	background: var(--post-background-color);
-	font-size: 16px;
+	font-size: var(--main-font-size);
 	word-break: break-word; /* TEMPORARY */
 }
