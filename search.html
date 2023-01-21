@@ -27,8 +27,10 @@ layout: page
 
 	<% if (results.length > 0) { -%>
 	<ul class="search-results-listing">
-		<% results.forEach(function(item) { _%>
-			<li><%= item %></li>
+		<% results.forEach(function(result) { _%>
+			<li>
+				<div><%= JSON.stringify(result.item) %></div>
+			</li>
 		<% }) -%>
 	</ul>
 	<% } %>

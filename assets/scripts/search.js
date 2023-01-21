@@ -16,9 +16,10 @@ const searchResultsBackup = document.querySelector("#search-results-backup");
 const searchInitScreen = document.querySelector("#search-initial-screen");
 const searchResultTemplate = document.querySelector("#template-search-result").innerHTML;
 
-async function initSearchData() {
+async function initSearcher() {
 	const response = await fetch(searchDataURL);
 	searchData = await response.json();
+	searcher = new Fuse(searchData.translations, searcherOptions);
 }
 
 function getSearchDataProp(obj, _path) {
@@ -32,10 +33,6 @@ function getSearchDataProp(obj, _path) {
 	if (path.length == 0)
 		return translatedAuthors;
 	return Fuse.config.getFn(translatedAuthors, path);
-}
-
-async function initalizeSearcher() {
-	searcher = new Fuse(searchData.translations, searcherOptions);
 }
 
 function setFormEnabled(form, enabled) {
@@ -67,12 +64,8 @@ function setLoading(isLoading) {
 }
 
 async function renderSearchResults(results) {
-	try {
-		const output = ejs.render(searchResultTemplate, { results: results });
-		searchResults.innerHTML = output;
-	} catch (e) {
-		searchResults.innerText = e;
-	}
+	const output = ejs.render(searchResultTemplate, { results: results });
+	searchResults.innerHTML = output;
 }
 
 async function executeSearch(query) {
@@ -84,7 +77,7 @@ async function executeSearch(query) {
 	setLoading(false);
 }
 
-function onSearchSubmit(e) {
+form.addEventListener("submit", e => {
 	e.preventDefault();
 
 	const query = form.elements.query.value;
@@ -94,17 +87,16 @@ function onSearchSubmit(e) {
 	history.pushState("", "", url);
 
 	executeSearch(query);
-}
-form.addEventListener("submit", onSearchSubmit);
+});
 
-async function init() {
-	await initSearchData();
-	await initalizeSearcher();
+document.addEventListener("DOMContentLoaded", async () => {
+	await initSearcher();
 	onSearchReady();
 
 	let url = new URL(location);
 	let query = url.searchParams.get("query");
-	if (query)
+	if (query) {
+		form.elements.query.value = query;
 		executeSearch(query);
-}
-document.addEventListener("DOMContentLoaded", () => init());
+	}
+});
