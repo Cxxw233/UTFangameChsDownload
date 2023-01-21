@@ -19,7 +19,5 @@ function myTime() {
 	document.getElementById("clock-7").innerText = Math.floor(ss / 10);
 	document.getElementById("clock-8").innerText = ss % 10;
 }
-document.addEventListener("DOMContentLoaded", () => {
-	myTime();
-	setInterval(myTime, 1000);
-});
+myTime();
+setInterval(myTime, 1000);

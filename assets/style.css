@@ -146,8 +146,6 @@ header .buttons-right {
 	float: right;
 }
 header .buttons button {
-	appearance: none;
-	-webkit-appearance: none;
 	background: transparent;
 	border: 0;
 }
@@ -178,21 +176,19 @@ header .buttons button#change-accent > img {
 }
 
 footer {
+	margin: auto;
 	text-align: center;
-	margin: auto;
-}
-footer #dog {
-	padding: auto;
-	position: relative;
-	margin: auto;
-	top: -18px;
-}
-footer #dog > img {
-	float: right;
 }
 footer div {
 	padding: 20px;
 	margin: 0 10px;
+}
+footer #dog {
+	display: block;
+	padding: 0;
+	margin-bottom: 0;
+	text-align: right;
+	height: 38px;
 }
 footer div.footer-1 {
 	background-color: #6b6b6b;
