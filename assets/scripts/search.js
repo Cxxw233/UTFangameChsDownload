@@ -22,13 +22,23 @@ function displayError(e, desc) {
 ${e.stack}`);
 }
 
-async function initSearcher() {
-	const response = await fetch(searchDataURL);
-	searchData = await response.json();
-	searchData.translations.forEach((x) => {
-		x._authorsText = x.authors.map((y) => searchData.authors[y]);
-	});
-	searcher = new Fuse(searchData.translations, searcherOptions);
+async function initSearch() {
+	try {
+		const response = await fetch(searchDataURL);
+		searchData = await response.json();
+	} catch (e) {
+		displayError(e, "加载搜索数据失败！请检查你的网络。");
+		throw e;
+	}
+	try {
+		searchData.translations.forEach((x) => {
+			x._authorsText = x.authors.map((y) => searchData.authors[y]);
+		});
+		searcher = new Fuse(searchData.translations, searcherOptions);
+	} catch (e) {
+		displayError(e, "处理搜索数据失败！这可能是 bug，请联系管理员。");
+		throw e;
+	}
 }
 
 function setFormEnabled(form, enabled) {
@@ -36,11 +46,6 @@ function setFormEnabled(form, enabled) {
 		i.disabled = !enabled;
 	}
 	return enabled;
-}
-
-function onSearchReady() {
-	setFormEnabled(form, true);
-	screens.classList.add("search-ready");
 }
 
 function setLoading(isLoading) {
@@ -54,6 +59,8 @@ function setLoading(isLoading) {
 		screens.classList.add("search-loading");
 	} else {
 		setFormEnabled(form, true);
+		if (!screens.classList.contains("search-ready"))
+			screens.classList.add("search-ready");
 		searchResultsBackup.replaceChildren();
 	}
 	return isLoading;
@@ -64,7 +71,7 @@ async function renderSearchResults(results) {
 	try {
 		output = ejs.render(searchResultTemplate, { results: results });
 	} catch (e) {
-		displayError(e, "渲染搜索结果失败！这是网站的问题，请报告。");
+		displayError(e, "渲染搜索结果失败！这是网站的问题，请联系管理员。");
 		return;
 	}
 	searchResults.innerHTML = output;
@@ -92,8 +99,9 @@ form.addEventListener("submit", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
-	await initSearcher();
-	onSearchReady();
+	setLoading(true);
+	await initSearch();
+	setLoading(false);
 
 	let url = new URL(location);
 	let query = url.searchParams.get("query");

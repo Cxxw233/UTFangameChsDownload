@@ -340,7 +340,7 @@ form[name="search-form"] {
 #search-loading-overlay {
 	background-color: rgba(0, 0, 0, 0.125);
 	opacity: 0;
-	transition: opacity 0.1s;
+	transition: opacity 1.5s;
 	pointer-events: none;
 }
 .search-screens.search-loading #search-loading-overlay {
@@ -373,10 +373,11 @@ form[name="search-form"] {
 }
 .search-results-listing > li > div {
 	max-width: 100%;
+	margin: 0 5px;
 	padding: 15px;
+	padding-bottom: 5px;
 	outline: 2px solid var(--c);
 	box-shadow: 0px 0px 5px #333333;
 	background: var(--post-background-color);
 	font-size: var(--main-font-size);
-	word-break: break-word; /* TEMPORARY */
 }
