@@ -297,8 +297,20 @@ footer .end > dd {
 
 .author-avatar-pres {
 	display: flex;
-	align-items: center;
-	gap: 10px;
+	gap: 28px;
+}
+.author-avatar-pres > div:nth-child(1) > img {
+	width: 80px;
+	height: 80px;
+}
+@counter-style ut-asterisk {
+	system: cyclic;
+	symbols: "*";
+	suffix: " ";
+}
+.author-avatar-pres > div:nth-child(2) {
+	display: list-item;
+	list-style: ut-asterisk outside;
 }
 
 .search-form-container {
@@ -307,7 +319,7 @@ footer .end > dd {
 }
 form[name="search-form"] {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 }
