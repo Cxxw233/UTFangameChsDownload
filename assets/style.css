@@ -172,34 +172,35 @@ footer .footer-1 > p {
 }
 
 header .header-title {
+	display: flex;
+	margin: 10px;
+	padding: 10px;
 	font-size: var(--secondary-heading-font-size);
 	background-color: grey;
 	color: white;
-	padding: 10px;
-	margin: 10px;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
 }
-header .header-title * {
-	text-align: center;
-	display: block;
-	color: white;
-}
-
-/*设置按钮属性*/
-header .buttons * {
-	margin: 0;
+header .header-title div {
+	margin: auto;
 	padding: 0;
+}
+header .header-title div:nth-child(2) {
+	text-align: center;
+	flex: 1;
+}
+header .header-title div:nth-child(2) a {
+	color: inherit;
+}
+header .buttons * {
 	width: 32px;
-	font-size: 32px;
-}
-header .buttons-left {
-	float: left;
-}
-header .buttons-right {
-	float: right;
 }
 header .buttons button {
 	background: transparent;
 	border: 0;
+	margin: 0;
+	padding: 0;
 }
 header .buttons button#change-accent > img {
 	width: 100%;
