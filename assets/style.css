@@ -292,8 +292,7 @@ footer .end > dd {
 	border: 1px solid darkgray;
 }
 .tabbed-table-content > li > p {
-	padding: 0 15px;
-	margin: 15px 0;
+	margin: 15px;
 }
 
 .author-avatar-pres {
