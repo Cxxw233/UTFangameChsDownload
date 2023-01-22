@@ -1,5 +1,5 @@
 {%- unless include.author.team -%}
-	<div class="author-avatar-pres">
+	<p><div class="author-avatar-pres">
 		<div>
 			<img
 				src="{{ '/assets/images/authors/' | append: include.author.image | relative_url }}"
@@ -11,7 +11,7 @@
 		<div>
 			* 由<a href="{{ include.author.homepage }}">@{{ include.author.title }}</a>制作的汉化项目
 		</div>
-	</div>
+	</div></p>
 {%- endunless -%}
 
 {{ content }}
