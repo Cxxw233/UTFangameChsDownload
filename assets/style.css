@@ -50,7 +50,7 @@ body {
 	-moz-osx-font-smoothing: none;
 }
 
-.aria-hidden {
+*[aria-hidden="true"] {
 	visibility: hidden;
 	position: absolute;
 	top: -999px;
@@ -59,6 +59,7 @@ body {
 #main-content {
 	margin: 10px;
 }
+
 .page {
 	background-color: var(--post-background-color);
 	color: var(--secondary-color);
@@ -130,6 +131,16 @@ button {
 }
 button:hover {
 	background-color: darkgray;
+}
+
+@counter-style ut-asterisk {
+	system: cyclic;
+	symbols: "*";
+	suffix: " ";
+}
+
+ul {
+	list-style-type: ut-asterisk;
 }
 
 h1,
@@ -303,11 +314,6 @@ footer .end > dd {
 	width: 80px;
 	height: 80px;
 }
-@counter-style ut-asterisk {
-	system: cyclic;
-	symbols: "*";
-	suffix: " ";
-}
 .author-avatar-pres > div:nth-child(2) {
 	margin-left: 10px;
 }
@@ -318,11 +324,10 @@ footer .end > dd {
 
 .search-form-container {
 	margin-bottom: 15px;
-	height: 40px;
 }
 form[name="search-form"] {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
 }
