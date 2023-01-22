@@ -241,14 +241,14 @@ footer .dog {
 	padding: 0;
 	justify-content: right;
 }
-footer div.footer-1 {
+footer .footer-1 {
 	background-color: #6b6b6b;
 }
-footer div.end {
+footer .end {
 	background-color: var(--end-color);
 	list-style-type: none;
 }
-footer div.end > dd {
+footer .end > dd {
 	margin: 0;
 }
 
@@ -279,7 +279,7 @@ footer div.end > dd {
 	border-top: 5px solid transparent;
 	word-wrap: break-word;
 }
-.tabbed-table-title li.tabbed-table-title-active {
+.tabbed-table-title .tabbed-table-title-active {
 	background: var(--primary-color);
 	border-color: var(--link);
 }
@@ -288,7 +288,7 @@ footer div.end > dd {
 	margin: 0;
 }
 .tabbed-table-content p,
-.tabbed-table-content div.author-avatar-pres {
+.tabbed-table-content .author-avatar-pres {
 	padding: 0 15px;
 	margin: 15px 0;
 }
