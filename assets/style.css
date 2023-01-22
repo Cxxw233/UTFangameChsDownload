@@ -297,7 +297,7 @@ footer .end > dd {
 
 .author-avatar-pres {
 	display: flex;
-	gap: 28px;
+	gap: 32px;
 }
 .author-avatar-pres > div:nth-child(1) > img {
 	width: 80px;
