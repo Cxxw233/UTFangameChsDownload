@@ -350,6 +350,7 @@ form[name="search-form"] {
 	opacity: 1;
 	transition: opacity 2s 0.15s;
 	pointer-events: auto;
+	cursor: not-allowed;
 }
 
 /* 我在 CSS 里写显示逻辑 :!!: */
