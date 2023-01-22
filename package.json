@@ -1,0 +1,20 @@
+{
+	"name": "utfangamechsdownload",
+	"private": true,
+	"version": "0.0.0",
+	"description": "UNDERTALE汉化下崽站",
+	"scripts": {
+		"build": "bundle exec jekyll build",
+		"serve": "bundle exec jekyll serve"
+	},
+	"repository": "git+https://github.com/Cxxw233/UTFangameChsDownload.git",
+	"author": "cxx_w, AX_233",
+	"bugs": {
+		"url": "https://github.com/Cxxw233/UTFangameChsDownload/issues"
+	},
+	"homepage": "https://github.com/Cxxw233/UTFangameChsDownload#readme",
+	"devDependencies": {
+		"@shopify/prettier-plugin-liquid": "^1.0.5",
+		"prettier": "2.8.3"
+	}
+}

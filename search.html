@@ -1,0 +1,53 @@
+---
+title: 搜索
+layout: page
+---
+
+<link name="search-data" href="{{ '/search.json' | relative_url }}" />
+
+<div class="search-form-container">
+	<form name="search-form" action="" method="GET">
+		<label for="query" class="aria-hidden">输入查询词</label>
+		<input disabled type="search" name="query" id="query" required placeholder="搜索汉化..." />
+		<button disabled type="submit">搜索</button>
+	</form>
+</div>
+
+<div class="search-screens">
+	<div id="search-initial-screen">加载中</div>
+	<div class="search-results" id="search-results"></div>
+	<div class="search-results" id="search-results-backup">
+		<p class="aria-hidden">搜索中</p>
+	</div>
+	<div id="search-loading-overlay"></div>
+</div>
+
+<script id="template-search-result" type="text/html+ejs-tmpl">
+	<h4><% if (results.length > 0) { _%><%= results.length %> 个<%_ } else { _%>没有<% } %>结果</h4>
+
+	<% if (results.length > 0) { -%>
+	<ul class="search-results-listing">
+		<% results.forEach(function(result) { _%>
+			<% let item = result.item %>
+			<li>
+				<div>
+					<h3><%= item.title %></h3>
+					<p>by <%= item._authorsText.join("，") %></p>
+					<% item.links.forEach(function(link) { %>
+						<% let linkName = link.name ? link.name : "下载链接" %>
+						<p>
+						<% if (link.url) { _%>
+							<a href="<%= link.url %>"><%= linkName %></a><%_ } else { _%><%= linkName _%>
+						<%_ } _%><% if (link.notes || link.passcode) { _%>（<%= link.passcode ? `提取码：${link.passcode}` : "" _%><%= link.notes ? `${link.passcode ? "；" : ""}${link.notes}` : "" %>）<%_ } %>
+						</p>
+					<% }) %>
+				</div>
+			</li>
+		<% }) -%>
+	</ul>
+	<% } %>
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6/dist/fuse.basic.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ejs@3/ejs.min.js"></script>
+<script src="assets/scripts/search.js"></script>
