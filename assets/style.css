@@ -20,6 +20,8 @@
 
 	--ui-font: undertalefont, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji";
+	--ui-font-mono: undertalefont, ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+		monospace;
 }
 .dark-theme {
 	--primary-color: rgb(27, 27, 27);
@@ -236,6 +238,7 @@ header .buttons button#change-accent > img {
 	margin: 0 auto;
 	max-width: fit-content;
 	font-size: var(--main-font-size);
+	font-family: var(--ui-font-mono);
 	text-align: center;
 	color: white;
 	border-style: solid;
@@ -319,14 +322,14 @@ footer .end > dd {
 
 .author-avatar-pres {
 	display: flex;
-	gap: 20px;
+	gap: 16px;
 }
 .author-avatar-pres > div:nth-child(1) > img {
 	width: 80px;
 	height: 80px;
 }
 .author-avatar-pres > div:nth-child(2) {
-	margin-left: 10px;
+	margin-left: 1em;
 }
 .author-avatar-pres > div:nth-child(2) > span {
 	display: list-item;
