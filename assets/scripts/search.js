@@ -15,6 +15,7 @@ const searchInitScreen = document.querySelector("#search-initial-screen");
 const searchResultTemplate = document.querySelector("#template-search-result").innerHTML;
 
 function displayError(e, desc) {
+	console.error(desc, e);
 	alert(`${desc}
 
 下面是详尽的错误报告，可能会有用：
