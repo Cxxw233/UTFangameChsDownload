@@ -114,7 +114,6 @@ input {
 	outline-offset: 0;
 	outline: 1px solid var(--c);
 	padding: 10px;
-	min-width: 0;
 }
 input::placeholder {
 	color: gray;
@@ -139,7 +138,7 @@ button {
 	border: 1px solid var(--c);
 	background-color: lightgray;
 	padding: 10px 20px;
-	max-width: fit-content;
+	width: fit-content;
 }
 button:hover {
 	background-color: darkgray;
@@ -345,11 +344,8 @@ form[name="search-form"] {
 	align-items: center;
 	gap: 5px;
 }
-form[name="search-form"] input {
-	flex-grow: 1;
-}
 form[name="search-form"] button {
-	flex-grow: 0;
+	flex-basis: 100px;
 }
 
 .search-screens {
