@@ -297,7 +297,7 @@ footer .end > dd {
 
 .author-avatar-pres {
 	display: flex;
-	gap: 32px;
+	gap: 20px;
 }
 .author-avatar-pres > div:nth-child(1) > img {
 	width: 80px;
@@ -309,6 +309,9 @@ footer .end > dd {
 	suffix: " ";
 }
 .author-avatar-pres > div:nth-child(2) {
+	margin-left: 10px;
+}
+.author-avatar-pres > div:nth-child(2) > span {
 	display: list-item;
 	list-style: ut-asterisk outside;
 }
