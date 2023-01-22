@@ -23,15 +23,6 @@ function displayError(e, desc) {
 ${e.stack}`);
 }
 
-// debug function
-/*
-function delay(x) {
-	if (x <= 0)
-		return new Promise(resolve => resolve());
-	return new Promise(resolve => setTimeout(resolve, x * 1000));
-}
-*/
-
 async function initSearch() {
 	try {
 		const response = await fetch(searchDataURL);
@@ -89,10 +80,7 @@ async function renderSearchResults(results) {
 async function executeSearch(query) {
 	setLoading(true);
 
-	const searchTime = Date.now();
 	const results = searcher.search(query);
-	// DEBUG: 搜索太快了，至少0.1秒钟后显示结果
-	// await delay(0.1 - (Date.now() - searchTime) / 1000);
 	renderSearchResults(results);
 
 	setLoading(false);
