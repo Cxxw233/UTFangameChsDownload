@@ -23,6 +23,13 @@ function displayError(e, desc) {
 ${e.stack}`);
 }
 
+/*
+debug function
+function delay(x) {
+	return new Promise(resolve => setTimeout(resolve, x * 1000));
+}
+*/
+
 async function initSearch() {
 	try {
 		const response = await fetch(searchDataURL);
