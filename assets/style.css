@@ -138,9 +138,8 @@ button {
 	-webkit-appearance: none;
 	border: 1px solid var(--c);
 	background-color: lightgray;
-	padding: 10px;
-	width: 80px;
-	margin: 0 5px;
+	padding: 10px 20px;
+	max-width: fit-content;
 }
 button:hover {
 	background-color: darkgray;
@@ -344,6 +343,13 @@ form[name="search-form"] {
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
+	gap: 5px;
+}
+form[name="search-form"] input {
+	flex-grow: 1;
+}
+form[name="search-form"] button {
+	flex-grow: 0;
 }
 
 .search-screens {
@@ -385,16 +391,14 @@ form[name="search-form"] {
 .search-results-listing {
 	margin: 0;
 	padding: 0;
+	list-style-type: none;
 }
 .search-results-listing > li {
-	list-style-type: none;
 	margin: 10px 0;
 }
 .search-results-listing > li > div {
 	max-width: 100%;
-	margin: 0 5px;
 	padding: 15px;
-	padding-bottom: 5px;
 	outline: 2px solid var(--c);
 	box-shadow: 0px 0px 5px #333333;
 	background: var(--post-background-color);

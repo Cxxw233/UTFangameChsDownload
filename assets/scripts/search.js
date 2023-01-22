@@ -69,7 +69,7 @@ function setLoading(isLoading) {
 async function renderSearchResults(results) {
 	let output;
 	try {
-		output = ejs.render(searchResultTemplate, { results: results });
+		output = ejs.render(searchResultTemplate, { results: results }, { rmWhitespace: true });
 	} catch (e) {
 		displayError(e, "渲染搜索结果失败！这是网站的问题，请联系管理员。");
 		return;
