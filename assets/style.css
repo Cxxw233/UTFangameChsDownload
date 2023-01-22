@@ -172,34 +172,35 @@ footer .footer-1 > p {
 }
 
 header .header-title {
+	display: flex;
+	margin: 10px;
+	padding: 10px;
 	font-size: var(--secondary-heading-font-size);
 	background-color: grey;
 	color: white;
-	padding: 10px;
-	margin: 10px;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
 }
-header .header-title * {
-	text-align: center;
-	display: block;
-	color: white;
-}
-
-/*设置按钮属性*/
-header .buttons * {
-	margin: 0;
+header .header-title div {
+	margin: auto;
 	padding: 0;
+}
+header .header-title div:nth-child(2) {
+	text-align: center;
+	flex: 1;
+}
+header .header-title div:nth-child(2) a {
+	color: inherit;
+}
+header .buttons * {
 	width: 32px;
-	font-size: 32px;
-}
-header .buttons-left {
-	float: left;
-}
-header .buttons-right {
-	float: right;
 }
 header .buttons button {
 	background: transparent;
 	border: 0;
+	margin: 0;
+	padding: 0;
 }
 header .buttons button#change-accent > img {
 	width: 100%;
@@ -240,14 +241,14 @@ footer .dog {
 	padding: 0;
 	justify-content: right;
 }
-footer div.footer-1 {
+footer .footer-1 {
 	background-color: #6b6b6b;
 }
-footer div.end {
+footer .end {
 	background-color: var(--end-color);
 	list-style-type: none;
 }
-footer div.end > dd {
+footer .end > dd {
 	margin: 0;
 }
 
@@ -258,6 +259,7 @@ footer div.end > dd {
 .tabbed-table-title {
 	display: flex;
 	border: 1px solid lightgray;
+	border-bottom: 0;
 	box-shadow: 5px 1px 20px #333333;
 	padding: 0;
 	margin: 0;
@@ -277,7 +279,7 @@ footer div.end > dd {
 	border-top: 5px solid transparent;
 	word-wrap: break-word;
 }
-.tabbed-table-title li.tabbed-table-title-active {
+.tabbed-table-title .tabbed-table-title-active {
 	background: var(--primary-color);
 	border-color: var(--link);
 }
@@ -286,7 +288,7 @@ footer div.end > dd {
 	margin: 0;
 }
 .tabbed-table-content p,
-.tabbed-table-content div.author-avatar-pres {
+.tabbed-table-content .author-avatar-pres {
 	padding: 0 15px;
 	margin: 15px 0;
 }
