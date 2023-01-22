@@ -352,11 +352,12 @@ form[name="search-form"] {
 #search-loading-overlay {
 	background-color: rgba(0, 0, 0, 0.125);
 	opacity: 0;
-	transition: opacity 1.5s;
+	transition: opacity 0.1s 0s;
 	pointer-events: none;
 }
 .search-screens.search-loading #search-loading-overlay {
 	opacity: 1;
+	transition: opacity 1s 0.5s;
 	pointer-events: auto;
 }
 
