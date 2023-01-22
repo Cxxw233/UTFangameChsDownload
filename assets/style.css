@@ -11,11 +11,15 @@
 	--c: rgb(207, 207, 207); /*头像栏颜色*/
 	--link: rgb(0, 17, 255); /*链接颜色*/
 	--end-color: rgb(167, 167, 167); /*友情链接颜色*/
+
 	--main-font-size: 18px;
 	--main-heading-font-size: 2em;
 	--secondary-heading-font-size: 1.5em;
 	--thirdary-heading-font-size: 1.3em;
 	--fourthary-heading-font-size: 1em;
+
+	--ui-font: undertalefont, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji";
 }
 .dark-theme {
 	--primary-color: rgb(27, 27, 27);
@@ -45,7 +49,7 @@ body {
 	background-color: var(--primary-color);
 	font-size: var(--main-font-size);
 	color: var(--secondary-color);
-	font-family: undertalefont;
+	font-family: var(--ui-font);
 	-webkit-font-smoothing: none;
 	-moz-osx-font-smoothing: none;
 }
@@ -82,14 +86,17 @@ img.img-pixelart {
 }
 
 button,
-label,
 input,
+optgroup,
 select,
 textarea {
 	display: block;
 	font-family: inherit;
 	font-size: 100%;
+	line-height: 1.15;
 	width: 100%;
+	min-width: 0;
+	margin: 0;
 }
 
 input,
@@ -102,6 +109,7 @@ input {
 	-webkit-appearance: none;
 	background: white;
 	border: 0;
+	outline-offset: 0;
 	outline: 1px solid var(--c);
 	padding: 10px;
 	min-width: 0;
@@ -118,6 +126,9 @@ input:focus {
 }
 input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 	display: none;
+}
+::-webkit-search-decoration {
+	-webkit-appearance: none;
 }
 
 button {
