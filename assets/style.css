@@ -269,7 +269,7 @@ footer .end > dd {
 	padding: 10px 5px;
 	text-align: center;
 	list-style-type: none;
-	width: fit-content;
+	min-width: 0;
 	/*outline: 1px solid #cccccc;*/
 	background: transparent;
 	border-top: 5px solid transparent;
@@ -291,17 +291,14 @@ footer .end > dd {
 	box-shadow: 5px 5px 20px #333333;
 	border: 1px solid darkgray;
 }
-.tabbed-table-content > li > p {
-	margin: 15px;
+.tabbed-table-content > li > *:not(.tabbed-table) {
+	margin: 20px;
 }
 
 .author-avatar-pres {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-}
-.author-avatar-pres img {
-	margin-right: 10px;
+	gap: 10px;
 }
 
 .search-form-container {
