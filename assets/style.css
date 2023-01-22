@@ -334,19 +334,10 @@ form[name="search-form"] {
 
 .search-screens {
 	display: grid;
-	min-height: 25vh;
+	min-height: 50vh;
 }
 .search-screens > div {
 	grid-area: 1 / 1;
-}
-
-#search-initial-screen {
-	margin: auto;
-	text-align: center;
-	display: none;
-}
-.search-screens:not(.search-ready) #search-initial-screen {
-	display: block;
 }
 
 #search-loading-overlay {
@@ -357,7 +348,7 @@ form[name="search-form"] {
 }
 .search-screens.search-loading #search-loading-overlay {
 	opacity: 1;
-	transition: opacity 1s 0.5s;
+	transition: opacity 2s 0.15s;
 	pointer-events: auto;
 }
 
