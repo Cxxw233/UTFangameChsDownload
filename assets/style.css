@@ -278,10 +278,12 @@ footer .end > dd {
 }
 
 /*选项卡样式*/
+.tabbed-table {
+	outline: 1px solid lightgray;
+}
 .tabbed-table-title {
 	display: flex;
-	border: 1px solid lightgray;
-	border-bottom: 0;
+	list-style-type: none;
 	box-shadow: 5px 1px 20px #333333;
 	padding: 0;
 	margin: 0;
@@ -291,9 +293,7 @@ footer .end > dd {
 	flex: 1 0 120px;
 	padding: 10px 5px;
 	text-align: center;
-	list-style-type: none;
 	min-width: 0;
-	/*outline: 1px solid #cccccc;*/
 	background: transparent;
 	border-top: 5px solid transparent;
 	word-wrap: break-word;
@@ -303,19 +303,18 @@ footer .end > dd {
 	border-color: var(--link);
 }
 .tabbed-table-content {
-	padding: 0;
 	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 .tabbed-table-content > li {
 	display: block;
-	list-style-type: none;
 	color: var(--secondary-color);
 	background-color: var(--primary-color);
 	box-shadow: 5px 5px 20px #333333;
-	border: 1px solid darkgray;
 }
-.tabbed-table-content > li > *:not(.tabbed-table) {
-	margin: 20px;
+.tabbed-table-content > li:not(:has(.tabbed-table)) {
+	padding: 10px 20px;
 }
 
 .author-avatar-pres {
