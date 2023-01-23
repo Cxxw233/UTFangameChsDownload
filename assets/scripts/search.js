@@ -15,6 +15,7 @@ const searchInitScreen = document.querySelector("#search-initial-screen");
 const searchResultTemplate = document.querySelector("#template-search-result").innerHTML;
 
 function displayError(e, desc) {
+	console.error(desc, e);
 	alert(`${desc}
 
 下面是详尽的错误报告，可能会有用：
@@ -68,7 +69,7 @@ function setLoading(isLoading) {
 async function renderSearchResults(results) {
 	let output;
 	try {
-		output = ejs.render(searchResultTemplate, { results: results });
+		output = ejs.render(searchResultTemplate, { results: results }, { rmWhitespace: true });
 	} catch (e) {
 		displayError(e, "渲染搜索结果失败！这是网站的问题，请联系管理员。");
 		return;

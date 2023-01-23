@@ -4,20 +4,18 @@ layout: page
 ---
 
 <link name="search-data" href="{{ '/search.json' | relative_url }}" />
-
 <div class="search-form-container">
 	<form name="search-form" action="" method="GET">
-		<label for="query" class="aria-hidden">输入查询词</label>
+		<label for="query" aria-hidden="true">输入查询词</label>
 		<input disabled type="search" name="query" id="query" required placeholder="搜索汉化..." />
 		<button disabled type="submit">搜索</button>
 	</form>
 </div>
 
 <div class="search-screens">
-	<div id="search-initial-screen">加载中</div>
 	<div class="search-results" id="search-results"></div>
 	<div class="search-results" id="search-results-backup">
-		<p class="aria-hidden">搜索中</p>
+		<p aria-hidden="true">搜索中</p>
 	</div>
 	<div id="search-loading-overlay"></div>
 </div>
@@ -50,4 +48,4 @@ layout: page
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6/dist/fuse.basic.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/ejs@3/ejs.min.js"></script>
-<script src="assets/scripts/search.js"></script>
+<script src="{{ '/assets/scripts/search.js' | relative_url }}"></script>
