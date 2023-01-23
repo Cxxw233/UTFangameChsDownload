@@ -206,19 +206,21 @@ header .header-title {
 	justify-content: space-around;
 	align-items: center;
 }
-header .header-title div {
-	margin: auto;
-	padding: 0;
-}
 header .header-title div:nth-child(2) {
 	text-align: center;
-	flex: 1;
 }
 header .header-title div:nth-child(2) a {
 	color: inherit;
 }
+header .buttons {
+	flex-basis: 25%;
+}
+header .buttons-right {
+	text-align: right;
+}
 header .buttons * {
 	width: 32px;
+	display: inline-block;
 }
 header .buttons button {
 	background: transparent;
