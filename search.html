@@ -30,7 +30,6 @@ layout: page
 			<li>
 				<div>
 					<h3><%= item.title %></h3>
-					<p><%= result.score %></p>
 					<p>by <%= item._authorsText.join("，") %></p>
 					<% item.links.forEach(function(link) { %>
 						<% let linkName = link.name ? link.name : "下载链接" %>
