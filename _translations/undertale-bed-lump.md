@@ -1,5 +1,5 @@
 ---
-title: "UNDERTALEBedLump"
+title: "UNDERTALE Bed Lump"
 authors:
  - ax
 links:

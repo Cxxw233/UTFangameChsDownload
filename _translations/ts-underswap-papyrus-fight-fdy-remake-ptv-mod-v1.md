@@ -1,5 +1,5 @@
 ---
-title: "TS！Underswap Fdy重置PTV改版ver.1"
+title: "TS!Underswap Fdy重置PTV改版ver.1"
 authors:
  - egger
 links:

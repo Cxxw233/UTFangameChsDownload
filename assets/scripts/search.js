@@ -4,8 +4,12 @@ const searchDataURL = document.querySelector("link[name='search-data']").href;
 let searchData = {};
 let searcher;
 const searcherOptions = {
-	keys: ["title", "_authorsText"]
+	keys: ["title"],
+	includeScore: true,
+	thresold: 0.5,
+	distance: 100,
 };
+const MOST_RELEVANT_THRESOLD = 1/4;
 
 const form = document.querySelector("form[name='search-form']");
 const screens = document.querySelector(".search-screens");
@@ -77,10 +81,18 @@ async function renderSearchResults(results) {
 	searchResults.innerHTML = output;
 }
 
+function doSearchWithScoreThresold(searcher, query, thresold) {
+	let results = searcher.search(query);
+	results = results.filter(x => x.score < thresold);
+	results = results.sort((x, y) => x.score - y.score);
+	return results;
+}
+
 async function executeSearch(query) {
 	setLoading(true);
 
-	const results = searcher.search(query);
+	// TODO: 将过滤掉的部分结果显示
+	const results = doSearchWithScoreThresold(searcher, query, MOST_RELEVANT_THRESOLD);
 	renderSearchResults(results);
 
 	setLoading(false);
