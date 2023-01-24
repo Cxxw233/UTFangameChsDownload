@@ -36,7 +36,11 @@ layout: page
 						<p>
 						<% if (link.url) { _%>
 							<a href="<%= link.url %>"><%= linkName %></a><%_ } else { _%><%= linkName _%>
-						<%_ } _%><% if (link.notes || link.passcode) { _%>（<%= link.passcode ? `提取码：${link.passcode}` : "" _%><%= link.notes ? `${link.passcode ? "；" : ""}${link.notes}` : "" %>）<%_ } %>
+						<%_ } _%>
+						<% if (link.notes || link.passcode) { _%>
+						（<%= link.passcode ? `提取码：${link.passcode}` : "" _%>
+						<%= link.notes ? `${link.passcode ? "；" : ""}${link.notes}` : "" %>）
+						<%_ } %>
 						</p>
 					<% }) %>
 				</div>
