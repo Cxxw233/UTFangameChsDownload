@@ -6,15 +6,14 @@ let searcher;
 const searcherOptions = {
 	keys: ["title"],
 	includeScore: true,
-	distance: 120,
+	distance: 120
 };
-const MOST_RELEVANT_THRESOLD = 1/3;
+const MOST_RELEVANT_THRESOLD = 1 / 3;
 
 const form = document.querySelector("form[name='search-form']");
 const screens = document.querySelector(".search-screens");
 const searchResults = document.querySelector("#search-results");
 const searchResultsBackup = document.querySelector("#search-results-backup");
-const searchInitScreen = document.querySelector("#search-initial-screen");
 const searchResultTemplate = document.querySelector("#template-search-result").innerHTML;
 
 function displayError(e, desc) {
@@ -83,9 +82,9 @@ async function renderSearchResults(results) {
 function doSearchWithScoreThresold(searcher, query, thresold) {
 	let results = searcher.search(query);
 	let resultsF = {};
-	resultsF.belowThresold = results.filter(x => x.score <= thresold);
+	resultsF.belowThresold = results.filter((x) => x.score <= thresold);
 	resultsF.belowThresold = resultsF.belowThresold.sort((x, y) => x.score - y.score);
-	resultsF.aboveThresold = results.filter(x => x.score > thresold);
+	resultsF.aboveThresold = results.filter((x) => x.score > thresold);
 	resultsF.aboveThresold = resultsF.aboveThresold.sort((x, y) => x.score - y.score);
 	return resultsF;
 }
