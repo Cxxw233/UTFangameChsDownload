@@ -281,7 +281,7 @@ footer .end > dd {
 
 /*选项卡样式*/
 .tabbed-table {
-	outline: 1px solid lightgray;
+	outline: 1px solid var(--primary-color);
 }
 .tabbed-table-title {
 	display: flex;
