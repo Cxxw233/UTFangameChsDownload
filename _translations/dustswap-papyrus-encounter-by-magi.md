@@ -1,5 +1,5 @@
 ---
-title: "Absolute Sans Fight"
+title: "DUSTSWAP - Papyrus Encounter (Magi Edition)"
 authors:
  - egger
 links:
