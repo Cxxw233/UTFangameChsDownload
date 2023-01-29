@@ -278,10 +278,10 @@ footer .footer-1 {
 footer .end {
 	background-color: var(--end-color);
 }
-footer .end > ul,
-footer .end > ul > li {
+footer .end > ul {
 	list-style-type: none;
 	margin: 0;
+	padding: 0;
 }
 
 /*选项卡样式*/
