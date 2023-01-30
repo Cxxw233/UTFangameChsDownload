@@ -40,6 +40,7 @@
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 	-moz-tab-size: 4;
 	tab-size: 4;
 }
@@ -107,8 +108,8 @@ button {
 }
 
 input {
-	appearance: none;
 	-webkit-appearance: none;
+	appearance: none;
 	background: white;
 	border: 0;
 	outline-offset: 0;
@@ -133,11 +134,12 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 }
 
 button {
-	appearance: none;
 	-webkit-appearance: none;
+	appearance: none;
 	border: 1px solid var(--c);
 	background-color: lightgray;
 	padding: 10px 20px;
+	width: -moz-fit-content;
 	width: fit-content;
 }
 button:hover {
@@ -236,6 +238,7 @@ header .buttons button#change-accent > img {
 .clock {
 	padding: 10px 15px;
 	margin: 0 auto;
+	max-width: -moz-fit-content;
 	max-width: fit-content;
 	font-size: var(--main-font-size);
 	font-family: var(--ui-font-mono);
@@ -252,6 +255,7 @@ header .buttons button#change-accent > img {
 		0 6px 0 #141414, 0 7px 0 #0a0a0a, 0 8px 0 #000000, 0 0 5px rgba(100, 100, 100, 0),
 		0 -1px 3px rgba(120, 120, 120, 0.2), 0 9px 9px rgba(140, 140, 140, 0.3),
 		0 12px 12px rgba(160, 160, 160, 0.3), 0 15px 15px rgba(180, 180, 180, 0.3);
+	-webkit-user-select: none;
 	user-select: none;
 }
 
@@ -273,10 +277,11 @@ footer .footer-1 {
 }
 footer .end {
 	background-color: var(--end-color);
-	list-style-type: none;
 }
-footer .end > dd {
+footer .end > ul {
+	list-style-type: none;
 	margin: 0;
+	padding: 0;
 }
 
 /*选项卡样式*/
