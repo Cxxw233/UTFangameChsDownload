@@ -3,6 +3,8 @@ title: "Undertale: Bits and Pieces官方授权简中本地化组"
 team: true
 ---
 
+Undertale: Bits and Pieces By TeamBnP
+
 \* 目前成员名单：
 
 <!-- prettier-ignore -->

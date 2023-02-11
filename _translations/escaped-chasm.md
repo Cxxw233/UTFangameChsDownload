@@ -1,5 +1,5 @@
 ---
-title: "逃离深渊(Escaped Chasm)(非UT/DR相关)"
+title: "Escaped Chasm"
 authors:
  - team_ec
 links:

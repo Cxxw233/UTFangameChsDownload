@@ -1,8 +1,11 @@
 ---
-title: "空径之民(Dweller's Empty Path)非官方汉化组"
+title: "Dweller's Empty Path非官方简中本地化组"
 team: true
 ---
-\* [百度贴吧发布贴](https://tieba.baidu.com/p/6890735112)
+
+Dweller's Empty Path By Temmie
+
+[百度贴吧发布贴](https://tieba.baidu.com/p/6890735112)
 
 \* 目前成员名单：
 

@@ -1,5 +1,5 @@
 ---
-title: "Dweller's Empty Path(空径之民)(非UT/DR相关)"
+title: "Dweller's Empty Path"
 authors:
  - team_dep
 links:

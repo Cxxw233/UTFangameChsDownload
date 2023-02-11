@@ -1,7 +1,9 @@
 ---
-title: "Facing Demons官方简中本地化组"
+title: "直面恶魔官方简中本地化组"
 team: true
 ---
+
+直面恶魔/Facing Demons By IGB Team
 
 \* 目前成员名单：
 

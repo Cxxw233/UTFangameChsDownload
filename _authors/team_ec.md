@@ -1,8 +1,13 @@
 ---
-title: "逃离深渊(Escaped Chasm)非官方汉化组"
+title: "Escaped Chasm非官方简中本地化组"
 team: true
 ---
-\* [汉化发布视频](https://www.bilibili.com/video/BV1oU4y1D72h)
+
+Escaped Chasm By Temmie
+
+[汉化发布视频](https://www.bilibili.com/video/BV1oU4y1D72h)
+
+\* 目前成员名单：
 
 \* 翻译：[希铁石z](https://space.bilibili.com/470552417)
 
