@@ -309,6 +309,21 @@ footer .end > ul {
 	background: var(--primary-color);
 	border-color: var(--link);
 }
+
+.tabbed-table-title-active {
+	border-width: 100%;
+	transition: all 0.2s;
+}
+.tabbed-table-title-active:hover {
+	border-color: rgb(236, 129, 47);
+}
+
+.tabbed-table-content li p {
+	transition: all 0.1s;
+}
+.tabbed-table-content li p:hover {
+	transform: translateX(10px);
+}
 .tabbed-table-content {
 	margin: 0;
 	padding: 0;
