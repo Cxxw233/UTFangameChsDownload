@@ -10,7 +10,7 @@ team: true
 <!-- prettier-ignore -->
 \* 项目负责人：[@AX暗星233](https://space.bilibili.com/443074427)
 
-\* 文本翻译： [@AX暗星233](https://space.bilibili.com/443074427) 、[RoCtD_14159](https://space.bilibili.com/283586183)
+\* 文本翻译： [RoCtD_14159](https://space.bilibili.com/283586183)
 
 \* 文本校正：[@Bronie\_](https://space.bilibili.com/616770040)
 
