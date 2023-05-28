@@ -10,6 +10,8 @@ team: true
 <!-- prettier-ignore -->
 \* 项目负责人：[@AX暗星233](https://space.bilibili.com/443074427)
 
+\* 文本翻译： [@AX暗星233](https://space.bilibili.com/443074427) 、[RoCtD_14159](https://space.bilibili.com/283586183)
+
 \* 文本校正：[@Bronie\_](https://space.bilibili.com/616770040)
 
 \* 技术程序员：[@憨憨羊の宇航鸽鸽](https://space.bilibili.com/252906762)、[@智慧一](https://space.bilibili.com/429803290)
