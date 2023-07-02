@@ -1,5 +1,5 @@
 ---
-title: Deltarune八云紫战
+title: "Deltarune八云紫战"
 authors:
  - ax
 links:
