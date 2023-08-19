@@ -322,7 +322,7 @@ footer .end > ul {
 	transition: all 0.2s;
 }
 .tabbed-table-content li p:hover {
-	transform: translateX(10px) scale(1.08);
+	transform: translateX(30px) scale(1.08);
 	
 }
 .tabbed-table-content {
@@ -359,6 +359,7 @@ footer .end > ul {
 .search-form-container {
 	margin-bottom: 15px;
 }
+/*input新增 选中加阴影 过渡效果 | button新增transition属性*/
 form[name="search-form"] {
 	display: flex;
 	flex-flow: row nowrap;
@@ -368,6 +369,15 @@ form[name="search-form"] {
 }
 form[name="search-form"] button {
 	flex-basis: 100px;
+	transition: all 1s;
+}
+
+form[name="search-form"] input {
+	transition: all 0.5s;
+}
+
+form[name="search-form"] input:focus {
+	box-shadow: 0px 0px 5px 2px gray;
 }
 
 .search-screens {
@@ -411,9 +421,17 @@ form[name="search-form"] button {
 	padding: 0;
 	list-style-type: none;
 }
-.search-results-listing > li {
+/*这里新增 搜索结果的li 放大比例 加阴影的 过渡效果（修改部分为下面 li的transition 和 li:hover）*/
+.search-results-listing>li {
 	margin: 10px 0;
+	transition: all 0.5s;
 }
+
+.search-results-listing>li:hover {
+	box-shadow: 0px 0px 10px 2px gray;
+	transform: scale(1.05);
+}
+
 .search-results-listing > li > div {
 	max-width: 100%;
 	padding: 15px;
