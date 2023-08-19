@@ -279,13 +279,16 @@ footer .dog {
 }
 footer .footer-flex {
 	display: flex;
-	flex-direction: row;
+	margin: 0 10px;
+	padding: 0px;
 }
 footer .footer-1 {
 	background-color: #6b6b6b;
+	width: 100%;
 }
 footer .end {
 	background-color: var(--end-color);
+	width: 100%;
 }
 footer .end > ul {
 	list-style-type: none;
