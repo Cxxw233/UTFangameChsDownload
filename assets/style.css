@@ -341,10 +341,10 @@ footer .end > ul {
 }
 
 .tabbed-table-content li p {
-	transition: all 0.1s;
+	transition: all 0.2s;
 }
 .tabbed-table-content li p:hover {
-	transform: translateX(10px),scale(1.2);
+	transform: translateX(10px) scale(1.08);
 	
 }
 .tabbed-table-content {
