@@ -283,10 +283,12 @@ footer .footer-flex {
 	padding: 0px;
 }
 footer .footer-1 {
+	padding: 10px;
 	background-color: #6b6b6b;
 	width: 100%;
 }
 footer .end {
+	padding: 10px;
 	background-color: var(--end-color);
 	width: 100%;
 }
@@ -295,7 +297,6 @@ footer .end > ul {
 	margin: 0;
 	padding: 0;
 }
-
 /*选项卡样式*/
 .tabbed-table {
 	outline: 1px solid var(--primary-color);
@@ -334,7 +335,7 @@ footer .end > ul {
 	transition: all 0.2s;
 }
 .tabbed-table-content li p:hover {
-	transform: translateX(60px) scale(1.15);
+	transform: translateX(90px) scale(1.15);
 	
 }
 .tabbed-table-content {
