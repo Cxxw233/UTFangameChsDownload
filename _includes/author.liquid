@@ -1,25 +1,20 @@
 {%- unless include.author.team -%}
-	<p>
-		<div class="author-avatar-pres">
-			<div>
-				<img
-					src="{{ '/assets/images/authors/' | append: include.author.image | relative_url }}"
-					title="{{ include.author.title }}">
-			</div>
-			<div>
-				<span
-					>由<a href="{{ include.author.homepage }}">@{{ include.author.title }}</a>制作的汉化项目</span
-				>
-			</div>
-		</div>
-	</p>
+  <p>
+    <div class="author-avatar-pres">
+      <div>
+        <img src="{{ '/assets/images/authors/' | append: include.author.image | relative_url }}" title="{{ include.author.title }}">
+      </div>
+      <div>
+        <span>由<a class="a-link" href="{{ include.author.homepage }}">@{{ include.author.title }}</a>制作的汉化项目</span>
+      </div>
+    </div>
+  </p>
 {%- endunless -%}
 
 {{ content }}
 
-{%- assign tls = site.translations
-	| where_exp: 'item', 'item.authors contains include.author.slug'
--%}
+{%- assign tls = site.translations 
+  | where_exp: 'item', 'item.authors contains include.author.slug' -%}
 {%- for tl in tls -%}
-	{{ tl.output }}
+  {{ tl.output }}
 {%- endfor -%}

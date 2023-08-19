@@ -76,11 +76,11 @@ body {
 a {
 	color: var(--link);
 	text-decoration: none;
+	transition: all 0.1s;
 }
 a:hover {
 	text-decoration: underline;
 }
-
 img {
 	image-rendering: auto;
 }
@@ -173,6 +173,11 @@ header .title-pt3 {
 	text-align: center;
 	margin: 10px;
 }
+/*为了能让CSShake效果能用在title-pt3下面的效果 故使用inlineblock*/
+header .title-pt3 span {
+	display: inline-block;
+}
+
 h2,
 h3,
 h4,
@@ -272,18 +277,26 @@ footer .dog {
 	padding: 0;
 	justify-content: right;
 }
+footer .footer-flex {
+	display: flex;
+	margin: 0 10px;
+	padding: 0px;
+}
 footer .footer-1 {
+	padding: 10px;
 	background-color: #6b6b6b;
+	width: 100%;
 }
 footer .end {
+	padding: 10px;
 	background-color: var(--end-color);
+	width: 100%;
 }
 footer .end > ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-
 /*选项卡样式*/
 .tabbed-table {
 	outline: 1px solid var(--primary-color);
@@ -319,10 +332,11 @@ footer .end > ul {
 }
 
 .tabbed-table-content li p {
-	transition: all 0.1s;
+	transition: all 0.2s;
 }
 .tabbed-table-content li p:hover {
-	transform: translateX(10px);
+	transform: translateX(90px) scale(1.15);
+	
 }
 .tabbed-table-content {
 	margin: 0;
@@ -358,6 +372,7 @@ footer .end > ul {
 .search-form-container {
 	margin-bottom: 15px;
 }
+/*input新增 选中加阴影 过渡效果 | button新增transition属性*/
 form[name="search-form"] {
 	display: flex;
 	flex-flow: row nowrap;
@@ -367,6 +382,15 @@ form[name="search-form"] {
 }
 form[name="search-form"] button {
 	flex-basis: 100px;
+	transition: all 1s;
+}
+
+form[name="search-form"] input {
+	transition: all 0.5s;
+}
+
+form[name="search-form"] input:focus {
+	box-shadow: 0px 0px 5px 2px gray;
 }
 
 .search-screens {
@@ -410,9 +434,17 @@ form[name="search-form"] button {
 	padding: 0;
 	list-style-type: none;
 }
-.search-results-listing > li {
+/*这里新增 搜索结果的li 放大比例 加阴影的 过渡效果（修改部分为下面 li的transition 和 li:hover）*/
+.search-results-listing>li {
 	margin: 10px 0;
+	transition: all 0.5s;
 }
+
+.search-results-listing>li:hover {
+	box-shadow: 0px 0px 10px 2px gray;
+	transform: scale(1.05);
+}
+
 .search-results-listing > li > div {
 	max-width: 100%;
 	padding: 15px;
