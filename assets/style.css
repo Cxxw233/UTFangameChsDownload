@@ -277,6 +277,10 @@ footer .dog {
 	padding: 0;
 	justify-content: right;
 }
+footer .footer-flex {
+	display: flex;
+	flex-direction: row;
+}
 footer .footer-1 {
 	background-color: #6b6b6b;
 }
@@ -327,7 +331,7 @@ footer .end > ul {
 	transition: all 0.2s;
 }
 .tabbed-table-content li p:hover {
-	transform: translateX(40px) scale(1.15);
+	transform: translateX(60px) scale(1.15);
 	
 }
 .tabbed-table-content {
