@@ -173,6 +173,11 @@ header .title-pt3 {
 	text-align: center;
 	margin: 10px;
 }
+/*为了能让CSShake效果能用在title-pt3下面的效果 故使用inlineblock*/
+header .title-pt3 span {
+	display: inline-block;
+}
+
 h2,
 h3,
 h4,
@@ -322,7 +327,7 @@ footer .end > ul {
 	transition: all 0.2s;
 }
 .tabbed-table-content li p:hover {
-	transform: translateX(30px) scale(1.08);
+	transform: translateX(40px) scale(1.15);
 	
 }
 .tabbed-table-content {
