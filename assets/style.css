@@ -76,9 +76,25 @@ body {
 a {
 	color: var(--link);
 	text-decoration: none;
+	position: relative;
 }
-a:hover {
-	text-decoration: underline;
+a::after {
+	content: '';
+	display: block;
+	/*开始时候下划线的宽度为100%*/
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	bottom: -10px;
+	background: #000;
+	transition: all 0.3s ease-in-out;
+	/*通过transform的缩放scale来让初始时x轴为0*/
+	transform: scale3d(0, 1, 1);
+	/*将坐标原点移到元素的中间，以原点为中心进行缩放*/
+	transform-origin: 50% 0;
+}
+a:hover::after {
+	transform: scale3d(1, 1, 1);
 }
 
 img {
@@ -322,7 +338,8 @@ footer .end > ul {
 	transition: all 0.1s;
 }
 .tabbed-table-content li p:hover {
-	transform: translateX(10px);
+	transform: translateX(10px), scale(1.2);
+	
 }
 .tabbed-table-content {
 	margin: 0;
