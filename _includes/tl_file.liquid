@@ -1,10 +1,7 @@
 {%- assign filename = include.name | default: include.file.name -%}
 
 {%- if include.file.url -%}
-  <a
-    class="a-link"
-    href="{{ include.file.url | uri_escape }}"
-    target="_blank">
+  <a href="{{ include.file.url | uri_escape }}" target="_blank">
     {{ filename }}
   </a>
 {%- else -%}
