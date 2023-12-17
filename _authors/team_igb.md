@@ -4,6 +4,7 @@ team: true
 ---
 
 直面恶魔/Facing Demons By IGB Team
+
 Storyshift Asriel Fight By IGB Team
 
 \* 目前成员名单：
