@@ -1,9 +1,11 @@
 ---
-title: "直面恶魔官方简中本地化组"
+title: "IGB Team CN 官方简中本地化组"
 team: true
 ---
 
 直面恶魔/Facing Demons By IGB Team
+
+Storyshift Asriel Fight By IGB Team
 
 \* 目前成员名单：
 
@@ -26,5 +28,3 @@ team: true
 \* Chara 中文配音：[@一只chara路过](https://space.bilibili.com/478857921)
 
 \* IGB 团队官方监制：[@IGBTeam](https://space.bilibili.com/1603675278)（Lepeha）
-
-在做了，你先别急
