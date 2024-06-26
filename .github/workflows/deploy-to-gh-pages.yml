@@ -27,7 +27,7 @@ jobs:
    - name: 获取代码
      uses: actions/checkout@v3
    - name: 配置 Ruby
-     uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
+     uses: ruby/setup-ruby@v1 # v1.127.0
      with:
       ruby-version: "3.1"
       rubygems: latest
