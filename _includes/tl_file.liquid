@@ -1,20 +1,16 @@
 {%- assign filename = include.name | default: include.file.name -%}
 
 {%- if include.file.url -%}
-  <a href="{{ include.file.url | uri_escape }}" target="_blank">
-    {{ filename }}
-  </a>
+  <a href="{{ include.file.url | uri_escape }}" target="_blank">{{ filename }}</a>
 {%- else -%}
   {{ filename }}
-{%- endif -%}
-
-{%- if include.file.passcode or include.file.notes -%}
+{%- endif %}{% if include.file.passcode or include.file.notes -%}
   （
   {%- if include.file.passcode -%}
     提取码：{{ include.file.passcode }}
     {%- if include.file.notes -%}；{%- endif -%}
   {%- endif -%}
   {{ include.file.notes }}
-  {%- comment -%} whitespace {%- endcomment -%}
+  {%- comment -%} whitespace stripping {%- endcomment -%}
   ）
 {%- endif -%}
