@@ -5,6 +5,8 @@ team: true
 
 TS! Underswap By TeamSwitch
 
+原作：Team Switched / Toby Fox
+
 \* 目前成员名单：
 
 <!-- prettier-ignore -->
@@ -16,4 +18,4 @@ TS! Underswap By TeamSwitch
 \* 美工：鲸流 天机汉化组（[希铁石z](https://space.bilibili.com/470552417/) [KodLenss](https://space.bilibili.com/40748676)）
 
 <!-- prettier-ignore -->
-\* 程序：天机汉化组（[希铁石z](https://space.bilibili.com/470552417/) [KodLenss](https://space.bilibili.com/40748676)）
+\* 程序：天机汉化组（[希铁石z](https://space.bilibili.com/470552417/) [KodLenss](https://space.bilibili.com/40748676)）[WS3917](https://space.bilibili.com/333621267) [天机ceyase](https://space.bilibili.com/512943967)
