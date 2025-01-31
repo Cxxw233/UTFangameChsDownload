@@ -22,7 +22,7 @@ Storyshift Asriel Fight By IGB Team
 
 \* Boogie 中文配音：[@抑郁的三叶草](https://space.bilibili.com/694165479)
 
-\* Metta 中文配音：[@纳塔斯威尔森](https://space.bilibili.com/279554110)
+<!-- \* Metta 中文配音：[@纳塔斯威尔森](https://space.bilibili.com/279554110) -->
 
 <!-- prettier-ignore -->
 \* Chara 中文配音：[@一只chara路过](https://space.bilibili.com/478857921)
