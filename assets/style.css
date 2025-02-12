@@ -330,12 +330,12 @@ footer .end > ul {
 .tabbed-table-title-active:hover {
 	border-color: rgb(0,190,255);
 }
-
+/*鼠标悬停在框框内的li时的样式，p:hover为悬停时设置的效果*/
 .tabbed-table-content li p {
 	transition: all 0.2s;
 }
 .tabbed-table-content li p:hover {
-	transform: translateX(90px) scale(1.15);
+	transform: translateX(3px) scale(1.02);
 	
 }
 .tabbed-table-content {
