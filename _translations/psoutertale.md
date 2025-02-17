@@ -16,9 +16,9 @@ links:
  - name: Mega.nz
    url: "https://mega.nz/folder/bi40gA4I#Q6jLvVM-i8EJMf5Ei8-zhQ"
  - name: 雨伞架下载站(直链下载)
-   url: "https://www.ws3917.site/files/psot/"
+   url: "https://www.ws3917.space/files/psot/"
  - name: 雨伞架下载站(在线游玩)
-   url: "https://www.ws3917.site/psot/"
+   url: "https://www.ws3917.space/psot/"
  - name: Idev games(在线游玩)
    url: "https://idev.games/game/ps-outertale-project-spacetime"
 ---
