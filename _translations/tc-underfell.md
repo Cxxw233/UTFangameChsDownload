@@ -8,6 +8,6 @@ links:
  - name: Windows端
    url: "https://wwoe.lanzouy.com/ik3Ca0jw029i"
  - name: 安卓端
-   url: "https://wwoe.lanzouy.com/inI7v0jw02fe"
-   passcode: 1876
+   url: "https://wwoe.lanzouu.com/i2xzS0jz29ri"
+   passcode: 2neb
 ---
