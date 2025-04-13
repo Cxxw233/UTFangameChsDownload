@@ -3,11 +3,11 @@ title: "PS!Outertale"
 authors:
  - team_pstvl
 links:
- - name: 百度网盘
-   url: "https://pan.baidu.com/s/1q-tyaqwmjRPMvYepHdRI6g?pwd=psot"
+ - name: 微雨云存储
+   url: "https://www.vyuyun.com/s/8kByHe"
    passcode: psot
  - name: 123云盘
-   url: "https://www.123865.com/s/UI15Vv-JQXfh"
+   url: "https://www.123912.com/s/UI15Vv-JQXfh?"
    passcode: psot
  - name: Google Drive
    url: "https://drive.google.com/drive/folders/1kkSUfZIbfZrRQNU_rloQDmxy_rkgJDHl?usp=drive_link"
