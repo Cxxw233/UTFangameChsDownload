@@ -5,6 +5,6 @@ authors:
 links:
  - name: 简体中文版  
    url: "https://www.123pan.com/s/KPMSVv-TcXjv.html"
- - name: Gamejolt
+ - name: GameJolt
    url: "https://gamejolt.com/games/undertaleicebound/688804"
 ---

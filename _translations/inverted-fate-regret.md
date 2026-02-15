@@ -8,6 +8,6 @@ links:
    passcode:  DORK
  - name: 123云盘
    url: "https://www.123912.com/s/r3SSVv-XEZWd"
- - name: Gamejolt原版
+ - name: GameJolt原版
    url: "https://gamejolt.com/games/invertedfateasgore/957669"
 ---

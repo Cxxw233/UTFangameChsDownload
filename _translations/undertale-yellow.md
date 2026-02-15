@@ -12,6 +12,6 @@ links:
    passcode: 1145
  - name: Google Drive
    url: "https://drive.google.com/drive/folders/1nAFttikBUoKf4nzsdTIfzrqAMr-87PFV?usp=sharing"
- - name: Gamejolt原版
+ - name: GameJolt原版
    url: "https://gamejolt.com/games/UndertaleYellow/136925"
 ---

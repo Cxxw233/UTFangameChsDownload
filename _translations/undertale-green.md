@@ -3,7 +3,7 @@ title: "UNDRETALE:GREEN by Migs"
 authors:
  - team_echo
 links:
- - name: "Gamejolt原版"
+ - name: "GameJolt原版"
    url: "https://gamejolt.com/games/undertalegreen/161268"
  - name: "Windows端(蓝奏)"
    url: "https://wwse.lanzoub.com/iaFHB2me146f"

@@ -5,6 +5,6 @@ authors:
 links:
  - name: "蓝奏云"
    url: "https://wwd.lanzoub.com/iZeem24hen5g"
- - name: "Gamejolt补档"
+ - name: "GameJolt补档"
    url: "https://gamejolt.com/games/1225/1015970"
 ---

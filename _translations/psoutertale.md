@@ -3,7 +3,7 @@ title: "PS!Outertale"
 authors:
  - team_pstvl
 links:
- - name: Gamejolt
+ - name: GameJolt
    url: "https://gamejolt.com/games/outertale/643082"
  - name: 微雨云存储
    url: "https://www.vyuyun.com/s/8kByHe"

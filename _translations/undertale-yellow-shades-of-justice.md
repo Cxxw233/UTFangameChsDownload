@@ -6,8 +6,8 @@ links:
  - name: 百度网盘
    url: "https://pan.baidu.com/s/171B0O6t7M3nWDcq42nBybA?pwd=1145"
    passcode: 1145
- - name: Gamejolt（汉化）
+ - name: GameJolt（汉化）
    url: "https://gamejolt.com/games/UTY_SOJ_CHS/1002593"
- - name: Gamejolt（原版）
+ - name: GameJolt（原版）
    url: "https://gamejolt.com/games/UTY_shadesofjustice/935169"
 ---

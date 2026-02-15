@@ -9,8 +9,8 @@ links:
  - name: 蓝奏云
    url: "https://chessy.lanzouv.com/b0um0tt4f"
    passcode: bshhz
- - name: Gamejolt（汉化）
+ - name: GameJolt（汉化）
    url: "https://gamejolt.com/games/Wilterfangame_CHS/1050599"
- - name: Gamejolt（原版）
+ - name: GameJolt（原版）
    url: "https://gamejolt.com/games/Wilterfangame/895372"
 ---

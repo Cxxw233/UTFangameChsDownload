@@ -5,6 +5,6 @@ authors:
 links:
  - name: "蓝奏云"
    url: "https://wwei.lanzoub.com/imKGX27d49ij"
- - name: "Gamejolt原版"
+ - name: "GameJolt原版"
    url: "https://gamejolt.com/games/FallenCrown/567808"
 ---

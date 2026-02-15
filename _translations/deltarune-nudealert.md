@@ -3,7 +3,7 @@ title: "Deltarune：nudealert by Sievaxx"
 authors:
  - team_echo
 links:
- - name: "Gamejolt原版"
+ - name: "GameJolt原版"
    url: "https://gamejolt.com/games/nudealert/496504"
  - name: "Windows端(百度)"
    url: "https://pan.baidu.com/s/10UeslvwBb75iS6EwisvpgA?pwd=NUDE"

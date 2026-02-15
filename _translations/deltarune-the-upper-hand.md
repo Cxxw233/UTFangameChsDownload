@@ -5,6 +5,6 @@ authors:
 links:
  - name: 123云盘
    url: "https://www.123912.com/s/fq2sjv-MbNHv"
- - name: Gamejolt原版（补档）
+ - name: GameJolt原版（补档）
    url: "https://gamejolt.com/games/1997/1009365"
 ---
