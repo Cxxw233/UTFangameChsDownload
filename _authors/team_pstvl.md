@@ -3,9 +3,11 @@ title: "雨伞架汉化组"
 team: true
 ---
 
-PS!Outertale by Spacey_432(Cryblik)
+PS!Outertale by [Spacey_432(Cryblik)](https://gamejolt.com/@spacey_432)
 
-目前人员名单：
+Deltarune Yellow By a friend of [toastemperor](https://gamejolt.com/@toastemperor)
+
+\* 目前人员名单：
 
 \* 【文翻 & 文校】：[1个渣渣](https://space.bilibili.com/25245703)、[braing](https://space.bilibili.com/3546756799269477)、[errosia](https://space.bilibili.com/1270845501)、[Murder--Sans_MDR](https://space.bilibili.com/492674926)、[R.o.C.t.D./π/3.1415⑨](https://space.bilibili.com/283586183)、[Wasneet Potato](https://space.bilibili.com/1641628190)、[ws3917](https://space.bilibili.com/333621267)
 

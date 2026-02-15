@@ -7,7 +7,7 @@ LA JUPO VANIA: The Game by BLOODFIST
 
 La Jupo owned by Calamityls
 
-\* 成员名单：
+\*成员名单：
 
 <!-- prettier-ignore -->
 \* 项目负责人：[@Herbert-Hyy](https://space.bilibili.com/315533705)
@@ -47,3 +47,17 @@ The Game by .Marchewa
 \* 宣发：[@Herbert-Hyy](https://space.bilibili.com/315533705)
 
 \* 测试：[@Sad小杰](https://space.bilibili.com/1336917935)
+
+
+Dusttale: The Genocide's End By Team DTLG
+
+\* 成员名单：
+
+<!-- prettier-ignore -->
+\* 文本翻译：[@卍无佚卐](https://space.bilibili.com/1543846944)、[@Herbert-Hyy](https://space.bilibili.com/315533705)
+
+\* 程序工作：[@xmtx-unofficial](https://space.bilibili.com/171859753)
+
+\* 贴图汉化：[@C0723゚](https://space.bilibili.com/3493139836832022)
+
+\* 特别感谢：[@缪雨_FAN](https://space.bilibili.com/3546555747403791) （前期程序）

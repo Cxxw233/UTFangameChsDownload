@@ -10,5 +10,4 @@ links:
    url: "https://www.123912.com/s/r3SSVv-XEZWd"
  - name: Gamejolt原版
    url: "https://gamejolt.com/games/invertedfateasgore/957669"
-   
 ---

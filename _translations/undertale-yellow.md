@@ -5,7 +5,7 @@ authors:
 links:
  - name: Github Releases
    url: "https://github.com/UTCLC/UTYSC-Releases/releases"
- - name: 123网盘
+ - name: 123云盘
    url: "https://www.123865.com/s/KPMSVv-QVNjv"
  - name: 百度网盘
    url: "https://pan.baidu.com/s/1xa6_rmUOx98dkR2Ml3Mgww?pwd=1145"

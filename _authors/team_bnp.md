@@ -20,4 +20,4 @@ Undertale: Bits and Pieces By TeamBnP
 \* 画工：[@纸疯针Official](https://space.bilibili.com/440126325)、[@小树叶不是树叶](https://space.bilibili.com/500995957)
 
 <!-- prettier-ignore -->
-\* 特别感谢：[真是滑稽了啊](https://space.bilibili.com/77315809/)、[杜若-已燃尽](https://space.bilibili.com/58356619/)、[伍个核桃](https://space.bilibili.com/255121737/)、好人汉化组
+\* 特别感谢：[真是滑稽了啊](https://space.bilibili.com/77315809/)、[杜若-已燃尽](https://space.bilibili.com/58356619/)、[伍个核桃](https://space.bilibili.com/255121737/)、[好人汉化组](https://space.bilibili.com/3546893244172492)
